@@ -1,0 +1,56 @@
+{
+    "Name": "CharacterPropertyStore\u0000",
+    "Type": "StructProperty\u0000",
+    "StoredPropertyType": "BPMCharacterPropertyStore\u0000",
+    "Properties": [
+        {
+            "Name": "BPMCharacterPropertyStore\u0000",
+            "Type": "Tuple",
+            "Properties": [
+                {
+                    "Name": "StoredCharacterArchetype\u0000",
+                    "Type": "ObjectProperty\u0000",
+                    "Property": "/Game/Blueprints/CharacterSelectors/Fragile.Fragile\u0000"
+                },
+                {
+                    "Name": "StoredCharacterMesh\u0000",
+                    "Type": "SoftObjectProperty\u0000",
+                    "Property": "/Game/Character/FP_player/RoyalHand_Rig.RoyalHand_Rig\u0000"
+                },
+                {
+                    "Name": "StoredWeapon\u0000",
+                    "Type": "SoftObjectProperty\u0000",
+                    "Property": "/Game/Blueprints/Weapons/BP_DoubleBarrel.BP_DoubleBarrel_C\u0000"
+                },
+                {
+                    "Name": "StoredSecondaryAbility\u0000",
+                    "Type": "SoftObjectProperty\u0000",
+                    "Property": "/Game/Blueprints/Abilities/Secondary/Secondary_Teleport.Secondary_Teleport_C\u0000"
+                },
+                {
+                    "Name": "StoredMobilityAbility\u0000",
+                    "Type": "SoftObjectProperty\u0000",
+                    "Property": "/Game/Blueprints/Abilities/Auxillary/Aux_QuickStepFlying.Aux_QuickStepFlying_C\u0000"
+                },
+                {
+                    "Name": "StoredUltimateAbility\u0000",
+                    "Type": "SoftObjectProperty\u0000",
+                    "Property": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_AbilityUltimateDiscount.Ulti_AbilityUltimateDiscount_C\u0000"
+                },
+                {
+                    "Name": "bStoredHasHealth\u0000",
+                    "Type": "BoolProperty\u0000",
+                    "Property": false
+                },
+                {
+                    "Name": "StoredPlayerStatLuck\u0000",
+                    "Type": "FloatProperty\u0000",
+                    "Property": [
+                        0,
+                        2
+                    ]
+                }
+            ]
+        }
+    ]
+}
