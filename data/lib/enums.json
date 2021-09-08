@@ -1,0 +1,28 @@
+{
+    "DIFFICULTY": {
+        "EASY": {
+            "Name":"BPMDifficulty\u0000",
+            "Type":"EnumProperty\u0000",
+            "EnumType":"EBPMDifficulty\u0000",
+            "Poperty":"EBPMDifficulty::BPMD_EASY\u0000"
+        },
+        "HELLISH": {
+            "Name":"BPMDifficulty\u0000",
+            "Type":"EnumProperty\u0000",
+            "EnumType":"EBPMDifficulty\u0000",
+            "Property":"EBPMDifficulty::BPMD_HELLISH\u0000"
+        },
+        "PRACTICE": {
+            "Name":"BPMDifficulty\u0000",
+            "Type":"EnumProperty\u0000",
+            "EnumType":"EBPMDifficulty\u0000",
+            "Property":"EBPMDifficulty::BPMD_PRACTICE\u0000"
+        }
+    },
+    "CRYPTSVISIT": {
+        "Name":"SpecialChapterVisit\u0000",
+        "Type":"EnumProperty\u0000",
+        "EnumType":"ESpecialChapterVisit\u0000",
+        "Property":"ESpecialChapterVisit::ESCV_AsgardCrypt\u0000"
+    }
+}
