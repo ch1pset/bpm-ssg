@@ -1,5 +1,5 @@
 {
-  "REQUIRED": [
+  "POOLS": [
     "ShopItemPool",
     "TreasureItemPool",
     "BossItemPool",
@@ -19,7 +19,7 @@
     "FutureProofingAPool",
     "FutureProofingBPool"
   ],
-  "OPTIONAL": [
+  "PROPS": [
     "FloorIndex",
     "FloorGenerationSeeds",
     "FloorModifierFloats",
