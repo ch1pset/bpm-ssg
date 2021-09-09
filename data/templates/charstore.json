@@ -1,0 +1,12 @@
+{
+    "Name": "CharacterPropertyStore\u0000",
+    "Type": "StructProperty\u0000",
+    "StoredPropertyType": "BPMCharacterPropertyStore\u0000",
+    "Properties": [
+        {
+            "Name": "BPMCharacterPropertyStore\u0000",
+            "Type": "Tuple",
+            "Properties": []
+        }
+    ]
+}

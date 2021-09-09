@@ -1,0 +1,218 @@
+{
+    "EquipmentAbilities": {
+        "Name": "StoredEquipmentAbilities\u0000",
+        "Type": "ArrayProperty\u0000",
+        "StoredPropertyType": "SoftObjectProperty\u0000",
+        "Property": {
+            "Name": "",
+            "Type": "SoftObjectProperty",
+            "Properties": []
+        }
+    },
+    "EquipmentCharges": {
+        "Name": "StoredEquipmentAbilitiesCharges\u0000",
+        "Type": "ArrayProperty\u0000",
+        "StoredPropertyType": "IntProperty\u0000",
+        "Property": {
+            "Name": "",
+            "Type": "IntProperty",
+            "Properties": []
+        }
+    },
+    "StoredArchetype": {
+        "Name": "StoredCharacterArchetype\u0000",
+        "Type": "ObjectProperty\u0000",
+        "Property": ""
+    },
+    "StoredMesh": {
+        "Name": "StoredCharacterMesh\u0000",
+        "Type": "SoftObjectProperty\u0000",
+        "Property": ""
+    },
+    "StoredWeapon": {
+        "Name": "StoredWeapon\u0000",
+        "Type": "SoftObjectProperty\u0000",
+        "Property": ""
+    },
+    "StoredSecondary": {
+        "Name": "StoredSecondaryAbility\u0000",
+        "Type": "SoftObjectProperty\u0000",
+        "Property": ""
+    },
+    "StoredMobility": {
+        "Name": "StoredMobilityAbility\u0000",
+        "Type": "SoftObjectProperty\u0000",
+        "Property": ""
+    },
+    "StoredUltimate": {
+        "Name": "StoredUltimateAbility\u0000",
+        "Type": "SoftObjectProperty\u0000",
+        "Property": ""
+    },
+    "StoredHeadItem": {
+        "Name": "StoredHeadItemAbility\u0000",
+        "Type": "SoftObjectProperty\u0000",
+        "Property": ""
+    },
+    "StoredChestItem": {
+        "Name": "StoredChestItemAbility\u0000",
+        "Type": "SoftObjectProperty\u0000",
+        "Property": ""
+    },
+    "StoredArmsItem": {
+        "Name": "StoredArmsItemAbility\u0000",
+        "Type": "SoftObjectProperty\u0000",
+        "Property": ""
+    },
+    "StoredLegsItem": {
+        "Name": "StoredLegsItemAbility\u0000",
+        "Type": "SoftObjectProperty\u0000",
+        "Property": ""
+    },
+    "StoredHealthContainer": {
+      "Name": "StoredHealthContainer\u0000",
+      "Type": "FloatProperty\u0000",
+      "Property": [
+        0,
+        0
+      ]
+    },
+    "StoredHealth": {
+      "Name": "StoredHealth\u0000",
+      "Type": "FloatProperty\u0000",
+      "Property": [
+        0,
+        100
+      ]
+    },
+    "StoredShield": {
+      "Name": "StoredShield\u0000",
+      "Type": "FloatProperty\u0000",
+      "Property": [
+        0,
+        0
+      ]
+    },
+    "StoredCoins": {
+      "Name": "StoredCoins\u0000",
+      "Type": "IntProperty\u0000",
+      "Property": [
+        0,
+        0
+      ]
+    },
+    "StoredKeys": {
+      "Name": "StoredKeys\u0000",
+      "Type": "IntProperty\u0000",
+      "Property": [
+        0,
+        0
+      ]
+    },
+    "StoredSpeedStat": {
+      "Name": "StoredPlayerStatMovementSpeed\u0000",
+      "Type": "FloatProperty\u0000",
+      "Property": [
+        0,
+        0
+      ]
+    },
+    "StoredDamageStat": {
+      "Name": "StoredPlayerStatWeaponDamage\u0000",
+      "Type": "FloatProperty\u0000",
+      "Property": [
+        0,
+        0
+      ]
+    },
+    "StoredCriticalStat": {
+      "Name": "StoredPlayerStatWeaponCritical\u0000",
+      "Type": "FloatProperty\u0000",
+      "Property": [
+        0,
+        0
+      ]
+    },
+    "StoredRangeStat": {
+      "Name": "StoredPlayerStatRange\u0000",
+      "Type": "FloatProperty\u0000",
+      "Property": [
+        0,
+        0
+      ]
+    },
+    "StoredLuckStat": {
+      "Name": "StoredPlayerStatLuck\u0000",
+      "Type": "FloatProperty\u0000",
+      "Property": [
+        0,
+        0
+      ]
+    },
+    "StoredAbilityStat": {
+      "Name": "StoredPlayerStatAbility\u0000",
+      "Type": "FloatProperty\u0000",
+      "Property": [
+        0,
+        0
+      ]
+    },
+    "StoredClipUpStat": {
+      "Name": "StoredPlayerStatExtraAmmo\u0000",
+      "Type": "IntProperty\u0000",
+      "Property": [
+        0,
+        0
+      ]
+    },
+    "bStoredCanPickupWeapons": {
+      "Name": "bStoredCanPickupWeapons\u0000",
+      "Type": "BoolProperty\u0000",
+      "Property": false
+    },
+    "bStoredHasHealth": {
+      "Name": "bStoredHasHealth\u0000",
+      "Type": "BoolProperty\u0000",
+      "Property": false
+    },
+    "bStoredSmallCharacter": {
+      "Name": "bStoredSmallCharacter\u0000",
+      "Type": "BoolProperty\u0000",
+      "Property": true
+    },
+    "bStoredAlwaysGeneratesBanks": {
+      "Name": "bStoredAlwaysGeneratesBanks\u0000",
+      "Type": "BoolProperty\u0000",
+      "Property": true
+    },
+    "bStoredGoldIsHealth": {
+      "Name": "bStoredGoldIsHealth\u0000",
+      "Type": "BoolProperty\u0000",
+      "Property": true
+    },
+    "bStoredRandomLoadout": {
+      "Name": "bStoredRandomLoadout\u0000",
+      "Type": "BoolProperty\u0000",
+      "Property": true
+    },
+    "bStoredCompleteAllRoomsRequired": {
+      "Name": "bStoredCompleteAllRoomsRequired\u0000",
+      "Type": "BoolProperty\u0000",
+      "Property": true
+    },
+    "bStoredGeneratesShops": {
+      "Name": "bStoredGeneratesShops\u0000",
+      "Type": "BoolProperty\u0000",
+      "Property": false
+    },
+    "bStoredGeneratesTreasureRooms": {
+      "Name": "bStoredGeneratesTreasureRooms\u0000",
+      "Type": "BoolProperty\u0000",
+      "Property": false
+    },
+    "bStoredGeneratesArmouryRooms": {
+      "Name": "bStoredGeneratesArmouryRooms\u0000",
+      "Type": "BoolProperty\u0000",
+      "Property": false
+    }
+}
