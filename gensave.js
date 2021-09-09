@@ -29,7 +29,7 @@ function genItemPool(name) {
 }
 
 function getCharTemplate(name) {
-    return json(`${TEMP_PATH}/characters/${name}.json`);
+    return json(`${TEMP_PATH}/characters/${name.toLowerCase()}.json`);
 }
 
 function getRunTemplate() {
