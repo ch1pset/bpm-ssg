@@ -29,15 +29,17 @@ function shuffleFisherYates(array) {
 }
 
 function genItemPool(name) {
-    let pool = ITEMPOOL[name];
+    let pool = Object.assign([], ITEMPOOL[name]);
     let ret = Object.assign({}, RUNSTORE[name]);
 
     shuffleFisherYates(pool);
 
     console.log(`${name}: `);
     console.log(pool);
-
-    pool.forEach(item => {
+    
+    pool.forEach(([item, weight]) => {
+        if(ITEMS[item] === undefined)
+            console.log(`Mislabled ${item}`)
         ret.Property.Properties.push(ITEMS[item]);
     });
     return ret;
@@ -62,141 +64,145 @@ function genSeeds() {
     return floorSeeds;
 }
 
+function roll(min, max) {
+    min = (min !== undefined) ? min : 0;
+    max = (max !== undefined) ? max : 1;
+    return Math.floor(prng.quick() * (max - min + 1)) + min; //inclusive range
+}
+
+function chooseFloors([min, max], num) {
+    let floors = [];
+    num = (num !== undefined) ? num : roll(min, max);
+    for(let i = 0; i < num; i++) {
+        let floor;
+        while(floors.includes(floor = roll(min, max)));
+        floors.push(floor);
+    }
+    return floors;
+}
+
+function assignFloor(floor, room) {
+    let ret = Object.assign({}, RUNSTORE[room]);
+    ret.Property = [floor, 1];
+    console.log(ret);
+    return ret;
+}
+
 function genRooms() {
     let ret = [];
     REQUIREMENTS.ROOMS.forEach(room => {
-        let floor, flip;
         switch(room) {
             case "LibraryBeforeArmoury":
-                for(let i = 0; i < 7; i++) {
-                    flip = Math.abs(prng.int32() % 2);
-                    if(flip === 0) {
-                        let library = Object.assign({}, RUNSTORE[room]);
-                        library.Property = [i, 1];
-                        ret.push(library);
-                    }
-                }
-                break;
+            case "BankRoomChosen":
             case "MinibossChoice":
-                for(let i = 0; i < 7; i++) {
-                    flip = Math.abs(prng.int32() % 2);
-                    if(flip === 0) {
-                        let miniboss = Object.assign({}, RUNSTORE[room]);
-                        miniboss.Property = [i, 1];
-                        ret.push(miniboss);
-                    }
-                }
+            case "ChallengeRoomChosen":
+            case "HeroRoomChosen":
+                chooseFloors([0, 9])
+                    .forEach(f => ret.push(assignFloor(f, room)));
                 break;
             case "ChoiceRoomChosen":
-                floor = Math.abs(prng.int32() % 7);
-                let well = Object.assign({}, RUNSTORE[room]);
-                well.Property = [floor, 1];
-                ret.push(well);
-                break;
-            case "BankRoomChosen":
-                for(let i = 0; i < 7; i++) {
-                    flip = Math.abs(prng.int32() % 5);
-                    if(flip === 0) {
-                        let bank = Object.assign({}, RUNSTORE[room]);
-                        bank.Property = [i, 1];
-                        ret.push(bank);
-                    }
-                }
-                break;
-            case "ChallengeRoomChosen":
-                for(let i = 0; i < 7; i++) {
-                    flip = Math.abs(prng.int32() % 2);
-                    if(flip === 0) {
-                        let challenge = Object.assign({}, RUNSTORE[room]);
-                        challenge.Property = [i, 1];
-                        ret.push(challenge);
-                    }
-                }
+            case "BlackMarketRoomChosen":
+            case "PortalRoomChosen":
+                chooseFloors([0, 6], roll())
+                    .forEach(f => ret.push(assignFloor(f, room)));
                 break;
             case "StairsRoomChosen":
-                flip = Math.abs(prng.int32() % 2);
-                let stairs = Object.assign({}, RUNSTORE[room]);
-                if(flip === 0)
-                    ret.push(stairs);
-                break;
-            case "HeroRoomChosen":
-                for(let i = 0; i < 7; i++) {
-                    flip = Math.abs(prng.int32() % 5);
-                    if(flip === 0) {
-                        let hero = Object.assign({}, RUNSTORE[room]);
-                        hero.Property = [i, 1];
-                        ret.push(hero);
-                    }
-                }
+                chooseFloors([0, 1])
+                    .forEach(f => ret.push(assignFloor(f, room)));
                 break;
             case "GamblingRoomChosen":
-                flip = [];
-                flip[0] = Math.abs(prng.int32() % 7);
-                while((flip[1] = Math.abs(prng.int32() % 7)) === flip[0]) {};
-                flip.forEach(f => {
-                    let gamble = Object.assign({}, RUNSTORE[room]);
-                    gamble.Property = [f, 1];
-                    ret.push(gamble);
-                })
-                break;
             case "RerollRoomChosen":
-                flip = [];
-                flip[0] = Math.abs(prng.int32() % 7);
-                while((flip[1] = Math.abs(prng.int32() % 7)) === flip[0]) {};
-                flip.forEach(f => {
-                    let reroll = Object.assign({}, RUNSTORE[room]);
-                    reroll.Property = [f, 1];
-                    ret.push(reroll);
-                })
+                chooseFloors([0, 6], 2)
+                    .forEach(f => ret.push(assignFloor(f, room)));
                 break;
             case "PrestigeRoomChosen":
-                if(Math.abs(prng.int32() % 2) === 0) {
-                    floor = Math.abs(prng.int32() % 2) + 2;
-                    let prestige = Object.assign({}, RUNSTORE[room]);
-                    prestige.Property = [floor, 1];
-                }
-                break;
-            case "BlackMarketRoomChosen":
-                if(Math.abs(prng.int32() % 2) === 0) {
-                    floor = Math.abs(prng.int32() % 7);
-                    let market = Object.assign({}, RUNSTORE[room]);
-                    market.Property = [floor, 1];
-                }
-                break;
-            case "PortalRoomChosen":
-                if(Math.abs(prng.int32() % 10) === 0) {
-                    floor = Math.abs(prng.int32() % 7);
-                    let market = Object.assign({}, RUNSTORE[room]);
-                    market.Property = [floor, 1];
-                }
+                chooseFloors([2, 3], roll())
+                    .forEach(f => ret.push(assignFloor(f, room)));
                 break;
         }
     })
     return ret;
 }
 
-function getCharTemplate(name) {
-    return json(`${TEMP_PATH}/characters/${name}.json`);
+function genChar() {
+    let ret = [];
+    REQUIREMENTS.RANDCHAR.forEach(prop => {
+        let p = Object.assign({}, CHARSTORE[prop]);
+        let index;
+        switch(prop) {
+        case "StoredWeapon":
+            index = roll(0, ITEMNAME.Weapon.length - 1);
+            p.Property = ITEMNAME.Weapon[index].Value;
+            break;
+        case "StoredMobilityAbility":
+            index = roll();
+            p.Property = ITEMNAME.Auxilary[index].Value;
+            break;
+        case "StoredSecondaryAbility":
+            index = roll(0, ITEMNAME.Secondary.length - 1);
+            p.Property = ITEMNAME.Secondary[index].Value;
+            break;
+        case "StoredUltimateAbility":
+            index = roll(0, ITEMNAME.Ultimate.length - 1);
+            p.Property = ITEMNAME.Ultimate[index].Value;
+            break;
+        case "StoredHeadItemAbility":
+            index = roll(0, ITEMNAME.Head.length - 1);
+            p.Property = ITEMNAME.Head[index].Value;
+            break;
+        case "StoredChestItemAbility":
+            index = roll(0, ITEMNAME.Chest.length - 1);
+            p.Property = ITEMNAME.Chest[index].Value;
+            break;
+        case "StoredArmsItemAbility":
+            index = roll(0, ITEMNAME.Arm.length - 1);
+            p.Property = ITEMNAME.Arm[index].Value;
+            break;
+        case "StoredLegsItemAbility":
+            index = roll(0, ITEMNAME.Foot.length - 1);
+            p.Property = ITEMNAME.Foot[index].Value;
+            break;
+        case "StoredHealth":
+        case "StoredShield":
+            p.Property = [0, (25 * roll(0, 7))];
+            break;
+        case "StoredCoins":
+        case "StoredKeys":
+            p.Property = [0, roll(0, 7)];
+            break;
+        }
+        ret.push(p);
+    });
+    console.log(ret);
+    return ret;
 }
 
-function getRunTemplate(diff, prng) {
+function getCharTemplate(name) {
+    let ret = json(`${TEMP_PATH}/characters/${name}.json`);
+    if(name === 'run') {
+        let tuple = ret.Properties[0];
+        genChar().forEach(prop => {
+            tuple.Properties.push(prop);
+        });
+    }
+    return ret;
+}
+
+function getRunTemplate(diff) {
     let ret = {};
     Object.assign(ret, T_RUNSTORE);
     let tuple = ret.Properties[0];
 
-    REQUIREMENTS.POOLS.forEach(pool => {
-        tuple.Properties.push(genItemPool(pool, prng))
-    });
+    REQUIREMENTS.POOLS
+        .forEach(pool => tuple.Properties.push(genItemPool(pool)));
 
     tuple.Properties.push(RUNSTORE.DIFFICULTY[diff])
 
-    genSeeds(prng).forEach(prop => {
-        tuple.Properties.push(prop);
-    })
+    genSeeds()
+        .forEach(prop => tuple.Properties.push(prop))
 
-    genRooms().forEach(prop => {
-        tuple.Properties.push(prop);
-    })
+    genRooms()
+        .forEach(prop => tuple.Properties.push(prop))
     return ret;
 }
 
