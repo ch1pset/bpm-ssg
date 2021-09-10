@@ -88,7 +88,7 @@
         },
         {
             "Value": "/Game/Blueprints/Abilities/Item/Chest/Chest_ItemCursedIron.Chest_ItemCursedIron_C\u0000",
-            "Name": "Cursed Metal"
+            "Name": "Cursed Iron"
         },
         {
             "Value": "/Game/Blueprints/Abilities/Item/Chest/Chest_ItemDoubleDamage.Chest_ItemDoubleDamage_C\u0000",
@@ -403,22 +403,22 @@
             "Name": "Pistol"
         }
     ],
-    "Auxilaries": [
-        {
-            "Value": "/Game/Blueprints/Abilities/Auxillary/Aux_DoubleTime.Aux_DoubleTime_C\u0000",
-            "Name": "Dash(Full Auto)"
-        },
+    "Auxilary": [
         {
             "Value": "/Game/Blueprints/Abilities/Auxillary/Aux_QuickStep.Aux_QuickStep_C\u0000",
             "Name": "Dash"
         },
         {
-            "Value": "/Game/Blueprints/Abilities/Auxillary/Aux_QuickStepDyingVamp.Aux_QuickStepDyingVamp_C\u0000",
-            "Name": "Dash(Skuld)"
-        },
-        {
             "Value": "/Game/Blueprints/Abilities/Auxillary/Aux_QuickStepFlying.Aux_QuickStepFlying_C\u0000",
             "Name": "Dash/Flying"
+        },
+        {
+            "Value": "/Game/Blueprints/Abilities/Auxillary/Aux_DoubleTime.Aux_DoubleTime_C\u0000",
+            "Name": "Dash(Full Auto)"
+        },
+        {
+            "Value": "/Game/Blueprints/Abilities/Auxillary/Aux_QuickStepDyingVamp.Aux_QuickStepDyingVamp_C\u0000",
+            "Name": "Dash(Skuld)"
         },
         {
             "Value": "/Game/Blueprints/Abilities/Auxillary/Aux_QuickStepFlyingLavaFloor.Aux_QuickStepFlyingLavaFloor_C\u0000",
@@ -437,7 +437,7 @@
             "Name": "Dash(Supertime)"
         }
     ],
-    "Secondaries": [
+    "Secondary": [
         {
             "Value": "/Game/Blueprints/Abilities/Secondary/Secondary_AbilityBlockArm.Secondary_AbilityBlockArm_C\u0000",
             "Name": "Block"
@@ -499,7 +499,7 @@
             "Name": "Steal Life"
         }
     ],
-    "Ultimates": [
+    "Ultimate": [
         {
             "Value": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_AbilityUltimateAlliedAngel.Ulti_AbilityUltimateAlliedAngel_C\u0000",
             "Name": "Valkyrie's Call"
@@ -553,7 +553,7 @@
             "Name": "Banking"
         }
     ],
-    "Curses": [
+    "Curse": [
         {
             "Value": "/Game/Blueprints/Abilities/Curse/Curse_BossTough.Curse_BossTough_C\u0000",
             "Name": "Godlike"
