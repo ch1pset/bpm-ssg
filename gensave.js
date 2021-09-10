@@ -52,7 +52,7 @@ function genSeeds() {
         Object.assign(gen, RUNSTORE.FloorGenerationSeeds);
         Object.assign(mod, RUNSTORE.FloorModifierFloats);
         Object.assign(play, RUNSTORE.FloorPlaySeeds);
-        gen.Property = [i, (prng.int32() % ((2**16) - 1))];
+        gen.Property = [i, (prng.int32() % (2**16))];
         mod.Property = [i, (prng.quick() * 100)];
         play.Property = [i, prng.int32()];
         floorSeeds.push(gen);
