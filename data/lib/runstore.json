@@ -202,13 +202,13 @@
             "Name":"BPMDifficulty\u0000",
             "Type":"EnumProperty\u0000",
             "EnumType":"EBPMDifficulty\u0000",
-            "Poperty":"EBPMDifficulty::BPMD_EASY\u0000"
+            "Property":"EBPMDifficulty::BPMD_EASY\u0000"
         },
         "HARD": {
             "Name":"BPMDifficulty\u0000",
             "Type":"EnumProperty\u0000",
             "EnumType":"EBPMDifficulty\u0000",
-            "Poperty":"EBPMDifficulty::BPMD_HARD\u0000"
+            "Property":"EBPMDifficulty::BPMD_HARD\u0000"
         },
         "HELLISH": {
             "Name":"BPMDifficulty\u0000",
