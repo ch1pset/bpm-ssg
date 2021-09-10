@@ -48,5 +48,19 @@
   ],
   "DIFFICULTY": [
     "BPMDifficulty"
+  ],
+  "RANDCHAR": [
+    "StoredWeapon",
+    "StoredMobilityAbility",
+    "StoredSecondaryAbility",
+    "StoredUltimateAbility",
+    "StoredHeadItemAbility",
+    "StoredChestItemAbility",
+    "StoredArmsItemAbility",
+    "StoredLegsItemAbility",
+    "StoredHealth",
+    "StoredShield",
+    "StoredCoins",
+    "StoredKeys"
   ]
 }
