@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/MacND/bpm-ssg#readme",
   "dependencies": {
-    "seedrandom": "^3.0.5"
+    "esm-seedrandom": "^3.0.5",
+    "uesavetool": "^1.1.3"
   },
-  "type":"module"
+  "type": "module"
 }
