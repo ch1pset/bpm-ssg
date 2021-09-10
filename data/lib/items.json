@@ -1482,11 +1482,11 @@
     ]
   },
   "Bolt-action Rifle": {
-    "Name": "BPMAbilityWeightPair\u0000",
+    "Name": "BPMWeaponWeightPair\u0000",
     "Type": "Tuple",
     "Properties": [
       {
-        "Name": "BPMAbility\u0000",
+        "Name": "BPMWeapon\u0000",
         "Type": "SoftObjectProperty\u0000",
         "Property": "/Game/Blueprints/Weapons/BP_BoltRifle.BP_BoltRifle_C\u0000"
       },
@@ -1501,11 +1501,11 @@
     ]
   },
   "Shotgun Pistol": {
-    "Name": "BPMAbilityWeightPair\u0000",
+    "Name": "BPMWeaponWeightPair\u0000",
     "Type": "Tuple",
     "Properties": [
       {
-        "Name": "BPMAbility\u0000",
+        "Name": "BPMWeapon\u0000",
         "Type": "SoftObjectProperty\u0000",
         "Property": "/Game/Blueprints/Weapons/BP_SpreadPistol.BP_SpreadPistol_C\u0000"
       },
@@ -1520,11 +1520,11 @@
     ]
   },
   "Energy Cannon": {
-    "Name": "BPMAbilityWeightPair\u0000",
+    "Name": "BPMWeaponWeightPair\u0000",
     "Type": "Tuple",
     "Properties": [
       {
-        "Name": "BPMAbility\u0000",
+        "Name": "BPMWeapon\u0000",
         "Type": "SoftObjectProperty\u0000",
         "Property": "/Game/Blueprints/Weapons/BP_StickyGun.BP_StickyGun_C\u0000"
       },
@@ -1539,11 +1539,11 @@
     ]
   },
   "Gauss Cannon": {
-    "Name": "BPMAbilityWeightPair\u0000",
+    "Name": "BPMWeaponWeightPair\u0000",
     "Type": "Tuple",
     "Properties": [
       {
-        "Name": "BPMAbility\u0000",
+        "Name": "BPMWeapon\u0000",
         "Type": "SoftObjectProperty\u0000",
         "Property": "/Game/Blueprints/Weapons/BP_RailGun.BP_RailGun_C\u0000"
       },
@@ -1558,11 +1558,11 @@
     ]
   },
   "Pump Shotgun": {
-    "Name": "BPMAbilityWeightPair\u0000",
+    "Name": "BPMWeaponWeightPair\u0000",
     "Type": "Tuple",
     "Properties": [
       {
-        "Name": "BPMAbility\u0000",
+        "Name": "BPMWeapon\u0000",
         "Type": "SoftObjectProperty\u0000",
         "Property": "/Game/Blueprints/Weapons/BP_Shotgun.BP_Shotgun_C\u0000"
       },
@@ -1577,11 +1577,11 @@
     ]
   },
   "Garand": {
-    "Name": "BPMAbilityWeightPair\u0000",
+    "Name": "BPMWeaponWeightPair\u0000",
     "Type": "Tuple",
     "Properties": [
       {
-        "Name": "BPMAbility\u0000",
+        "Name": "BPMWeapon\u0000",
         "Type": "SoftObjectProperty\u0000",
         "Property": "/Game/Blueprints/Weapons/BP_PingRifle.BP_PingRifle_C\u0000"
       },
@@ -1596,11 +1596,11 @@
     ]
   },
   "Raygun": {
-    "Name": "BPMAbilityWeightPair\u0000",
+    "Name": "BPMWeaponWeightPair\u0000",
     "Type": "Tuple",
     "Properties": [
       {
-        "Name": "BPMAbility\u0000",
+        "Name": "BPMWeapon\u0000",
         "Type": "SoftObjectProperty\u0000",
         "Property": "/Game/Blueprints/Weapons/BP_AlienBlaster.BP_AlienBlaster_C\u0000"
       },
@@ -1615,11 +1615,11 @@
     ]
   },
   "Burst SMG": {
-    "Name": "BPMAbilityWeightPair\u0000",
+    "Name": "BPMWeaponWeightPair\u0000",
     "Type": "Tuple",
     "Properties": [
       {
-        "Name": "BPMAbility\u0000",
+        "Name": "BPMWeapon\u0000",
         "Type": "SoftObjectProperty\u0000",
         "Property": "/Game/Blueprints/Weapons/BP_SubmachineGun.BP_SubmachineGun_C\u0000"
       },
@@ -1634,11 +1634,11 @@
     ]
   },
   "Minigun": {
-    "Name": "BPMAbilityWeightPair\u0000",
+    "Name": "BPMWeaponWeightPair\u0000",
     "Type": "Tuple",
     "Properties": [
       {
-        "Name": "BPMAbility\u0000",
+        "Name": "BPMWeapon\u0000",
         "Type": "SoftObjectProperty\u0000",
         "Property": "/Game/Blueprints/Weapons/BP_MiniGun.BP_MiniGun_C\u0000"
       },
@@ -1653,11 +1653,11 @@
     ]
   },
   "Double-Tap": {
-    "Name": "BPMAbilityWeightPair\u0000",
+    "Name": "BPMWeaponWeightPair\u0000",
     "Type": "Tuple",
     "Properties": [
       {
-        "Name": "BPMAbility\u0000",
+        "Name": "BPMWeapon\u0000",
         "Type": "SoftObjectProperty\u0000",
         "Property": "/Game/Blueprints/Weapons/BP_AutoShotty.BP_AutoShotty_C\u0000"
       },
@@ -1672,11 +1672,11 @@
     ]
   },
   "Rocket Launcher": {
-    "Name": "BPMAbilityWeightPair\u0000",
+    "Name": "BPMWeaponWeightPair\u0000",
     "Type": "Tuple",
     "Properties": [
       {
-        "Name": "BPMAbility\u0000",
+        "Name": "BPMWeapon\u0000",
         "Type": "SoftObjectProperty\u0000",
         "Property": "/Game/Blueprints/Weapons/BP_RocketLauncher.BP_RocketLauncher_C\u0000"
       },
@@ -1691,11 +1691,11 @@
     ]
   },
   "Fireball Launcher": {
-    "Name": "BPMAbilityWeightPair\u0000",
+    "Name": "BPMWeaponWeightPair\u0000",
     "Type": "Tuple",
     "Properties": [
       {
-        "Name": "BPMAbility\u0000",
+        "Name": "BPMWeapon\u0000",
         "Type": "SoftObjectProperty\u0000",
         "Property": "/Game/Blueprints/Weapons/BP_BigGun.BP_BigGun_C\u0000"
       },
@@ -1710,11 +1710,11 @@
     ]
   },
   "Revolver": {
-    "Name": "BPMAbilityWeightPair\u0000",
+    "Name": "BPMWeaponWeightPair\u0000",
     "Type": "Tuple",
     "Properties": [
       {
-        "Name": "BPMAbility\u0000",
+        "Name": "BPMWeapon\u0000",
         "Type": "SoftObjectProperty\u0000",
         "Property": "/Game/Blueprints/Weapons/BP_Revolver.BP_Revolver_C\u0000"
       },
@@ -1729,11 +1729,11 @@
     ]
   },
   "Grenade Launcher": {
-    "Name": "BPMAbilityWeightPair\u0000",
+    "Name": "BPMWeaponWeightPair\u0000",
     "Type": "Tuple",
     "Properties": [
       {
-        "Name": "BPMAbility\u0000",
+        "Name": "BPMWeapon\u0000",
         "Type": "SoftObjectProperty\u0000",
         "Property": "/Game/Blueprints/Weapons/BP_GrenadeLauncher.BP_GrenadeLauncher_C\u0000"
       },
@@ -1748,11 +1748,11 @@
     ]
   },
   "Charge Pistol": {
-    "Name": "BPMAbilityWeightPair\u0000",
+    "Name": "BPMWeaponWeightPair\u0000",
     "Type": "Tuple",
     "Properties": [
       {
-        "Name": "BPMAbility\u0000",
+        "Name": "BPMWeapon\u0000",
         "Type": "SoftObjectProperty\u0000",
         "Property": "/Game/Blueprints/Weapons/BP_Blaster.BP_Blaster_C\u0000"
       },
@@ -1767,11 +1767,11 @@
     ]
   },
   "Haunted Revolver": {
-    "Name": "BPMAbilityWeightPair\u0000",
+    "Name": "BPMWeaponWeightPair\u0000",
     "Type": "Tuple",
     "Properties": [
       {
-        "Name": "BPMAbility\u0000",
+        "Name": "BPMWeapon\u0000",
         "Type": "SoftObjectProperty\u0000",
         "Property": "/Game/Blueprints/Weapons/BP_HandCannon.BP_HandCannon_C\u0000"
       },
@@ -1786,11 +1786,11 @@
     ]
   },
   "Lever Action": {
-    "Name": "BPMAbilityWeightPair\u0000",
+    "Name": "BPMWeaponWeightPair\u0000",
     "Type": "Tuple",
     "Properties": [
       {
-        "Name": "BPMAbility\u0000",
+        "Name": "BPMWeapon\u0000",
         "Type": "SoftObjectProperty\u0000",
         "Property": "/Game/Blueprints/Weapons/BP_Winnie.BP_Winnie_C\u0000"
       },
@@ -1805,11 +1805,11 @@
     ]
   },
   "Gold Pistol": {
-    "Name": "BPMAbilityWeightPair\u0000",
+    "Name": "BPMWeaponWeightPair\u0000",
     "Type": "Tuple",
     "Properties": [
       {
-        "Name": "BPMAbility\u0000",
+        "Name": "BPMWeapon\u0000",
         "Type": "SoftObjectProperty\u0000",
         "Property": "/Game/Blueprints/Weapons/BP_GoldPistol.BP_GoldPistol_C\u0000"
       },
@@ -1824,11 +1824,11 @@
     ]
   },
   "Sawn-Off Shotgun": {
-    "Name": "BPMAbilityWeightPair\u0000",
+    "Name": "BPMWeaponWeightPair\u0000",
     "Type": "Tuple",
     "Properties": [
       {
-        "Name": "BPMAbility\u0000",
+        "Name": "BPMWeapon\u0000",
         "Type": "SoftObjectProperty\u0000",
         "Property": "/Game/Blueprints/Weapons/BP_DoubleBarrel.BP_DoubleBarrel_C\u0000"
       },
@@ -1843,11 +1843,11 @@
     ]
   },
   "Pistol": {
-    "Name": "BPMAbilityWeightPair\u0000",
+    "Name": "BPMWeaponWeightPair\u0000",
     "Type": "Tuple",
     "Properties": [
       {
-        "Name": "BPMAbility\u0000",
+        "Name": "BPMWeapon\u0000",
         "Type": "SoftObjectProperty\u0000",
         "Property": "/Game/Blueprints/Weapons/BP_Pistol.BP_Pistol_C\u0000"
       },
