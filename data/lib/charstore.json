@@ -34,37 +34,37 @@
         "Type": "SoftObjectProperty\u0000",
         "Property": ""
     },
-    "StoredSecondary": {
+    "StoredSecondaryAbility": {
         "Name": "StoredSecondaryAbility\u0000",
         "Type": "SoftObjectProperty\u0000",
         "Property": ""
     },
-    "StoredMobility": {
+    "StoredMobilityAbility": {
         "Name": "StoredMobilityAbility\u0000",
         "Type": "SoftObjectProperty\u0000",
         "Property": ""
     },
-    "StoredUltimate": {
+    "StoredUltimateAbility": {
         "Name": "StoredUltimateAbility\u0000",
         "Type": "SoftObjectProperty\u0000",
         "Property": ""
     },
-    "StoredHeadItem": {
+    "StoredHeadItemAbility": {
         "Name": "StoredHeadItemAbility\u0000",
         "Type": "SoftObjectProperty\u0000",
         "Property": ""
     },
-    "StoredChestItem": {
+    "StoredChestItemAbility": {
         "Name": "StoredChestItemAbility\u0000",
         "Type": "SoftObjectProperty\u0000",
         "Property": ""
     },
-    "StoredArmsItem": {
+    "StoredArmsItemAbility": {
         "Name": "StoredArmsItemAbility\u0000",
         "Type": "SoftObjectProperty\u0000",
         "Property": ""
     },
-    "StoredLegsItem": {
+    "StoredLegsItemAbility": {
         "Name": "StoredLegsItemAbility\u0000",
         "Type": "SoftObjectProperty\u0000",
         "Property": ""
