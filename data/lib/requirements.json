@@ -19,14 +19,20 @@
     "FutureProofingAPool",
     "FutureProofingBPool"
   ],
-  "PROPS": [
-    "FloorIndex",
+  "SEEDS": [
     "FloorGenerationSeeds",
     "FloorModifierFloats",
-    "FloorPlaySeeds",
+    "FloorPlaySeeds"
+  ],
+  "CHALLENGE": [
     "bChallenge",
-    "ChallengeNumber",
-    "BPMDifficulty",
+    "ChallengeNumber"
+  ],
+  "FLOOR": [
+    "FloorIndex",
+    "SpecialChapterVisit"
+  ],
+  "ROOMS": [
     "LibraryBeforeArmoury",
     "MinibossChoice",
     "ChoiceRoomChosen",
@@ -38,7 +44,9 @@
     "RerollRoomChosen",
     "PrestigeRoomChosen",
     "BlackMarketRoomChosen",
-    "PortalRoomChosen",
-    "SpecialChapterVisit"
+    "PortalRoomChosen"
+  ],
+  "DIFFICULTY": [
+    "BPMDifficulty"
   ]
 }
