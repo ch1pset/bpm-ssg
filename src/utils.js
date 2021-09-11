@@ -18,10 +18,6 @@ export async function json(path) {
     return JSON.parse(await fs.readFile(path, 'utf8'));
 }
 
-export async function store(path, obj) {
-    await fs.writeFile(path, JSON.stringify(obj, null, 2));
-}
-
 // Algorithm based on:
 // Weighted Random Sampling (2005; Efraimidis, Spirakis)
 //
