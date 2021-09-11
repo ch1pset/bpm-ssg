@@ -73,6 +73,13 @@ export class RunPropertyStore extends StructProperty {
         rooms.forEach(room => {
             switch(room) {
                 case "LibraryBeforeArmoury":
+                    for(let i = 0; i < 4; i++) {
+                        if(rollDice() === 0) {
+                            this.assignFloor(2*i, room);
+                            this.assignFloor(2*i+1, room);
+                        }
+                    }
+                    break;
                 case "MinibossChoice":
                     for(let i = 0; i < 4; i++) {
                         chooseFromRange([2*i, 2*i+1], 1)
