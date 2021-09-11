@@ -35,10 +35,10 @@
   "ROOMS": [
     "LibraryBeforeArmoury",
     "MinibossChoice",
+    "StairsRoomChosen",
     "ChoiceRoomChosen",
     "BankRoomChosen",
     "ChallengeRoomChosen",
-    "StairsRoomChosen",
     "HeroRoomChosen",
     "GamblingRoomChosen",
     "RerollRoomChosen",

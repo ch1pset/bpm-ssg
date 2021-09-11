@@ -19,14 +19,6 @@ const T_RUNSTORE = json(`${TEMP_PATH}/runstore.json`);
 const seed = process.argv[2];
 const prng = xorshift(seed, {state: true});
 
-function shuffleFisherYates(array) {
-    for(let i = array.length - 1; i > 0; i--) {
-        let j = Math.floor(prng.quick() * i);
-        let temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-    }
-}
 // Algorithm based on:
 // Weighted Random Sampling (2005; Efraimidis, Spirakis)
 //
@@ -56,12 +48,9 @@ function genItemPool(name) {
 function genSeeds() {
     let floorSeeds = [];
     for(let i = 0; i <= 9; i++) {
-        let gen = {};
-        let mod = {};
-        let play = {};
-        Object.assign(gen, RUNSTORE.FloorGenerationSeeds);
-        Object.assign(mod, RUNSTORE.FloorModifierFloats);
-        Object.assign(play, RUNSTORE.FloorPlaySeeds);
+        let gen = Object.assign({}, RUNSTORE.FloorGenerationSeeds);
+        let mod = Object.assign({}, RUNSTORE.FloorModifierFloats);
+        let play = Object.assign({}, RUNSTORE.FloorPlaySeeds);
         gen.Property = [i, (prng.int32() % (2**16))];
         mod.Property = [i, (prng.quick() * 100)];
         play.Property = [i, prng.int32()];
@@ -101,22 +90,34 @@ function genRooms() {
     REQUIREMENTS.ROOMS.forEach(room => {
         switch(room) {
             case "LibraryBeforeArmoury":
-            case "BankRoomChosen":
             case "MinibossChoice":
+                for(let i = 0; i < 4; i++) {
+                    chooseFloors([2*i, 2*i+1], 1)
+                        .forEach(f => ret.push(assignFloor(f, room)));
+                }
+                break;
+            case "BankRoomChosen":
             case "ChallengeRoomChosen":
             case "HeroRoomChosen":
-                chooseFloors([0, 9])
+                chooseFloors([0, 5])
                     .forEach(f => ret.push(assignFloor(f, room)));
                 break;
-            case "ChoiceRoomChosen":
             case "BlackMarketRoomChosen":
             case "PortalRoomChosen":
-                chooseFloors([0, 6], roll())
+                chooseFloors([0, 5], roll())
                     .forEach(f => ret.push(assignFloor(f, room)));
                 break;
             case "StairsRoomChosen":
-                chooseFloors([0, 1])
+                chooseFloors([0, 1], roll())
                     .forEach(f => ret.push(assignFloor(f, room)));
+                break;
+            case "ChoiceRoomChosen":
+                let floors = []
+                if(ret.findIndex(prop => prop.Name === "StairsRoomChosen\0") !== -1)
+                    floors = chooseFloors([0, 1]);
+                else 
+                    floors = chooseFloors([0, 5], 1);
+                floors.forEach(f => ret.push(assignFloor(f, room)));
                 break;
             case "GamblingRoomChosen":
             case "RerollRoomChosen":
@@ -197,8 +198,7 @@ function getCharTemplate(name) {
 }
 
 function getRunTemplate(diff) {
-    let ret = {};
-    Object.assign(ret, T_RUNSTORE);
+    let ret = Object.assign({}, T_RUNSTORE);
     let tuple = ret.Properties[0];
 
     REQUIREMENTS.POOLS
