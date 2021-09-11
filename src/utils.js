@@ -12,6 +12,9 @@ export class prng {
     static quick() {
         return this._prng.quick();
     }
+    static destroy() {
+        this._prng = {};
+    }
 }
 
 export async function json(path) {

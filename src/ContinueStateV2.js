@@ -17,8 +17,8 @@ export class ContinueStateV2 extends Gvas {
         super();
         this.Header = GvasHeader.from(T_GVAS_HEADER);
     }
-    setHeader(template) {
-        this.Header = GvasHeader.from(template);
+    get Slot() {
+        return PropertyFactory.create(SAVESLOT.ContinueStateV2);
     }
     addProperty(prop) {
         this.Properties
@@ -27,9 +27,10 @@ export class ContinueStateV2 extends Gvas {
     static seededGen(seed, char, diff) {
         let save = new ContinueStateV2();
         prng.init(seed);
-        save.addProperty(PropertyFactory.create(SAVESLOT.ContinueStateV2));
+        save.addProperty(save.Slot);
         save.addProperty(CharacterPropertyStore.generate(char));
         save.addProperty(RunPropertyStore.generate(diff));
+        prng.destroy();
         return save;
     }
 }
