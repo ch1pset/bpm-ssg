@@ -28,17 +28,23 @@ export class CharacterPropertyStore extends StructProperty {
     addProperty(prop) {
         this.Properties[0].addProperty(prop);
     }
-    genLoadout(num) {
-        let loadout = Object.entries(REQUIREMENTS.LOADOUT);
-        prng.choose([0, loadout.length - 1], num)
-            .forEach(f => {
-                let selection = ITEMS.filter(([n, i]) => i.Type === loadout[f][1]);
-                let p = Object.assign({}, CHARSTORE[loadout[f][0]]);
+    selectItem(list, num) {
+        prng.choose([0, list.length - 1], num)
+            .forEach(i => {
+                let selection = ITEMS.filter(([n, item]) => item.Type === list[i][1]);
+                let p = Object.assign({}, CHARSTORE[list[i][0]]);
                 let index = prng.range(0, selection.length - 1);
                 p.Property = selection[index][1].Value;
                 this.addProperty(p);
                 console.log(p);
             })
+    }
+    genLoadout(opts) {
+        let loadout = Object.entries(REQUIREMENTS.LOADOUT);
+        let abilities = loadout.slice(0, 2);
+        let storeditems = loadout.slice(2, 6);
+        this.selectItem(abilities, opts.all ? 2 : prng.range(0, 2));
+        this.selectItem(storeditems, opts.all ? 4 : opts.num);
     }
     genChar(prop) {
         let p = Object.assign({}, CHARSTORE[prop]);
@@ -74,7 +80,7 @@ export class CharacterPropertyStore extends StructProperty {
         if(name === 'run') {
             REQUIREMENTS.RANDCHAR
                 .forEach(prop => ret.genChar(prop));
-            ret.genLoadout(2);
+            ret.genLoadout({num: 1});
         }
         return ret;
     }
