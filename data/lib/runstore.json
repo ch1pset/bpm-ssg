@@ -369,5 +369,37 @@
             0,
             1
         ]
+    },
+    "BPMAbilityWeightPair": {
+        "Name": "BPMAbilityWeightPair\u0000",
+        "Type": "Tuple",
+        "Properties": [
+            {
+            "Name": "BPMAbility\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": ""
+            },
+            {
+            "Name": "Weight\u0000",
+            "Type": "FloatProperty\u0000",
+            "Property": []
+            }
+        ]
+    },
+    "BPMWeaponWeightPair": {
+    "Name": "BPMWeaponWeightPair\u0000",
+    "Type": "Tuple",
+    "Properties": [
+        {
+            "Name": "BPMWeapon\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": ""
+        },
+        {
+            "Name": "Weight\u0000",
+            "Type": "FloatProperty\u0000",
+            "Property": []
+        }
+    ]
     }
 }

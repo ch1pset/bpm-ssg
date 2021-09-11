@@ -19,3 +19,4 @@ export * from './CharacterPropertyStore.js';
 export * from './RunPropertyStore.js';
 export * from './PropertyStore.js';
 export * from './ContinueStateV2.js';
+export * from './ItemWeightPair.js';

@@ -7,8 +7,7 @@ import {
     CHARSTORE,
     ITEMNAME,
     REQUIREMENTS,
-    rollDice, 
-    chooseFromRange,
+    prng,
     PropertyStore
 } from './index.js'
 
@@ -30,14 +29,14 @@ export class CharacterPropertyStore extends StructProperty {
         this.Properties[0].addProperty(prop);
     }
     genLoadout(num) {
-        let items = Object.keys(REQUIREMENTS.LOADOUT);
-        chooseFromRange([0, items.length - 1], num)
+        let items = Object.entries(REQUIREMENTS.LOADOUT);
+        let itemnames = Object.entries(ITEMNAME);
+        prng.choose([0, items.length - 1], num)
             .forEach(f => {
-                let item = items[f];
-                let type = REQUIREMENTS.LOADOUT[item]
-                let p = Object.assign({}, CHARSTORE[item]);
-                let index = rollDice(0, ITEMNAME[type].length - 1);
-                p.Property = ITEMNAME[type][index].Value;
+                let selection = itemnames.filter(([name, item]) => item.Type === items[f][1]);
+                let p = Object.assign({}, CHARSTORE[items[f][0]]);
+                let index = prng.range(0, selection.length - 1);
+                p.Property = selection[index][1].Value;
                 this.addProperty(p);
                 console.log(p);
             })
@@ -45,22 +44,26 @@ export class CharacterPropertyStore extends StructProperty {
     genChar(prop) {
         let p = Object.assign({}, CHARSTORE[prop]);
         let index;
+        let itemnames = Object.entries(ITEMNAME);
+        let selection = []
         switch(prop) {
             case "StoredWeapon":
-                index = rollDice(0, ITEMNAME.Weapon.length - 1);
-                p.Property = ITEMNAME.Weapon[index].Value;
+                selection = itemnames.filter(([name, item]) => item.Type === 'Weapon');
+                index = prng.range(0, selection.length - 1);
+                p.Property = selection[index][1].Value;
                 break;
             case "StoredMobilityAbility":
-                index = rollDice();
-                p.Property = ITEMNAME.Auxilary[index].Value;
+                selection = itemnames.filter(([name, item]) => item.Type === 'Weapon');
+                index = prng.range(0, selection.length - 1);
+                p.Property = selection[index][1].Value;
                 break;
             case "StoredHealth":
             case "StoredShield":
-                p.Property = [0, (25 * rollDice(0, 7))];
+                p.Property = [0, (25 * prng.range(0, 7))];
                 break;
             case "StoredCoins":
             case "StoredKeys":
-                p.Property = [0, rollDice(0, 7)];
+                p.Property = [0, prng.range(0, 7)];
                 break;
         }
         this.addProperty(p);

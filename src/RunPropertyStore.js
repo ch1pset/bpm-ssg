@@ -9,10 +9,9 @@ import {
     ITEMPOOL,
     ITEMS,
     prng,
-    rollDice, 
-    chooseFromRange, 
-    weightedShuffle,
-    PropertyStore 
+    PropertyStore,
+    ItemWeightPair,
+    ITEMNAME
 } from './index.js';
 
 export class RunPropertyStore extends StructProperty {
@@ -38,15 +37,25 @@ export class RunPropertyStore extends StructProperty {
     }
     genItemPool(name) {
         let item_pool = Object.assign({}, RUNSTORE[name]);
-        let pool = weightedShuffle(ITEMPOOL[name]);
+        let pool = prng.shuffle(ITEMPOOL[name]);
     
         console.log(`${name}: `);
         console.log(pool);
         
         pool.forEach(([item, weight]) => {
-            if(ITEMS[item] === undefined)
-                console.log(`Mislabled ${item}`)
-            item_pool.Property.Properties.push(ITEMS[item]);
+            if(ITEMNAME[item] === undefined)
+                console.log(`Mislabled/Missing Item: ${item}`)
+            else {
+                let item_weight_pair;
+                if(ITEMNAME[item].Type === 'Weapon')
+                    item_weight_pair = ItemWeightPair.from(RUNSTORE['BPMWeaponWeightPair'])
+                else 
+                    item_weight_pair = ItemWeightPair.from(RUNSTORE['BPMAbilityWeightPair'])
+
+                item_weight_pair.Item = ITEMNAME[item].Value;
+                item_weight_pair.Weight = weight;
+                item_pool.Property.Properties.push(item_weight_pair);
+            }
         });
         this.addProperty(item_pool);
     }
@@ -55,8 +64,8 @@ export class RunPropertyStore extends StructProperty {
             let gen = Object.assign({}, RUNSTORE.FloorGenerationSeeds);
             let mod = Object.assign({}, RUNSTORE.FloorModifierFloats);
             let play = Object.assign({}, RUNSTORE.FloorPlaySeeds);
-            gen.Property = [i, (prng.int32() % (2**16))];
-            mod.Property = [i, (prng.quick() * 100)];
+            gen.Property = [i, prng.int16()];
+            mod.Property = [i, prng.range(0, 100)];
             play.Property = [i, prng.int32()];
             this.addProperty(gen);
             this.addProperty(mod);
@@ -74,7 +83,7 @@ export class RunPropertyStore extends StructProperty {
             switch(room) {
                 case "LibraryBeforeArmoury":
                     for(let i = 0; i < 4; i++) {
-                        if(rollDice() === 0) {
+                        if(prng.range() === 0) {
                             this.assignFloor(2*i, room);
                             this.assignFloor(2*i+1, room);
                         }
@@ -82,40 +91,40 @@ export class RunPropertyStore extends StructProperty {
                     break;
                 case "MinibossChoice":
                     for(let i = 0; i < 4; i++) {
-                        chooseFromRange([2*i, 2*i+1], 1)
+                        prng.choose([2*i, 2*i+1], 1)
                             .forEach(f => this.assignFloor(f, room));
                     }
                     break;
                 case "BankRoomChosen":
                 case "ChallengeRoomChosen":
                 case "HeroRoomChosen":
-                    chooseFromRange([0, 5])
+                    prng.choose([0, 5])
                         .forEach(f => this.assignFloor(f, room));
                     break;
                 case "BlackMarketRoomChosen":
                 case "PortalRoomChosen":
-                    chooseFromRange([0, 5], rollDice())
+                    prng.choose([0, 5], prng.range())
                         .forEach(f => this.assignFloor(f, room));
                     break;
                 case "StairsRoomChosen":
-                    chooseFromRange([0, 0], rollDice()) //stairs can only be on floor 0
+                    prng.choose([0, 0], prng.range()) //stairs can only be on floor 0
                         .forEach(f => this.assignFloor(f, room));
                     break;
                 case "ChoiceRoomChosen":
                     let floors = []
                     if(this.Properties[0].has("StairsRoomChosen\0"))
-                        floors = chooseFromRange([0, 1]);
+                        floors = prng.choose([0, 1]);
                     else 
-                        floors = chooseFromRange([0, 5], 1);
+                        floors = prng.choose([0, 5], 1);
                     floors.forEach(f => this.assignFloor(f, room));
                     break;
                 case "GamblingRoomChosen":
                 case "RerollRoomChosen":
-                    chooseFromRange([0, 6], 2)
+                    prng.choose([0, 6], 2)
                         .forEach(f => this.assignFloor(f, room));
                     break;
                 case "PrestigeRoomChosen":
-                    chooseFromRange([2, 3], rollDice())
+                    prng.choose([2, 3], prng.range())
                         .forEach(f => this.assignFloor(f, room));
                     break;
             }

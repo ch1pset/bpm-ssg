@@ -1,598 +1,578 @@
 {
-    "Head": [
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Head/Head_ItemAttatchExplosives.Head_ItemAttatchExplosives_C\u0000",
-            "Name": "Hat of Madness"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Head/Head_ItemCriticalMultiplier.Head_ItemCriticalMultiplier_C\u0000",
-            "Name": "Helm of Precision"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Head/Head_ItemDeadeye.Head_ItemDeadeye_C\u0000",
-            "Name": "Deadeye Lens"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Head/Head_ItemEchoShot.Head_ItemEchoShot_C\u0000",
-            "Name": "Ymir's Crown"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Head/Head_ItemExplodingShots.Head_ItemExplodingShots_C\u0000",
-            "Name": "Horned Shot"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Head/Head_ItemFluffy.Head_ItemFluffy_C\u0000",
-            "Name": "Fluffy"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Head/Head_ItemFullHorns.Head_ItemFullHorns_C\u0000",
-            "Name": "Helm-heim"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Head/Head_ItemFullRoman.Head_ItemFullRoman_C\u0000",
-            "Name": "Short Horned"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Head/Head_ItemHeadSpeed.Head_ItemHeadSpeed_C\u0000",
-            "Name": "Hermóðr the Messenger"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Head/Head_ItemMindFlay.Head_ItemMindFlay_C\u0000",
-            "Name": "Selðr's Hat"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Head/Head_ItemMoon.Head_ItemMoon_C\u0000",
-            "Name": "Mani"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Head/Head_ItemOpeningChord.Head_ItemOpeningChord_C\u0000",
-            "Name": "The Secret Chord"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Head/Head_ItemOrc.Head_ItemOrc_C\u0000",
-            "Name": "Ogre's Helm"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Head/Head_ItemRageMutliplier.Head_ItemRageMutliplier_C\u0000",
-            "Name": "Helm of Rage"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Head/Head_ItemReflectDamage.Head_ItemReflectDamage_C\u0000",
-            "Name": "Equity"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Head/Head_ItemSwapAbilities.Head_ItemSwapAbilities_C\u0000",
-            "Name": "Adventurer's Fedora"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Head/Head_ItemVampHealth.Head_ItemVampHealth_C\u0000",
-            "Name": "Circlet of the Serpentine"
-        }
-    ],
-    "Chest": [
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Chest/Chest_ItemArmourBreastplate.Chest_ItemArmourBreastplate_C\u0000",
-            "Name": "Skjaldmeyjar's Plate"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Chest/Chest_ItemBlankShield.Chest_ItemBlankShield_C\u0000",
-            "Name": "Masquerade"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Chest/Chest_ItemCooldownReduction.Chest_ItemCooldownReduction_C\u0000",
-            "Name": "Battle Lion Shield"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Chest/Chest_ItemCriticalChance.Chest_ItemCriticalChance_C\u0000",
-            "Name": "Berserker's Arm"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Chest/Chest_ItemCursedIron.Chest_ItemCursedIron_C\u0000",
-            "Name": "Cursed Iron"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Chest/Chest_ItemDoubleDamage.Chest_ItemDoubleDamage_C\u0000",
-            "Name": "Face of Death"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Chest/Chest_ItemExtraFirebolts.Chest_ItemExtraFirebolts_C\u0000",
-            "Name": "Richeous Sun"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Chest/Chest_ItemInfiniteAmmo.Chest_ItemInfiniteAmmo_C\u0000",
-            "Name": "The Best Defense"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Chest/Chest_ItemJumpStrength.Chest_ItemJumpStrength_C\u0000",
-            "Name": "Springhel"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Chest/Chest_ItemLightningCleave.Chest_ItemLightningCleave_C\u0000",
-            "Name": "Storm"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Chest/Chest_ItemMagicFortify.Chest_ItemMagicFortify_C\u0000",
-            "Name": "Triquetra"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Chest/Chest_ItemRangeDouble.Chest_ItemRangeDouble_C\u0000",
-            "Name": "Gungnir's Partner"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Chest/Chest_ItemRegeneratingBreastPlate.Chest_ItemRegeneratingBreastPlate_C\u0000",
-            "Name": "Dragon's Skin"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Chest/Chest_ItemRevive.Chest_ItemRevive_C\u0000",
-            "Name": "Lion Heart"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Chest/Chest_ItemSlowProjectileShield.Chest_ItemSlowProjectileShield_C\u0000",
-            "Name": "Loki's Shield"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Chest/Chest_ItemTallShield.Chest_ItemTallShield_C\u0000",
-            "Name": "Svalinn"
-        }
-    ],
-    "Arm": [
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Arm/Arm_DwemerRing.Arm_DwemerRing_C\u0000",
-            "Name": "Dwarven Ring"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Arm/Arm_EagleEye.Arm_EagleEye_C\u0000",
-            "Name": "Raven God"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Arm/Arm_HighAltitudeGloves.Arm_HighAltitudeGloves_C\u0000",
-            "Name": "Spacewalker"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Arm/Arm_ItemConsumeSlotToGetStatBoost.Arm_ItemConsumeSlotToGetStatBoost_C\u0000",
-            "Name": "Loki's Bargain"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Arm/Arm_ItemDoubleHealingEffects.Arm_ItemDoubleHealingEffects_C\u0000",
-            "Name": "Gunnr's Bracer"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Arm/Arm_ItemEnemiesRainGold.Arm_ItemEnemiesRainGold_C\u0000",
-            "Name": "Golden Bracelet"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Arm/Arm_ItemGunFiresTwice.Arm_ItemGunFiresTwice_C\u0000",
-            "Name": "Quaternote"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Arm/Arm_ItemMedallion.Arm_ItemMedallion_C\u0000",
-            "Name": "Megingjord"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Arm/Arm_ItemMultiCleavingAttacks.Arm_ItemMultiCleavingAttacks_C\u0000",
-            "Name": "Memento Mori"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Arm/Arm_ItemPenetratingShots.Arm_ItemPenetratingShots_C\u0000",
-            "Name": "Sigrdrifa's Bracer"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Arm/Arm_ItemPureGoodness.Arm_ItemPureGoodness_C\u0000",
-            "Name": "Midgard Bracelet"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Arm/Arm_ItemSlowEnemies.Arm_ItemSlowEnemies_C\u0000",
-            "Name": "Asp's Whisper"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Arm/Arm_ItemSpeedUpArm.Arm_ItemSpeedUpArm_C\u0000",
-            "Name": "Go Faster Glove"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Arm/Arm_ItemWallPenetration.Arm_ItemWallPenetration_C\u0000",
-            "Name": "Powershot Glove"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Arm/Arm_Quickloader.Arm_Quickloader_C\u0000",
-            "Name": "Six-shooter"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Arm/Arm_RevealMap.Arm_RevealMap_C\u0000",
-            "Name": "Dwarven Braclet"
-        }
-    ],
-    "Foot": [
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Foot/Boots_GoldenGreaves.Boots_GoldenGreaves_C\u0000",
-            "Name": "Njord's Greaves"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Foot/Boots_ItemBonusSpeedAfterFire.Boots_ItemBonusSpeedAfterFire_C\u0000",
-            "Name": "Tumbler's Boots"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Foot/Boots_ItemClogsWooden.Boots_ItemClogsWooden_C\u0000",
-            "Name": "Aslög's Clogs"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Foot/Boots_ItemCreepBoots.Boots_ItemCreepBoots_C\u0000",
-            "Name": "Poison Boots"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Foot/Boots_ItemCriticalsAddDOT.Boots_ItemCriticalsAddDOT_C\u0000",
-            "Name": "Spurs of Justice"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Foot/Boots_ItemEnchantedGreaves.Boots_ItemEnchantedGreaves_C\u0000",
-            "Name": "Seiðr's Blessing"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Foot/Boots_ItemHeavyMetalBoots.Boots_ItemHeavyMetalBoots_C\u0000",
-            "Name": "Boots of Rock"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Foot/Boots_ItemHopliteGreaves.Boots_ItemHopliteGreaves_C\u0000",
-            "Name": "Hermod's Greaves"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Foot/Boots_ItemJumpBoots.Boots_ItemJumpBoots_C\u0000",
-            "Name": "Angelic Boots"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Foot/Boots_ItemPercentageDamageOnShot.Boots_ItemPercentageDamageOnShot_C\u0000",
-            "Name": "Giant Slayer Boots"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Foot/Boots_ItemRandomDamageOnBeat.Boots_ItemRandomDamageOnBeat_C\u0000",
-            "Name": "Rhythmic Chaos Boots"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Foot/Boots_ItemSpeedBoots.Boots_ItemSpeedBoots_C\u0000",
-            "Name": "Odin's Sneakers"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Foot/Boots_ItemStrafeBoots.Boots_ItemStrafeBoots_C\u0000",
-            "Name": "Skates of Strafe"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Foot/Boots_ItemTramplingBoots.Boots_ItemTramplingBoots_C\u0000",
-            "Name": "Tampling Boots"
-        }
-    ],
-    "Upgrades": [
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Upgrades/BP_ClipUp.BP_ClipUp_C\u0000",
-            "Name": "Clip Up"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Upgrades/BP_ItemAbilityPowerUp.BP_ItemAbilityPowerUp_C\u0000",
-            "Name": "Ability Up"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Upgrades/BP_ItemBagOfCoins.BP_ItemBagOfCoins_C\u0000",
-            "Name": "Coin Bag"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Upgrades/BP_ItemConvertShieldsToHealth.BP_ItemConvertShieldsToHealth_C\u0000",
-            "Name": "Shield Converter"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Upgrades/BP_ItemCriticalUp.BP_ItemCriticalUp_C\u0000",
-            "Name": "Precision Up"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Upgrades/BP_ItemDamageUp.BP_ItemDamageUp_C\u0000",
-            "Name": "Damage Up"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Upgrades/BP_ItemHeart.BP_ItemHeart_C\u0000",
-            "Name": "Small Healing Potion"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Upgrades/BP_ItemHeartContainer.BP_ItemHeartContainer_C\u0000",
-            "Name": "Heart Container"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Upgrades/BP_ItemKey.BP_ItemKey_C\u0000",
-            "Name": "Key"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Upgrades/BP_ItemLuckUp.BP_ItemLuckUp_C\u0000",
-            "Name": "Luck Up"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Upgrades/BP_ItemLuckyDice.BP_ItemLuckyDice_C\u0000",
-            "Name": "Lucky Dice"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Upgrades/BP_ItemRangeUp.BP_ItemRangeUp_C\u0000",
-            "Name": "Range Up"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Upgrades/BP_ItemShield.BP_ItemShield_C\u0000",
-            "Name": "Shield"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Upgrades/BP_ItemSpeedUp.BP_ItemSpeedUp_C\u0000",
-            "Name": "Speed Up"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Item/Upgrades/BP_SkeletonKey.BP_SkeletonKey_C\u0000",
-            "Name": "Skeleton Key"
-        }
-    ],
-    "Weapon": [
-        {
-            "Value": "/Game/Blueprints/Weapons/BP_BoltRifle.BP_BoltRifle_C\u0000",
-            "Name": "Bolt-action Rifle"
-        },
-        {
-            "Value": "/Game/Blueprints/Weapons/BP_SpreadPistol.BP_SpreadPistol_C\u0000",
-            "Name": "Shotgun Pistol"
-        },
-        {
-            "Value": "/Game/Blueprints/Weapons/BP_StickyGun.BP_StickyGun_C\u0000",
-            "Name": "Energy Cannon"
-        },
-        {
-            "Value": "/Game/Blueprints/Weapons/BP_RailGun.BP_RailGun_C\u0000",
-            "Name": "Gauss Cannon"
-        },
-        {
-            "Value": "/Game/Blueprints/Weapons/BP_Shotgun.BP_Shotgun_C\u0000",
-            "Name": "Pump Shotgun"
-        },
-        {
-            "Value": "/Game/Blueprints/Weapons/BP_PingRifle.BP_PingRifle_C\u0000",
-            "Name": "Garand"
-        },
-        {
-            "Value": "/Game/Blueprints/Weapons/BP_AlienBlaster.BP_AlienBlaster_C\u0000",
-            "Name": "Raygun"
-        },
-        {
-            "Value": "/Game/Blueprints/Weapons/BP_SubmachineGun.BP_SubmachineGun_C\u0000",
-            "Name": "Burst SMG"
-        },
-        {
-            "Value": "/Game/Blueprints/Weapons/BP_MiniGun.BP_MiniGun_C\u0000",
-            "Name": "Minigun"
-        },
-        {
-            "Value": "/Game/Blueprints/Weapons/BP_AutoShotty.BP_AutoShotty_C\u0000",
-            "Name": "Double-Tap"
-        },
-        {
-            "Value": "/Game/Blueprints/Weapons/BP_RocketLauncher.BP_RocketLauncher_C\u0000",
-            "Name": "Rocket Launcher"
-        },
-        {
-            "Value": "/Game/Blueprints/Weapons/BP_BigGun.BP_BigGun_C\u0000",
-            "Name": "Fireball Launcher"
-        },
-        {
-            "Value": "/Game/Blueprints/Weapons/BP_Revolver.BP_Revolver_C\u0000",
-            "Name": "Revolver"
-        },
-        {
-            "Value": "/Game/Blueprints/Weapons/BP_GrenadeLauncher.BP_GrenadeLauncher_C\u0000",
-            "Name": "Grenade Launcher"
-        },
-        {
-            "Value": "/Game/Blueprints/Weapons/BP_Blaster.BP_Blaster_C\u0000",
-            "Name": "Charge Pistol"
-        },
-        {
-            "Value": "/Game/Blueprints/Weapons/BP_HandCannon.BP_HandCannon_C\u0000",
-            "Name": "Haunted Revolver"
-        },
-        {
-            "Value": "/Game/Blueprints/Weapons/BP_Winnie.BP_Winnie_C\u0000",
-            "Name": "Lever Action"
-        },
-        {
-            "Value": "/Game/Blueprints/Weapons/BP_GoldPistol.BP_GoldPistol_C\u0000",
-            "Name": "Gold Pistol"
-        },
-        {
-            "Value": "/Game/Blueprints/Weapons/BP_DoubleBarrel.BP_DoubleBarrel_C\u0000",
-            "Name": "Sawn-Off Shotgun"
-        },
-        {
-            "Value": "/Game/Blueprints/Weapons/BP_Pistol.BP_Pistol_C\u0000",
-            "Name": "Pistol"
-        }
-    ],
-    "Auxilary": [
-        {
-            "Value": "/Game/Blueprints/Abilities/Auxillary/Aux_QuickStep.Aux_QuickStep_C\u0000",
-            "Name": "Dash"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Auxillary/Aux_QuickStepFlying.Aux_QuickStepFlying_C\u0000",
-            "Name": "Dash/Flying"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Auxillary/Aux_DoubleTime.Aux_DoubleTime_C\u0000",
-            "Name": "Dash(Full Auto)"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Auxillary/Aux_QuickStepDyingVamp.Aux_QuickStepDyingVamp_C\u0000",
-            "Name": "Dash(Skuld)"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Auxillary/Aux_QuickStepFlyingLavaFloor.Aux_QuickStepFlyingLavaFloor_C\u0000",
-            "Name": "Dash/Flying(Floor Is Lava)"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Auxillary/Aux_QuickStepGolden.Aux_QuickStepGolden_C\u0000",
-            "Name": "Dash(Herfjoter)"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Auxillary/Aux_QuickStepRetro.Aux_QuickStepRetro_C\u0000",
-            "Name": "Dash(Retro)"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Auxillary/Aux_TimeStep.Aux_TimeStep_C\u0000",
-            "Name": "Dash(Supertime)"
-        }
-    ],
-    "Secondary": [
-        {
-            "Value": "/Game/Blueprints/Abilities/Secondary/Secondary_AbilityBlockArm.Secondary_AbilityBlockArm_C\u0000",
-            "Name": "Block"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Secondary/Secondary_AbilityFreeze.Secondary_AbilityFreeze_C\u0000",
-            "Name": "Frost Bolt"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Secondary/Secondary_BurstAttack.Secondary_BurstAttack_C\u0000",
-            "Name": "Rhythm Burst"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Secondary/Secondary_ClapExplosion.Secondary_ClapExplosion_C\u0000",
-            "Name": "Thunderclap"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Secondary/Secondary_CoinThrow.Secondary_CoinThrow_C\u0000",
-            "Name": "Burning Coin"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Secondary/Secondary_CursedDamageAll.Secondary_CursedDamageAll_C\u0000",
-            "Name": "Celestial Wave"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Secondary/Secondary_FireBolt.Secondary_FireBolt_C\u0000",
-            "Name": "Fire Bolt"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Secondary/Secondary_Flak.Secondary_Flak_C\u0000",
-            "Name": "Broken Burst"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Secondary/Secondary_ManaShield.Secondary_ManaShield_C\u0000",
-            "Name": "Valkyrie's Veil"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Secondary/Secondary_MarkForDeath.Secondary_MarkForDeath_C\u0000",
-            "Name": "Mortal Curse"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Secondary/Secondary_Snipe.Secondary_Snipe_C\u0000",
-            "Name": "Snipe"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Secondary/Secondary_SpawnBarrel.Secondary_SpawnBarrel_C\u0000",
-            "Name": "Sacred Sapper"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Secondary/Secondary_Teleport.Secondary_Teleport_C\u0000",
-            "Name": "Teleport"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Secondary/Secondary_Unrelenting.Secondary_Unrelenting_C\u0000",
-            "Name": "Undying Strength"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Secondary/Secondary_VampAttack.Secondary_VampAttack_C\u0000",
-            "Name": "Steal Life"
-        }
-    ],
-    "Ultimate": [
-        {
-            "Value": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_AbilityUltimateAlliedAngel.Ulti_AbilityUltimateAlliedAngel_C\u0000",
-            "Name": "Valkyrie's Call"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_AbilityUltimateBigSnap.Ulti_AbilityUltimateBigSnap_C\u0000",
-            "Name": "Snap Fingers"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_AbilityUltimateDiscount.Ulti_AbilityUltimateDiscount_C\u0000",
-            "Name": "Barter"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_AbilityUltimateGenerateCoins.Ulti_AbilityUltimateGenerateCoins_C\u0000",
-            "Name": "Njord's Riches"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_AbilityUltimateHeal.Ulti_AbilityUltimateHeal_C\u0000",
-            "Name": "Elli's Touch"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_AbilityUltimateLuckForHealth.Ulti_AbilityUltimateLuckForHealth_C\u0000",
-            "Name": "Cursed Luck"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_AbilityUltimateMegaShot.Ulti_AbilityUltimateMegaShot_C\u0000",
-            "Name": "Mjolnir"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_AbilityUltimateRegenForTime.Ulti_AbilityUltimateRegenForTime_C\u0000",
-            "Name": "Odin's Blessing"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_AbilityUltimateSpeedBuff.Ulti_AbilityUltimateSpeedBuff_C\u0000",
-            "Name": "Hermóðr's Enchantment"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_AbilityUltimateTheQuest.Ulti_AbilityUltimateTheQuest_C\u0000",
-            "Name": "The Quest"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_ConvertToCoins.Ulti_ConvertToCoins_C\u0000",
-            "Name": "Geri's Audit"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_GenerateChest.Ulti_GenerateChest_C\u0000",
-            "Name": "Sigyn's Help"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_RemoteBank.Ulti_RemoteBank_C\u0000",
-            "Name": "Banking"
-        }
-    ],
-    "Curse": [
-        {
-            "Value": "/Game/Blueprints/Abilities/Curse/Curse_BossTough.Curse_BossTough_C\u0000",
-            "Name": "Godlike"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Curse/Curse_Damocles.Curse_Damocles_C\u0000",
-            "Name": "Runner"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Curse/Curse_Dying.Curse_Dying_C\u0000",
-            "Name": "Bleeding"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Curse/Curse_FastProjectiles.Curse_FastProjectiles_C\u0000",
-            "Name": "Twitch"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Curse/Curse_Gambit.Curse_Gambit_C\u0000",
-            "Name": "Gambit"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Curse/Curse_LowerAmmo.Curse_LowerAmmo_C\u0000",
-            "Name": "Want"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Curse/Curse_Mania.Curse_Mania_C\u0000",
-            "Name": "Mania!"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Curse/Curse_PlayerFragile.Curse_PlayerFragile_C\u0000",
-            "Name": "Fragile"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Curse/Curse_Shopless.Curse_Shopless_C\u0000",
-            "Name": "Poverty"
-        },
-        {
-            "Value": "/Game/Blueprints/Abilities/Curse/Curse_Toughened.Curse_Toughened_C\u0000",
-            "Name": "Fabled"
-        }
-    ]
+    "Hat of Madness": {
+        "Type": "Head",
+        "Value": "/Game/Blueprints/Abilities/Item/Head/Head_ItemAttatchExplosives.Head_ItemAttatchExplosives_C\u0000"
+    },
+    "Helm of Precision": {
+        "Type": "Head",
+        "Value": "/Game/Blueprints/Abilities/Item/Head/Head_ItemCriticalMultiplier.Head_ItemCriticalMultiplier_C\u0000"
+    },
+    "Deadeye Lens": {
+        "Type": "Head",
+        "Value": "/Game/Blueprints/Abilities/Item/Head/Head_ItemDeadeye.Head_ItemDeadeye_C\u0000"
+    },
+    "Ymir's Crown": {
+        "Type": "Head",
+        "Value": "/Game/Blueprints/Abilities/Item/Head/Head_ItemEchoShot.Head_ItemEchoShot_C\u0000"
+    },
+    "Horned Shot": {
+        "Type": "Head",
+        "Value": "/Game/Blueprints/Abilities/Item/Head/Head_ItemExplodingShots.Head_ItemExplodingShots_C\u0000"
+    },
+    "Fluffy": {
+        "Type": "Head",
+        "Value": "/Game/Blueprints/Abilities/Item/Head/Head_ItemFluffy.Head_ItemFluffy_C\u0000"
+    },
+    "Helm-heim": {
+        "Type": "Head",
+        "Value": "/Game/Blueprints/Abilities/Item/Head/Head_ItemFullHorns.Head_ItemFullHorns_C\u0000"
+    },
+    "Short Horned": {
+        "Type": "Head",
+        "Value": "/Game/Blueprints/Abilities/Item/Head/Head_ItemFullRoman.Head_ItemFullRoman_C\u0000"
+    },
+    "Hermóðr the Messenger": {
+        "Type": "Head",
+        "Value": "/Game/Blueprints/Abilities/Item/Head/Head_ItemHeadSpeed.Head_ItemHeadSpeed_C\u0000"
+    },
+    "Selðr's Hat": {
+        "Type": "Head",
+        "Value": "/Game/Blueprints/Abilities/Item/Head/Head_ItemMindFlay.Head_ItemMindFlay_C\u0000"
+    },
+    "Mani": {
+        "Type": "Head",
+        "Value": "/Game/Blueprints/Abilities/Item/Head/Head_ItemMoon.Head_ItemMoon_C\u0000"
+    },
+    "The Secret Chord": {
+        "Type": "Head",
+        "Value": "/Game/Blueprints/Abilities/Item/Head/Head_ItemOpeningChord.Head_ItemOpeningChord_C\u0000"
+    },
+    "Ogre's Helm": {
+        "Type": "Head",
+        "Value": "/Game/Blueprints/Abilities/Item/Head/Head_ItemOrc.Head_ItemOrc_C\u0000"
+    },
+    "Helm of Rage": {
+        "Type": "Head",
+        "Value": "/Game/Blueprints/Abilities/Item/Head/Head_ItemRageMutliplier.Head_ItemRageMutliplier_C\u0000"
+    },
+    "Equity": {
+        "Type": "Head",
+        "Value": "/Game/Blueprints/Abilities/Item/Head/Head_ItemReflectDamage.Head_ItemReflectDamage_C\u0000"
+    },
+    "Adventurer's Fedora": {
+        "Type": "Head",
+        "Value": "/Game/Blueprints/Abilities/Item/Head/Head_ItemSwapAbilities.Head_ItemSwapAbilities_C\u0000"
+    },
+    "Circlet of the Serpentine": {
+        "Type": "Head",
+        "Value": "/Game/Blueprints/Abilities/Item/Head/Head_ItemVampHealth.Head_ItemVampHealth_C\u0000"
+    },
+    "Skjaldmeyjar's Plate": {
+        "Type": "Chest",
+        "Value": "/Game/Blueprints/Abilities/Item/Chest/Chest_ItemArmourBreastplate.Chest_ItemArmourBreastplate_C\u0000"
+    },
+    "Masquerade": {
+        "Type": "Chest",
+        "Value": "/Game/Blueprints/Abilities/Item/Chest/Chest_ItemBlankShield.Chest_ItemBlankShield_C\u0000"
+    },
+    "Battle Lion Shield": {
+        "Type": "Chest",
+        "Value": "/Game/Blueprints/Abilities/Item/Chest/Chest_ItemCooldownReduction.Chest_ItemCooldownReduction_C\u0000"
+    },
+    "Berserker's Arm": {
+        "Type": "Chest",
+        "Value": "/Game/Blueprints/Abilities/Item/Chest/Chest_ItemCriticalChance.Chest_ItemCriticalChance_C\u0000"
+    },
+    "Cursed Iron": {
+        "Type": "Chest",
+        "Value": "/Game/Blueprints/Abilities/Item/Chest/Chest_ItemCursedIron.Chest_ItemCursedIron_C\u0000"
+    },
+    "Face of Death": {
+        "Type": "Chest",
+        "Value": "/Game/Blueprints/Abilities/Item/Chest/Chest_ItemDoubleDamage.Chest_ItemDoubleDamage_C\u0000"
+    },
+    "Richeous Sun": {
+        "Type": "Chest",
+        "Value": "/Game/Blueprints/Abilities/Item/Chest/Chest_ItemExtraFirebolts.Chest_ItemExtraFirebolts_C\u0000"
+    },
+    "The Best Defense": {
+        "Type": "Chest",
+        "Value": "/Game/Blueprints/Abilities/Item/Chest/Chest_ItemInfiniteAmmo.Chest_ItemInfiniteAmmo_C\u0000"
+    },
+    "Springhel": {
+        "Type": "Chest",
+        "Value": "/Game/Blueprints/Abilities/Item/Chest/Chest_ItemJumpStrength.Chest_ItemJumpStrength_C\u0000"
+    },
+    "Storm": {
+        "Type": "Chest",
+        "Value": "/Game/Blueprints/Abilities/Item/Chest/Chest_ItemLightningCleave.Chest_ItemLightningCleave_C\u0000"
+    },
+    "Triquetra": {
+        "Type": "Chest",
+        "Value": "/Game/Blueprints/Abilities/Item/Chest/Chest_ItemMagicFortify.Chest_ItemMagicFortify_C\u0000"
+    },
+    "Gungnir's Partner": {
+        "Type": "Chest",
+        "Value": "/Game/Blueprints/Abilities/Item/Chest/Chest_ItemRangeDouble.Chest_ItemRangeDouble_C\u0000"
+    },
+    "Dragon's Skin": {
+        "Type": "Chest",
+        "Value": "/Game/Blueprints/Abilities/Item/Chest/Chest_ItemRegeneratingBreastPlate.Chest_ItemRegeneratingBreastPlate_C\u0000"
+    },
+    "Lion Heart": {
+        "Type": "Chest",
+        "Value": "/Game/Blueprints/Abilities/Item/Chest/Chest_ItemRevive.Chest_ItemRevive_C\u0000"
+    },
+    "Loki's Shield": {
+        "Type": "Chest",
+        "Value": "/Game/Blueprints/Abilities/Item/Chest/Chest_ItemSlowProjectileShield.Chest_ItemSlowProjectileShield_C\u0000"
+    },
+    "Svalinn": {
+        "Type": "Chest",
+        "Value": "/Game/Blueprints/Abilities/Item/Chest/Chest_ItemTallShield.Chest_ItemTallShield_C\u0000"
+    },
+    "Dwarven Ring": {
+        "Type": "Arm",
+        "Value": "/Game/Blueprints/Abilities/Item/Arm/Arm_DwemerRing.Arm_DwemerRing_C\u0000"
+    },
+    "Raven God": {
+        "Type": "Arm",
+        "Value": "/Game/Blueprints/Abilities/Item/Arm/Arm_EagleEye.Arm_EagleEye_C\u0000"
+    },
+    "Spacewalker": {
+        "Type": "Arm",
+        "Value": "/Game/Blueprints/Abilities/Item/Arm/Arm_HighAltitudeGloves.Arm_HighAltitudeGloves_C\u0000"
+    },
+    "Loki's Bargain": {
+        "Type": "Arm",
+        "Value": "/Game/Blueprints/Abilities/Item/Arm/Arm_ItemConsumeSlotToGetStatBoost.Arm_ItemConsumeSlotToGetStatBoost_C\u0000"
+    },
+    "Gunnr's Bracer": {
+        "Type": "Arm",
+        "Value": "/Game/Blueprints/Abilities/Item/Arm/Arm_ItemDoubleHealingEffects.Arm_ItemDoubleHealingEffects_C\u0000"
+    },
+    "Golden Bracelet": {
+        "Type": "Arm",
+        "Value": "/Game/Blueprints/Abilities/Item/Arm/Arm_ItemEnemiesRainGold.Arm_ItemEnemiesRainGold_C\u0000"
+    },
+    "Quaternote": {
+        "Type": "Arm",
+        "Value": "/Game/Blueprints/Abilities/Item/Arm/Arm_ItemGunFiresTwice.Arm_ItemGunFiresTwice_C\u0000"
+    },
+    "Megingjord": {
+        "Type": "Arm",
+        "Value": "/Game/Blueprints/Abilities/Item/Arm/Arm_ItemMedallion.Arm_ItemMedallion_C\u0000"
+    },
+    "Memento Mori": {
+        "Type": "Arm",
+        "Value": "/Game/Blueprints/Abilities/Item/Arm/Arm_ItemMultiCleavingAttacks.Arm_ItemMultiCleavingAttacks_C\u0000"
+    },
+    "Sigrdrifa's Bracer": {
+        "Type": "Arm",
+        "Value": "/Game/Blueprints/Abilities/Item/Arm/Arm_ItemPenetratingShots.Arm_ItemPenetratingShots_C\u0000"
+    },
+    "Midgard Bracelet": {
+        "Type": "Arm",
+        "Value": "/Game/Blueprints/Abilities/Item/Arm/Arm_ItemPureGoodness.Arm_ItemPureGoodness_C\u0000"
+    },
+    "Asp's Whisper": {
+        "Type": "Arm",
+        "Value": "/Game/Blueprints/Abilities/Item/Arm/Arm_ItemSlowEnemies.Arm_ItemSlowEnemies_C\u0000"
+    },
+    "Go Faster Glove": {
+        "Type": "Arm",
+        "Value": "/Game/Blueprints/Abilities/Item/Arm/Arm_ItemSpeedUpArm.Arm_ItemSpeedUpArm_C\u0000"
+    },
+    "Powershot Glove": {
+        "Type": "Arm",
+        "Value": "/Game/Blueprints/Abilities/Item/Arm/Arm_ItemWallPenetration.Arm_ItemWallPenetration_C\u0000"
+    },
+    "Six-shooter": {
+        "Type": "Arm",
+        "Value": "/Game/Blueprints/Abilities/Item/Arm/Arm_Quickloader.Arm_Quickloader_C\u0000"
+    },
+    "Dwarven Braclet": {
+        "Type": "Arm",
+        "Value": "/Game/Blueprints/Abilities/Item/Arm/Arm_RevealMap.Arm_RevealMap_C\u0000"
+    },
+    "Njord's Greaves": {
+        "Type": "Foot",
+        "Value": "/Game/Blueprints/Abilities/Item/Foot/Boots_GoldenGreaves.Boots_GoldenGreaves_C\u0000"
+    },
+    "Tumbler's Boots": {
+        "Type": "Foot",
+        "Value": "/Game/Blueprints/Abilities/Item/Foot/Boots_ItemBonusSpeedAfterFire.Boots_ItemBonusSpeedAfterFire_C\u0000"
+    },
+    "Aslög's Clogs": {
+        "Type": "Foot",
+        "Value": "/Game/Blueprints/Abilities/Item/Foot/Boots_ItemClogsWooden.Boots_ItemClogsWooden_C\u0000"
+    },
+    "Poison Boots": {
+        "Type": "Foot",
+        "Value": "/Game/Blueprints/Abilities/Item/Foot/Boots_ItemCreepBoots.Boots_ItemCreepBoots_C\u0000"
+    },
+    "Spurs of Justice": {
+        "Type": "Foot",
+        "Value": "/Game/Blueprints/Abilities/Item/Foot/Boots_ItemCriticalsAddDOT.Boots_ItemCriticalsAddDOT_C\u0000"
+    },
+    "Seiðr's Blessing": {
+        "Type": "Foot",
+        "Value": "/Game/Blueprints/Abilities/Item/Foot/Boots_ItemEnchantedGreaves.Boots_ItemEnchantedGreaves_C\u0000"
+    },
+    "Boots of Rock": {
+        "Type": "Foot",
+        "Value": "/Game/Blueprints/Abilities/Item/Foot/Boots_ItemHeavyMetalBoots.Boots_ItemHeavyMetalBoots_C\u0000"
+    },
+    "Hermod's Greaves": {
+        "Type": "Foot",
+        "Value": "/Game/Blueprints/Abilities/Item/Foot/Boots_ItemHopliteGreaves.Boots_ItemHopliteGreaves_C\u0000"
+    },
+    "Angelic Boots": {
+        "Type": "Foot",
+        "Value": "/Game/Blueprints/Abilities/Item/Foot/Boots_ItemJumpBoots.Boots_ItemJumpBoots_C\u0000"
+    },
+    "Giant Slayer Boots": {
+        "Type": "Foot",
+        "Value": "/Game/Blueprints/Abilities/Item/Foot/Boots_ItemPercentageDamageOnShot.Boots_ItemPercentageDamageOnShot_C\u0000"
+    },
+    "Rhythmic Chaos Boots": {
+        "Type": "Foot",
+        "Value": "/Game/Blueprints/Abilities/Item/Foot/Boots_ItemRandomDamageOnBeat.Boots_ItemRandomDamageOnBeat_C\u0000"
+    },
+    "Odin's Sneakers": {
+        "Type": "Foot",
+        "Value": "/Game/Blueprints/Abilities/Item/Foot/Boots_ItemSpeedBoots.Boots_ItemSpeedBoots_C\u0000"
+    },
+    "Skates of Strafe": {
+        "Type": "Foot",
+        "Value": "/Game/Blueprints/Abilities/Item/Foot/Boots_ItemStrafeBoots.Boots_ItemStrafeBoots_C\u0000"
+    },
+    "Tampling Boots": {
+        "Type": "Foot",
+        "Value": "/Game/Blueprints/Abilities/Item/Foot/Boots_ItemTramplingBoots.Boots_ItemTramplingBoots_C\u0000"
+    },
+    "Clip Up": {
+        "Type": "Upgrades",
+        "Value": "/Game/Blueprints/Abilities/Item/Upgrades/BP_ClipUp.BP_ClipUp_C\u0000"
+    },
+    "Ability Up": {
+        "Type": "Upgrades",
+        "Value": "/Game/Blueprints/Abilities/Item/Upgrades/BP_ItemAbilityPowerUp.BP_ItemAbilityPowerUp_C\u0000"
+    },
+    "Coin Bag": {
+        "Type": "Upgrades",
+        "Value": "/Game/Blueprints/Abilities/Item/Upgrades/BP_ItemBagOfCoins.BP_ItemBagOfCoins_C\u0000"
+    },
+    "Shield Converter": {
+        "Type": "Upgrades",
+        "Value": "/Game/Blueprints/Abilities/Item/Upgrades/BP_ItemConvertShieldsToHealth.BP_ItemConvertShieldsToHealth_C\u0000"
+    },
+    "Precision Up": {
+        "Type": "Upgrades",
+        "Value": "/Game/Blueprints/Abilities/Item/Upgrades/BP_ItemCriticalUp.BP_ItemCriticalUp_C\u0000"
+    },
+    "Damage Up": {
+        "Type": "Upgrades",
+        "Value": "/Game/Blueprints/Abilities/Item/Upgrades/BP_ItemDamageUp.BP_ItemDamageUp_C\u0000"
+    },
+    "Small Healing Potion": {
+        "Type": "Upgrades",
+        "Value": "/Game/Blueprints/Abilities/Item/Upgrades/BP_ItemHeart.BP_ItemHeart_C\u0000"
+    },
+    "Heart Container": {
+        "Type": "Upgrades",
+        "Value": "/Game/Blueprints/Abilities/Item/Upgrades/BP_ItemHeartContainer.BP_ItemHeartContainer_C\u0000"
+    },
+    "Key": {
+        "Type": "Upgrades",
+        "Value": "/Game/Blueprints/Abilities/Item/Upgrades/BP_ItemKey.BP_ItemKey_C\u0000"
+    },
+    "Luck Up": {
+        "Type": "Upgrades",
+        "Value": "/Game/Blueprints/Abilities/Item/Upgrades/BP_ItemLuckUp.BP_ItemLuckUp_C\u0000"
+    },
+    "Lucky Dice": {
+        "Type": "Upgrades",
+        "Value": "/Game/Blueprints/Abilities/Item/Upgrades/BP_ItemLuckyDice.BP_ItemLuckyDice_C\u0000"
+    },
+    "Range Up": {
+        "Type": "Upgrades",
+        "Value": "/Game/Blueprints/Abilities/Item/Upgrades/BP_ItemRangeUp.BP_ItemRangeUp_C\u0000"
+    },
+    "Shield": {
+        "Type": "Upgrades",
+        "Value": "/Game/Blueprints/Abilities/Item/Upgrades/BP_ItemShield.BP_ItemShield_C\u0000"
+    },
+    "Speed Up": {
+        "Type": "Upgrades",
+        "Value": "/Game/Blueprints/Abilities/Item/Upgrades/BP_ItemSpeedUp.BP_ItemSpeedUp_C\u0000"
+    },
+    "Skeleton Key": {
+        "Type": "Upgrades",
+        "Value": "/Game/Blueprints/Abilities/Item/Upgrades/BP_SkeletonKey.BP_SkeletonKey_C\u0000"
+    },
+    "Bolt-action Rifle": {
+        "Type": "Weapon",
+        "Value": "/Game/Blueprints/Weapons/BP_BoltRifle.BP_BoltRifle_C\u0000"
+    },
+    "Shotgun Pistol": {
+        "Type": "Weapon",
+        "Value": "/Game/Blueprints/Weapons/BP_SpreadPistol.BP_SpreadPistol_C\u0000"
+    },
+    "Energy Cannon": {
+        "Type": "Weapon",
+        "Value": "/Game/Blueprints/Weapons/BP_StickyGun.BP_StickyGun_C\u0000"
+    },
+    "Gauss Cannon": {
+        "Type": "Weapon",
+        "Value": "/Game/Blueprints/Weapons/BP_RailGun.BP_RailGun_C\u0000"
+    },
+    "Pump Shotgun": {
+        "Type": "Weapon",
+        "Value": "/Game/Blueprints/Weapons/BP_Shotgun.BP_Shotgun_C\u0000"
+    },
+    "Garand": {
+        "Type": "Weapon",
+        "Value": "/Game/Blueprints/Weapons/BP_PingRifle.BP_PingRifle_C\u0000"
+    },
+    "Raygun": {
+        "Type": "Weapon",
+        "Value": "/Game/Blueprints/Weapons/BP_AlienBlaster.BP_AlienBlaster_C\u0000"
+    },
+    "Burst SMG": {
+        "Type": "Weapon",
+        "Value": "/Game/Blueprints/Weapons/BP_SubmachineGun.BP_SubmachineGun_C\u0000"
+    },
+    "Minigun": {
+        "Type": "Weapon",
+        "Value": "/Game/Blueprints/Weapons/BP_MiniGun.BP_MiniGun_C\u0000"
+    },
+    "Double-Tap": {
+        "Type": "Weapon",
+        "Value": "/Game/Blueprints/Weapons/BP_AutoShotty.BP_AutoShotty_C\u0000"
+    },
+    "Rocket Launcher": {
+        "Type": "Weapon",
+        "Value": "/Game/Blueprints/Weapons/BP_RocketLauncher.BP_RocketLauncher_C\u0000"
+    },
+    "Fireball Launcher": {
+        "Type": "Weapon",
+        "Value": "/Game/Blueprints/Weapons/BP_BigGun.BP_BigGun_C\u0000"
+    },
+    "Revolver": {
+        "Type": "Weapon",
+        "Value": "/Game/Blueprints/Weapons/BP_Revolver.BP_Revolver_C\u0000"
+    },
+    "Grenade Launcher": {
+        "Type": "Weapon",
+        "Value": "/Game/Blueprints/Weapons/BP_GrenadeLauncher.BP_GrenadeLauncher_C\u0000"
+    },
+    "Charge Pistol": {
+        "Type": "Weapon",
+        "Value": "/Game/Blueprints/Weapons/BP_Blaster.BP_Blaster_C\u0000"
+    },
+    "Haunted Revolver": {
+        "Type": "Weapon",
+        "Value": "/Game/Blueprints/Weapons/BP_HandCannon.BP_HandCannon_C\u0000"
+    },
+    "Lever Action": {
+        "Type": "Weapon",
+        "Value": "/Game/Blueprints/Weapons/BP_Winnie.BP_Winnie_C\u0000"
+    },
+    "Gold Pistol": {
+        "Type": "Weapon",
+        "Value": "/Game/Blueprints/Weapons/BP_GoldPistol.BP_GoldPistol_C\u0000"
+    },
+    "Sawn-Off Shotgun": {
+        "Type": "Weapon",
+        "Value": "/Game/Blueprints/Weapons/BP_DoubleBarrel.BP_DoubleBarrel_C\u0000"
+    },
+    "Pistol": {
+        "Type": "Weapon",
+        "Value": "/Game/Blueprints/Weapons/BP_Pistol.BP_Pistol_C\u0000"
+    },
+    "Dash": {
+        "Type": "Auxilary",
+        "Value": "/Game/Blueprints/Abilities/Auxillary/Aux_QuickStep.Aux_QuickStep_C\u0000"
+    },
+    "Dash/Flying": {
+        "Type": "Auxilary",
+        "Value": "/Game/Blueprints/Abilities/Auxillary/Aux_QuickStepFlying.Aux_QuickStepFlying_C\u0000"
+    },
+    "Dash(Full Auto)": {
+        "Type": "Auxilary",
+        "Value": "/Game/Blueprints/Abilities/Auxillary/Aux_DoubleTime.Aux_DoubleTime_C\u0000"
+    },
+    "Dash(Skuld)": {
+        "Type": "Auxilary",
+        "Value": "/Game/Blueprints/Abilities/Auxillary/Aux_QuickStepDyingVamp.Aux_QuickStepDyingVamp_C\u0000"
+    },
+    "Dash/Flying(Floor Is Lava)": {
+        "Type": "Auxilary",
+        "Value": "/Game/Blueprints/Abilities/Auxillary/Aux_QuickStepFlyingLavaFloor.Aux_QuickStepFlyingLavaFloor_C\u0000"
+    },
+    "Dash(Herfjoter)": {
+        "Type": "Auxilary",
+        "Value": "/Game/Blueprints/Abilities/Auxillary/Aux_QuickStepGolden.Aux_QuickStepGolden_C\u0000"
+    },
+    "Dash(Retro)": {
+        "Type": "Auxilary",
+        "Value": "/Game/Blueprints/Abilities/Auxillary/Aux_QuickStepRetro.Aux_QuickStepRetro_C\u0000"
+    },
+    "Dash(Supertime)": {
+        "Type": "Auxilary",
+        "Value": "/Game/Blueprints/Abilities/Auxillary/Aux_TimeStep.Aux_TimeStep_C\u0000"
+    },
+    "Block": {
+        "Type": "Secondary",
+        "Value": "/Game/Blueprints/Abilities/Secondary/Secondary_AbilityBlockArm.Secondary_AbilityBlockArm_C\u0000"
+    },
+    "Frost Bolt": {
+        "Type": "Secondary",
+        "Value": "/Game/Blueprints/Abilities/Secondary/Secondary_AbilityFreeze.Secondary_AbilityFreeze_C\u0000"
+    },
+    "Rhythm Burst": {
+        "Type": "Secondary",
+        "Value": "/Game/Blueprints/Abilities/Secondary/Secondary_BurstAttack.Secondary_BurstAttack_C\u0000"
+    },
+    "Thunderclap": {
+        "Type": "Secondary",
+        "Value": "/Game/Blueprints/Abilities/Secondary/Secondary_ClapExplosion.Secondary_ClapExplosion_C\u0000"
+    },
+    "Burning Coin": {
+        "Type": "Secondary",
+        "Value": "/Game/Blueprints/Abilities/Secondary/Secondary_CoinThrow.Secondary_CoinThrow_C\u0000"
+    },
+    "Celestial Wave": {
+        "Type": "Secondary",
+        "Value": "/Game/Blueprints/Abilities/Secondary/Secondary_CursedDamageAll.Secondary_CursedDamageAll_C\u0000"
+    },
+    "Fire Bolt": {
+        "Type": "Secondary",
+        "Value": "/Game/Blueprints/Abilities/Secondary/Secondary_FireBolt.Secondary_FireBolt_C\u0000"
+    },
+    "Broken Burst": {
+        "Type": "Secondary",
+        "Value": "/Game/Blueprints/Abilities/Secondary/Secondary_Flak.Secondary_Flak_C\u0000"
+    },
+    "Valkyrie's Veil": {
+        "Type": "Secondary",
+        "Value": "/Game/Blueprints/Abilities/Secondary/Secondary_ManaShield.Secondary_ManaShield_C\u0000"
+    },
+    "Mortal Curse": {
+        "Type": "Secondary",
+        "Value": "/Game/Blueprints/Abilities/Secondary/Secondary_MarkForDeath.Secondary_MarkForDeath_C\u0000"
+    },
+    "Snipe": {
+        "Type": "Secondary",
+        "Value": "/Game/Blueprints/Abilities/Secondary/Secondary_Snipe.Secondary_Snipe_C\u0000"
+    },
+    "Sacred Sapper": {
+        "Type": "Secondary",
+        "Value": "/Game/Blueprints/Abilities/Secondary/Secondary_SpawnBarrel.Secondary_SpawnBarrel_C\u0000"
+    },
+    "Teleport": {
+        "Type": "Secondary",
+        "Value": "/Game/Blueprints/Abilities/Secondary/Secondary_Teleport.Secondary_Teleport_C\u0000"
+    },
+    "Undying Strength": {
+        "Type": "Secondary",
+        "Value": "/Game/Blueprints/Abilities/Secondary/Secondary_Unrelenting.Secondary_Unrelenting_C\u0000"
+    },
+    "Steal Life": {
+        "Type": "Secondary",
+        "Value": "/Game/Blueprints/Abilities/Secondary/Secondary_VampAttack.Secondary_VampAttack_C\u0000"
+    },
+    "Valkyrie's Call": {
+        "Type": "Ultimate",
+        "Value": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_AbilityUltimateAlliedAngel.Ulti_AbilityUltimateAlliedAngel_C\u0000"
+    },
+    "Snap Fingers": {
+        "Type": "Ultimate",
+        "Value": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_AbilityUltimateBigSnap.Ulti_AbilityUltimateBigSnap_C\u0000"
+    },
+    "Barter": {
+        "Type": "Ultimate",
+        "Value": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_AbilityUltimateDiscount.Ulti_AbilityUltimateDiscount_C\u0000"
+    },
+    "Njord's Riches": {
+        "Type": "Ultimate",
+        "Value": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_AbilityUltimateGenerateCoins.Ulti_AbilityUltimateGenerateCoins_C\u0000"
+    },
+    "Elli's Touch": {
+        "Type": "Ultimate",
+        "Value": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_AbilityUltimateHeal.Ulti_AbilityUltimateHeal_C\u0000"
+    },
+    "Cursed Luck": {
+        "Type": "Ultimate",
+        "Value": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_AbilityUltimateLuckForHealth.Ulti_AbilityUltimateLuckForHealth_C\u0000"
+    },
+    "Mjolnir": {
+        "Type": "Ultimate",
+        "Value": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_AbilityUltimateMegaShot.Ulti_AbilityUltimateMegaShot_C\u0000"
+    },
+    "Odin's Blessing": {
+        "Type": "Ultimate",
+        "Value": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_AbilityUltimateRegenForTime.Ulti_AbilityUltimateRegenForTime_C\u0000"
+    },
+    "Hermóðr's Enchantment": {
+        "Type": "Ultimate",
+        "Value": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_AbilityUltimateSpeedBuff.Ulti_AbilityUltimateSpeedBuff_C\u0000"
+    },
+    "The Quest": {
+        "Type": "Ultimate",
+        "Value": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_AbilityUltimateTheQuest.Ulti_AbilityUltimateTheQuest_C\u0000"
+    },
+    "Geri's Audit": {
+        "Type": "Ultimate",
+        "Value": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_ConvertToCoins.Ulti_ConvertToCoins_C\u0000"
+    },
+    "Sigyn's Help": {
+        "Type": "Ultimate",
+        "Value": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_GenerateChest.Ulti_GenerateChest_C\u0000"
+    },
+    "Banking": {
+        "Type": "Ultimate",
+        "Value": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_RemoteBank.Ulti_RemoteBank_C\u0000"
+    },
+    "Godlike": {
+        "Type": "Curse",
+        "Value": "/Game/Blueprints/Abilities/Curse/Curse_BossTough.Curse_BossTough_C\u0000"
+    },
+    "Runner": {
+        "Type": "Curse",
+        "Value": "/Game/Blueprints/Abilities/Curse/Curse_Damocles.Curse_Damocles_C\u0000"
+    },
+    "Bleeding": {
+        "Type": "Curse",
+        "Value": "/Game/Blueprints/Abilities/Curse/Curse_Dying.Curse_Dying_C\u0000"
+    },
+    "Twitch": {
+        "Type": "Curse",
+        "Value": "/Game/Blueprints/Abilities/Curse/Curse_FastProjectiles.Curse_FastProjectiles_C\u0000"
+    },
+    "Gambit": {
+        "Type": "Curse",
+        "Value": "/Game/Blueprints/Abilities/Curse/Curse_Gambit.Curse_Gambit_C\u0000"
+    },
+    "Want": {
+        "Type": "Curse",
+        "Value": "/Game/Blueprints/Abilities/Curse/Curse_LowerAmmo.Curse_LowerAmmo_C\u0000"
+    },
+    "Mania!": {
+        "Type": "Curse",
+        "Value": "/Game/Blueprints/Abilities/Curse/Curse_Mania.Curse_Mania_C\u0000"
+    },
+    "Fragile": {
+        "Type": "Curse",
+        "Value": "/Game/Blueprints/Abilities/Curse/Curse_PlayerFragile.Curse_PlayerFragile_C\u0000"
+    },
+    "Poverty": {
+        "Type": "Curse",
+        "Value": "/Game/Blueprints/Abilities/Curse/Curse_Shopless.Curse_Shopless_C\u0000"
+    },
+    "Fabled": {
+        "Type": "Curse",
+        "Value": "/Game/Blueprints/Abilities/Curse/Curse_Toughened.Curse_Toughened_C\u0000"
+    }
 }
