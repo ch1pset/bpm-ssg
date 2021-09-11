@@ -4,9 +4,8 @@ const LIB_PATH = './data/lib';
 const TEMP_PATH = './data/templates'
 
 export const CHARSTORE = await json(`${LIB_PATH}/charstore.json`);
-export const ITEMNAME = await json(`${LIB_PATH}/items-names.json`);
-export const RUNSTORE = await json(`${LIB_PATH}/runstore.json`);
 export const ITEMS = await json(`${LIB_PATH}/items.json`);
+export const RUNSTORE = await json(`${LIB_PATH}/runstore.json`);
 export const ITEMPOOL = await json(`${LIB_PATH}/itempools.json`);
 export const SAVESLOT = await json(`${LIB_PATH}/saveslot.json`);
 export const REQUIREMENTS = await json(`${LIB_PATH}/requirements.json`);

@@ -5,7 +5,7 @@ import {
 import { 
     T_CHARSTORE,
     CHARSTORE,
-    ITEMNAME,
+    ITEMS,
     REQUIREMENTS,
     prng,
     PropertyStore
@@ -29,12 +29,11 @@ export class CharacterPropertyStore extends StructProperty {
         this.Properties[0].addProperty(prop);
     }
     genLoadout(num) {
-        let items = Object.entries(REQUIREMENTS.LOADOUT);
-        let itemnames = Object.entries(ITEMNAME);
-        prng.choose([0, items.length - 1], num)
+        let loadout = Object.entries(REQUIREMENTS.LOADOUT);
+        prng.choose([0, loadout.length - 1], num)
             .forEach(f => {
-                let selection = itemnames.filter(([name, item]) => item.Type === items[f][1]);
-                let p = Object.assign({}, CHARSTORE[items[f][0]]);
+                let selection = ITEMS.filter(([n, i]) => i.Type === loadout[f][1]);
+                let p = Object.assign({}, CHARSTORE[loadout[f][0]]);
                 let index = prng.range(0, selection.length - 1);
                 p.Property = selection[index][1].Value;
                 this.addProperty(p);
@@ -44,16 +43,15 @@ export class CharacterPropertyStore extends StructProperty {
     genChar(prop) {
         let p = Object.assign({}, CHARSTORE[prop]);
         let index;
-        let itemnames = Object.entries(ITEMNAME);
         let selection = []
         switch(prop) {
             case "StoredWeapon":
-                selection = itemnames.filter(([name, item]) => item.Type === 'Weapon');
+                selection = ITEMS.filter(([n, i]) => i.Type === 'Weapon');
                 index = prng.range(0, selection.length - 1);
                 p.Property = selection[index][1].Value;
                 break;
             case "StoredMobilityAbility":
-                selection = itemnames.filter(([name, item]) => item.Type === 'Weapon');
+                selection = ITEMS.filter(([n, i]) => i.Type === 'Weapon');
                 index = prng.range(0, selection.length - 1);
                 p.Property = selection[index][1].Value;
                 break;

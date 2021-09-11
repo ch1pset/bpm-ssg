@@ -7,11 +7,10 @@ import {
     RUNSTORE,
     REQUIREMENTS,
     ITEMPOOL,
-    ITEMS,
     prng,
     PropertyStore,
     ItemWeightPair,
-    ITEMNAME
+    ITEMS
 } from './index.js';
 
 export class RunPropertyStore extends StructProperty {
@@ -43,16 +42,17 @@ export class RunPropertyStore extends StructProperty {
         console.log(pool);
         
         pool.forEach(([item, weight]) => {
-            if(ITEMNAME[item] === undefined)
+            let [name, prop] = ITEMS.find(i => i[0] === item);
+            if(name === undefined)
                 console.log(`Mislabled/Missing Item: ${item}`)
             else {
                 let item_weight_pair;
-                if(ITEMNAME[item].Type === 'Weapon')
+                if(prop.Type === 'Weapon')
                     item_weight_pair = ItemWeightPair.from(RUNSTORE['BPMWeaponWeightPair'])
                 else 
                     item_weight_pair = ItemWeightPair.from(RUNSTORE['BPMAbilityWeightPair'])
 
-                item_weight_pair.Item = ITEMNAME[item].Value;
+                item_weight_pair.Item = prop.Value;
                 item_weight_pair.Weight = weight;
                 item_pool.Property.Properties.push(item_weight_pair);
             }
