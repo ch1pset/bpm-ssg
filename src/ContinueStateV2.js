@@ -6,7 +6,7 @@ import {
 
 import { 
     SAVESLOT,
-    prng,
+    Prng,
     T_GVAS_HEADER,
     RunPropertyStore, 
     CharacterPropertyStore 
@@ -26,11 +26,11 @@ export class ContinueStateV2 extends Gvas {
     }
     static seededGen(seed, char, diff) {
         let save = new ContinueStateV2();
-        prng.init(seed);
+        Prng.init(seed);
         save.addProperty(save.Slot);
         save.addProperty(CharacterPropertyStore.generate(char));
         save.addProperty(RunPropertyStore.generate(diff));
-        prng.destroy();
+        Prng.destroy();
         return save;
     }
 }

@@ -1,19 +1,24 @@
-import * as fs from 'fs/promises'
 import { prng_xorshift7 } from 'esm-seedrandom'
 
-export class prng {
-    static _prng = {};
+export class Prng {
+    static _prng = null;
     static init(seed) {
         this._prng = prng_xorshift7(seed, {state: true})
     }
     static int32() {
-        return this._prng.int32();
+        if(this._prng !== null)
+            return this._prng.int32();
+        return 0;
     }
     static int16() {
-        return this._prng.int32() % (2**16);
+        if(this._prng !== null)
+            return this._prng.int32() % (2**16);
+        return 0;
     }
     static quick() {
-        return this._prng.quick();
+        if(this._prng !== null)
+            return this._prng.quick();
+        return 0;
     }
     static range(min, max) {
         min = (min !== undefined) ? min : 0;
@@ -23,6 +28,12 @@ export class prng {
     static choose([min, max], num) {
         let values = [];
         num = (num !== undefined) ? num : this.range(min, max);
+        if(num !== 0 && num === (max - min + 1)) {
+            let i = min;
+            while(values.length < num)
+                values.push(i++);
+            return values;
+        }
         for(let i = 0; i < num; i++) {
             let val;
             while(values.includes(val = this.range(min, max)));
@@ -39,10 +50,6 @@ export class prng {
                     .sort((a, b) => b[1] - a[1]);
     }
     static destroy() {
-        this._prng = {};
+        this._prng = null;
     }
-}
-
-export async function json(path) {
-    return JSON.parse(await fs.readFile(path, 'utf8'));
 }
