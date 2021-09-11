@@ -27,12 +27,20 @@ function shuffleFisherYates(array) {
         array[j] = temp;
     }
 }
+// Algorithm based on:
+// Weighted Random Sampling (2005; Efraimidis, Spirakis)
+//
+// Credits: https://github.com/denizdogan/weighted-shuffle by denizdogan
+function weightedShuffle(array) {
+    let ret = Object.assign([], array);
+    ret.forEach(item => item[1] = prng.quick() ** (1 / item[1]));
+    ret.sort((a, b) => b[1] - a[1]);
+    return ret;
+}
 
 function genItemPool(name) {
-    let pool = Object.assign([], ITEMPOOL[name]);
     let ret = Object.assign({}, RUNSTORE[name]);
-
-    shuffleFisherYates(pool);
+    let pool = weightedShuffle(ITEMPOOL[name]);
 
     console.log(`${name}: `);
     console.log(pool);
