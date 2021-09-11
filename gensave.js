@@ -1,20 +1,26 @@
-import * as fs from 'fs/promises';
+import { stdout } from 'process';
 import { ContinueStateV2 } from "./index.js";
 
-function main(argv) {
+export function main(argv) {
 
     let args = {
-        seed:"0",
-        char:"goll",
-        diff:"hard"
+        s:"0",
+        c:"goll",
+        d:"hard",
+        "-o":false
     };
     argv.forEach(a => {
-        let arg = a.split(':');
-        args[arg[0]] = arg[1];
+        let [name, value] = a.split(':');
+        if(name === "-o") value = true;
+        args[name] = value;
     })
-    const save = ContinueStateV2.seededGen(args.seed, args.char, args.diff);
-    fs.writeFile('./output.json', JSON.stringify(save, null, 2));
-    fs.writeFile('./ContinueStateV2.sav', save.serialize());
+    const save = ContinueStateV2.seededGen(args);
+    const out_buf = save.serialize();
+    if(args["-o"] === true)
+        stdout.write(out_buf, (err) => {
+            if(err) throw err;
+        });
+    return out_buf;
 }
 
 __MAIN:
