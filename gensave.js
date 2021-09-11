@@ -61,21 +61,21 @@ function genSeeds() {
     return floorSeeds;
 }
 
-function roll(min, max) {
+function rollDice(min, max) {
     min = (min !== undefined) ? min : 0;
     max = (max !== undefined) ? max : 1;
     return Math.floor(prng.quick() * (max - min + 1)) + min; //inclusive range
 }
 
-function chooseFloors([min, max], num) {
-    let floors = [];
-    num = (num !== undefined) ? num : roll(min, max);
+function chooseFromRange([min, max], num) {
+    let values = [];
+    num = (num !== undefined) ? num : rollDice(min, max);
     for(let i = 0; i < num; i++) {
-        let floor;
-        while(floors.includes(floor = roll(min, max)));
-        floors.push(floor);
+        let val;
+        while(values.includes(val = rollDice(min, max)));
+        values.push(val);
     }
-    return floors;
+    return values;
 }
 
 function assignFloor(floor, room) {
@@ -92,40 +92,40 @@ function genRooms() {
             case "LibraryBeforeArmoury":
             case "MinibossChoice":
                 for(let i = 0; i < 4; i++) {
-                    chooseFloors([2*i, 2*i+1], 1)
+                    chooseFromRange([2*i, 2*i+1], 1)
                         .forEach(f => ret.push(assignFloor(f, room)));
                 }
                 break;
             case "BankRoomChosen":
             case "ChallengeRoomChosen":
             case "HeroRoomChosen":
-                chooseFloors([0, 5])
+                chooseFromRange([0, 5])
                     .forEach(f => ret.push(assignFloor(f, room)));
                 break;
             case "BlackMarketRoomChosen":
             case "PortalRoomChosen":
-                chooseFloors([0, 5], roll())
+                chooseFromRange([0, 5], rollDice())
                     .forEach(f => ret.push(assignFloor(f, room)));
                 break;
             case "StairsRoomChosen":
-                chooseFloors([0, 0], roll()) //stairs can only be on floor 0
+                chooseFromRange([0, 0], rollDice()) //stairs can only be on floor 0
                     .forEach(f => ret.push(assignFloor(f, room)));
                 break;
             case "ChoiceRoomChosen":
                 let floors = []
                 if(ret.findIndex(prop => prop.Name === "StairsRoomChosen\0") !== -1)
-                    floors = chooseFloors([0, 1]);
+                    floors = chooseFromRange([0, 1]);
                 else 
-                    floors = chooseFloors([0, 5], 1);
+                    floors = chooseFromRange([0, 5], 1);
                 floors.forEach(f => ret.push(assignFloor(f, room)));
                 break;
             case "GamblingRoomChosen":
             case "RerollRoomChosen":
-                chooseFloors([0, 6], 2)
+                chooseFromRange([0, 6], 2)
                     .forEach(f => ret.push(assignFloor(f, room)));
                 break;
             case "PrestigeRoomChosen":
-                chooseFloors([2, 3], roll())
+                chooseFromRange([2, 3], rollDice())
                     .forEach(f => ret.push(assignFloor(f, room)));
                 break;
         }
@@ -136,12 +136,12 @@ function genRooms() {
 function genLoadout(num) {
     let ret = [];
     let items = Object.keys(REQUIREMENTS.LOADOUT);
-    chooseFloors([0, items.length - 1], num)
+    chooseFromRange([0, items.length - 1], num)
         .forEach(f => {
             let item = items[f];
             let type = REQUIREMENTS.LOADOUT[item]
             let p = Object.assign({}, CHARSTORE[item]);
-            let index = roll(0, ITEMNAME[type].length - 1);
+            let index = rollDice(0, ITEMNAME[type].length - 1);
             p.Property = ITEMNAME[type][index].Value;
             ret.push(p);
             console.log(p);
@@ -156,20 +156,20 @@ function genChar() {
         let index;
         switch(prop) {
             case "StoredWeapon":
-                index = roll(0, ITEMNAME.Weapon.length - 1);
+                index = rollDice(0, ITEMNAME.Weapon.length - 1);
                 p.Property = ITEMNAME.Weapon[index].Value;
                 break;
             case "StoredMobilityAbility":
-                index = roll();
+                index = rollDice();
                 p.Property = ITEMNAME.Auxilary[index].Value;
                 break;
             case "StoredHealth":
             case "StoredShield":
-                p.Property = [0, (25 * roll(0, 7))];
+                p.Property = [0, (25 * rollDice(0, 7))];
                 break;
             case "StoredCoins":
             case "StoredKeys":
-                p.Property = [0, roll(0, 7)];
+                p.Property = [0, rollDice(0, 7)];
                 break;
         }
         ret.push(p);
