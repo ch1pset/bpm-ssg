@@ -36,7 +36,7 @@ export class CharacterPropertyStore extends StructProperty {
                 let index = Prng.range(0, selection.length - 1);
                 p.Property = selection[index][1].Value;
                 this.addProperty(p);
-                console.log(p);
+                // console.log(p);
             })
     }
     genLoadout(opts) {
@@ -71,7 +71,7 @@ export class CharacterPropertyStore extends StructProperty {
                 break;
         }
         this.addProperty(p);
-        console.log(p);
+        // console.log(p);
     }
     static generate(name) {
         let ret = new CharacterPropertyStore();

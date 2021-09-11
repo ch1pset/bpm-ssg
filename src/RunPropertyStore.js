@@ -38,8 +38,8 @@ export class RunPropertyStore extends StructProperty {
         let item_pool = Object.assign({}, RUNSTORE[name]);
         let pool = Prng.shuffle(ITEMPOOL[name]);
     
-        console.log(`${name}: `);
-        console.log(pool);
+        // console.log(`${name}: `);
+        // console.log(pool);
         
         pool.forEach(([item, weight]) => {
             let [name, prop] = ITEMS.find(i => i[0] === item);
@@ -75,7 +75,7 @@ export class RunPropertyStore extends StructProperty {
     assignFloor(floor, name) {
         let room = Object.assign({}, RUNSTORE[name]);
         room.Property = [floor, 1];
-        console.log(room);
+        // console.log(room);
         this.addProperty(room);
     }
     genRooms(room) {
