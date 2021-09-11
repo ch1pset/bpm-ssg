@@ -78,57 +78,55 @@ export class RunPropertyStore extends StructProperty {
         console.log(room);
         this.addProperty(room);
     }
-    genRooms(rooms) {
-        rooms.forEach(room => {
-            switch(room) {
-                case "LibraryBeforeArmoury":
-                    for(let i = 0; i < 4; i++) {
-                        if(prng.range() === 0) {
-                            this.assignFloor(2*i, room);
-                            this.assignFloor(2*i+1, room);
-                        }
+    genRooms(room) {
+        switch(room) {
+            case "LibraryBeforeArmoury":
+                for(let i = 0; i < 4; i++) {
+                    if(prng.range() === 0) {
+                        this.assignFloor(2*i, room);
+                        this.assignFloor(2*i+1, room);
                     }
-                    break;
-                case "MinibossChoice":
-                    for(let i = 0; i < 4; i++) {
-                        prng.choose([2*i, 2*i+1], 1)
-                            .forEach(f => this.assignFloor(f, room));
-                    }
-                    break;
-                case "BankRoomChosen":
-                case "ChallengeRoomChosen":
-                case "HeroRoomChosen":
-                    prng.choose([0, 5])
+                }
+                break;
+            case "MinibossChoice":
+                for(let i = 0; i < 4; i++) {
+                    prng.choose([2*i, 2*i+1], 1)
                         .forEach(f => this.assignFloor(f, room));
-                    break;
-                case "BlackMarketRoomChosen":
-                case "PortalRoomChosen":
-                    prng.choose([0, 5], prng.range())
-                        .forEach(f => this.assignFloor(f, room));
-                    break;
-                case "StairsRoomChosen":
-                    prng.choose([0, 0], prng.range()) //stairs can only be on floor 0
-                        .forEach(f => this.assignFloor(f, room));
-                    break;
-                case "ChoiceRoomChosen":
-                    let floors = []
-                    if(this.Properties[0].has("StairsRoomChosen\0"))
-                        floors = prng.choose([0, 1]);
-                    else 
-                        floors = prng.choose([0, 5], 1);
-                    floors.forEach(f => this.assignFloor(f, room));
-                    break;
-                case "GamblingRoomChosen":
-                case "RerollRoomChosen":
-                    prng.choose([0, 6], 2)
-                        .forEach(f => this.assignFloor(f, room));
-                    break;
-                case "PrestigeRoomChosen":
-                    prng.choose([2, 3], prng.range())
-                        .forEach(f => this.assignFloor(f, room));
-                    break;
-            }
-        })
+                }
+                break;
+            case "BankRoomChosen":
+            case "ChallengeRoomChosen":
+            case "HeroRoomChosen":
+                prng.choose([0, 5])
+                    .forEach(f => this.assignFloor(f, room));
+                break;
+            case "BlackMarketRoomChosen":
+            case "PortalRoomChosen":
+                prng.choose([0, 5], prng.range())
+                    .forEach(f => this.assignFloor(f, room));
+                break;
+            case "StairsRoomChosen":
+                prng.choose([0, 0], prng.range()) //stairs can only be on floor 0
+                    .forEach(f => this.assignFloor(f, room));
+                break;
+            case "ChoiceRoomChosen":
+                let floors = []
+                if(this.Properties[0].has("StairsRoomChosen\0"))
+                    floors = prng.choose([0, 1]);
+                else 
+                    floors = prng.choose([0, 5], 1);
+                floors.forEach(f => this.assignFloor(f, room));
+                break;
+            case "GamblingRoomChosen":
+            case "RerollRoomChosen":
+                prng.choose([0, 6], 2)
+                    .forEach(f => this.assignFloor(f, room));
+                break;
+            case "PrestigeRoomChosen":
+                prng.choose([2, 3], prng.range())
+                    .forEach(f => this.assignFloor(f, room));
+                break;
+        }
     }
     static generate(diff) {
         let ret = new RunPropertyStore();
@@ -136,7 +134,7 @@ export class RunPropertyStore extends StructProperty {
             .forEach(pool => ret.genItemPool(pool));
         ret.Difficulty = diff;
         ret.genSeeds();
-        ret.genRooms(REQUIREMENTS.ROOMS);
+        REQUIREMENTS.ROOMS.forEach(r => ret.genRooms(r));
         return ret;
     }
 }
