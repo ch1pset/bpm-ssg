@@ -52,15 +52,17 @@
   "RANDCHAR": [
     "StoredWeapon",
     "StoredMobilityAbility",
-    "StoredSecondaryAbility",
-    "StoredUltimateAbility",
-    "StoredHeadItemAbility",
-    "StoredChestItemAbility",
-    "StoredArmsItemAbility",
-    "StoredLegsItemAbility",
     "StoredHealth",
     "StoredShield",
     "StoredCoins",
     "StoredKeys"
-  ]
+  ],
+  "LOADOUT": {
+    "StoredSecondaryAbility": "Secondary",
+    "StoredUltimateAbility": "Ultimate",
+    "StoredHeadItemAbility": "Head",
+    "StoredChestItemAbility": "Chest",
+    "StoredArmsItemAbility": "Arm",
+    "StoredLegsItemAbility": "Foot"
+  }
 }

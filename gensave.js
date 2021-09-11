@@ -108,7 +108,7 @@ function genRooms() {
                     .forEach(f => ret.push(assignFloor(f, room)));
                 break;
             case "StairsRoomChosen":
-                chooseFloors([0, 1], roll())
+                chooseFloors([0, 0], roll()) //stairs can only be on floor 0
                     .forEach(f => ret.push(assignFloor(f, room)));
                 break;
             case "ChoiceRoomChosen":
@@ -133,56 +133,49 @@ function genRooms() {
     return ret;
 }
 
+function genLoadout(num) {
+    let ret = [];
+    let items = Object.keys(REQUIREMENTS.LOADOUT);
+    chooseFloors([0, items.length - 1], num)
+        .forEach(f => {
+            let item = items[f];
+            let type = REQUIREMENTS.LOADOUT[item]
+            let p = Object.assign({}, CHARSTORE[item]);
+            let index = roll(0, ITEMNAME[type].length - 1);
+            p.Property = ITEMNAME[type][index].Value;
+            ret.push(p);
+            console.log(p);
+        })
+    return ret;
+}
+
 function genChar() {
     let ret = [];
     REQUIREMENTS.RANDCHAR.forEach(prop => {
         let p = Object.assign({}, CHARSTORE[prop]);
         let index;
         switch(prop) {
-        case "StoredWeapon":
-            index = roll(0, ITEMNAME.Weapon.length - 1);
-            p.Property = ITEMNAME.Weapon[index].Value;
-            break;
-        case "StoredMobilityAbility":
-            index = roll();
-            p.Property = ITEMNAME.Auxilary[index].Value;
-            break;
-        case "StoredSecondaryAbility":
-            index = roll(0, ITEMNAME.Secondary.length - 1);
-            p.Property = ITEMNAME.Secondary[index].Value;
-            break;
-        case "StoredUltimateAbility":
-            index = roll(0, ITEMNAME.Ultimate.length - 1);
-            p.Property = ITEMNAME.Ultimate[index].Value;
-            break;
-        case "StoredHeadItemAbility":
-            index = roll(0, ITEMNAME.Head.length - 1);
-            p.Property = ITEMNAME.Head[index].Value;
-            break;
-        case "StoredChestItemAbility":
-            index = roll(0, ITEMNAME.Chest.length - 1);
-            p.Property = ITEMNAME.Chest[index].Value;
-            break;
-        case "StoredArmsItemAbility":
-            index = roll(0, ITEMNAME.Arm.length - 1);
-            p.Property = ITEMNAME.Arm[index].Value;
-            break;
-        case "StoredLegsItemAbility":
-            index = roll(0, ITEMNAME.Foot.length - 1);
-            p.Property = ITEMNAME.Foot[index].Value;
-            break;
-        case "StoredHealth":
-        case "StoredShield":
-            p.Property = [0, (25 * roll(0, 7))];
-            break;
-        case "StoredCoins":
-        case "StoredKeys":
-            p.Property = [0, roll(0, 7)];
-            break;
+            case "StoredWeapon":
+                index = roll(0, ITEMNAME.Weapon.length - 1);
+                p.Property = ITEMNAME.Weapon[index].Value;
+                break;
+            case "StoredMobilityAbility":
+                index = roll();
+                p.Property = ITEMNAME.Auxilary[index].Value;
+                break;
+            case "StoredHealth":
+            case "StoredShield":
+                p.Property = [0, (25 * roll(0, 7))];
+                break;
+            case "StoredCoins":
+            case "StoredKeys":
+                p.Property = [0, roll(0, 7)];
+                break;
         }
         ret.push(p);
+        console.log(p);
     });
-    console.log(ret);
+    genLoadout(2).forEach(prop => ret.push(prop));
     return ret;
 }
 
