@@ -1,20 +1,25 @@
-import * as fs from 'fs/promises'
-const LIB_PATH = './data/lib';
-const TEMP_PATH = './data/templates'
-async function json(path) {
-    return JSON.parse(await fs.readFile(path, 'utf8'));
+
+import CHARSTORE from '../data/lib/charstore.json'
+import ITEMS from '../data/lib/items.json'
+import RUNSTORE from '../data/lib/runstore.json'
+import ITEMPOOL from '../data/lib/itempools.json'
+import SAVESLOT from '../data/lib/saveslot.json'
+import REQUIREMENTS from '../data/lib/requirements.json'
+import T_RUNSTORE from '../data/templates/runstore.json'
+import T_CHARSTORE from '../data/templates/characters.json'
+import T_GVAS_HEADER from '../data/templates/ContinueStateV2_header.json'
+
+export {
+    CHARSTORE,
+    ITEMS,
+    RUNSTORE,
+    ITEMPOOL,
+    SAVESLOT,
+    REQUIREMENTS,
+    T_RUNSTORE,
+    T_CHARSTORE,
+    T_GVAS_HEADER
 }
-
-export const CHARSTORE = await json(`${LIB_PATH}/charstore.json`);
-export const ITEMS = await json(`${LIB_PATH}/items.json`);
-export const RUNSTORE = await json(`${LIB_PATH}/runstore.json`);
-export const ITEMPOOL = await json(`${LIB_PATH}/itempools.json`);
-export const SAVESLOT = await json(`${LIB_PATH}/saveslot.json`);
-export const REQUIREMENTS = await json(`${LIB_PATH}/requirements.json`);
-export const T_RUNSTORE = await json(`${TEMP_PATH}/runstore.json`);
-export const T_CHARSTORE = await json(`${TEMP_PATH}/characters.json`);
-export const T_GVAS_HEADER = await json(`${TEMP_PATH}/ContinueStateV2_header.json`);
-
 export * from './Prng.js';
 export * from './CharacterPropertyStore.js';
 export * from './RunPropertyStore.js';
