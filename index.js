@@ -1,2 +1,2 @@
 export * from './src/index.js'
-export { main as BPMGenSave } from './gensave.js';
+export { main as bpmssg } from './gensave.js';
