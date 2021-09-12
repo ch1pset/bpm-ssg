@@ -1,7 +1,7 @@
 import { stdout } from 'process';
 import { ContinueStateV2 } from "./index.js";
 
-export function main(argv) {
+function main(argv) {
 
     let args = {
         s:"0",
@@ -21,6 +21,16 @@ export function main(argv) {
             if(err) throw err;
         });
     return out_buf;
+}
+
+export function gen(args) {
+    let a = {
+        s:args.seed,
+        c:args.char,
+        d:args.diff
+    }
+    const save = ContinueStateV2.seededGen(a);
+    return save.serialize();
 }
 
 __MAIN:
