@@ -548,7 +548,7 @@
             }
         ]
     },
-    "sanndridr": {
+    "sanngridr": {
         "Name": "CharacterPropertyStore\u0000",
         "Type": "StructProperty\u0000",
         "StoredPropertyType": "BPMCharacterPropertyStore\u0000",

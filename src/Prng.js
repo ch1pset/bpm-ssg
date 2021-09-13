@@ -3,27 +3,27 @@ import { prng_xorshift7 } from 'esm-seedrandom'
 export const Prng = {
     _prng:null,
     init: function(seed) {
-        Prng._prng = prng_xorshift7(seed, {state: true})
+        this._prng = prng_xorshift7(seed, {state: true})
     },
     int32: function() {
-        if(Prng._prng !== null)
-            return Prng._prng.int32();
+        if(this._prng !== null)
+            return this._prng.int32();
         return 0;
     },
     int16: function() {
-        if(Prng._prng !== null)
-            return Prng._prng.int32() % (2**16);
+        if(this._prng !== null)
+            return this._prng.int32() % (2**16);
         return 0;
     },
     quick: function() {
-        if(Prng._prng !== null)
-            return Prng._prng.quick();
+        if(this._prng !== null)
+            return this._prng.quick();
         return 0;
     },
     range: function(min, max) {
         min = (min !== undefined) ? min : 0;
         max = (max !== undefined) ? max : 1;
-        return Math.floor(Prng._prng.quick() * (max - min + 1)) + min;
+        return Math.floor(this._prng.quick() * (max - min + 1)) + min;
     },
     choose: function([min, max], num) {
         let values = [];
@@ -50,6 +50,6 @@ export const Prng = {
                     .sort((a, b) => b[1] - a[1]);
     },
     destroy: function() {
-        Prng._prng = null;
+        this._prng = null;
     }
 }
