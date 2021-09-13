@@ -1,4 +1,4 @@
-import { stdout } from 'process';
+import * as fs from 'fs'
 import { ContinueStateV2 } from "./index.js";
 
 function main(argv) {
@@ -16,22 +16,16 @@ function main(argv) {
     })
     const save = ContinueStateV2.seededGen(args);
     const out_buf = save.serialize();
-    if(args["-o"] === true)
-        stdout.write(out_buf, (err) => {
+    if(args["-o"] === true) {
+        fs.writeFile('./ContinueStateV2.sav', out_buf, err => {
+            if(err) throw err;
+        })
+        fs.writeFile('./output.json', JSON.stringify(save, null, 2), err => {
             if(err) throw err;
         });
-    return out_buf;
+    }
 }
 
-export function gen(args) {
-    let a = {
-        s:args.seed,
-        c:args.char,
-        d:args.diff
-    }
-    const save = ContinueStateV2.seededGen(a);
-    return save.serialize();
-}
 
 __MAIN:
     main(process.argv.slice(2));
