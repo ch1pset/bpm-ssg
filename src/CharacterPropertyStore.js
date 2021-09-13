@@ -57,7 +57,7 @@ export class CharacterPropertyStore extends StructProperty {
                 p.Property = selection[index][1].Value;
                 break;
             case "StoredMobilityAbility":
-                selection = ITEMS.filter(([n, i]) => i.Type === 'Auxilary');
+                selection = ITEMS.filter(([n, i]) => i.Type === 'Auxilary').slice(0,2);
                 index = Prng.range(0, selection.length - 1);
                 p.Property = selection[index][1].Value;
                 break;
