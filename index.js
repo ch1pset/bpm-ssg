@@ -5,8 +5,7 @@ function gen(args) {
         c:args.char,
         d:args.diff
     }
-    const save = ContinueStateV2.seededGen(a);
-    return save.serialize();
+    return ContinueStateV2.seededGen(a);
 }
 
 export * from './src/index.js'
