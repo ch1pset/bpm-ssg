@@ -1,9 +1,9 @@
-import { prng_xorshift7 } from 'esm-seedrandom'
+import { prng_alea } from 'esm-seedrandom'
 
 export const Prng = {
     _prng:null,
     init: function(seed) {
-        this._prng = prng_xorshift7(seed, {state: true})
+        this._prng = prng_alea(seed, {state: true})
     },
     int32: function() {
         if(this._prng !== null)
