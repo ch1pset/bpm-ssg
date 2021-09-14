@@ -36,11 +36,11 @@ export class RunPropertyStore extends StructProperty {
         this.addProperty(RUNSTORE.DIFFICULTY[diff.toUpperCase()]);
     }
     genItemPool(name, enhance) {
-        let item_pool = JSON.parse(JSON.stringify(RUNSTORE[name]));
+        let item_pool = deep_copy_template(RUNSTORE[name]);
         let list = ITEMPOOL[name].Standard 
                 ? ITEMPOOL[name][enhance ? 'Enhanced' : 'Standard'] 
                 : ITEMPOOL[name];
-        let pool = Prng.shuffle(Object.assign([], list));
+        let pool = Prng.shuffle(deep_copy_template(list));
     
         pool.forEach(([item, weight]) => {
             let [iname, prop] = ITEMS.find(([n,p]) => n===item);
