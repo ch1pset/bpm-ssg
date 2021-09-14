@@ -47,7 +47,7 @@ export const Prng = {
     // Credits: https://github.com/denizdogan/weighted-shuffle by denizdogan
     shuffle: function(array, enhance) {
         return array.map(([i, w]) => [i, this.quick() ** (1 / enhance ? 1 : w)])
-                    .sort((a, b) => b[1] - a[1]);
+                    .sort(([an, aw], [bn, bw]) => aw - bw);
     },
     destroy: function() {
         this._prng = null;
