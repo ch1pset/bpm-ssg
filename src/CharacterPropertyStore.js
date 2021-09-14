@@ -3,6 +3,7 @@ import {
 } from 'uesavetool';
 
 import { 
+    deep_copy_template,
     T_CHARSTORE,
     CHARSTORE,
     ITEMS,
@@ -32,11 +33,10 @@ export class CharacterPropertyStore extends StructProperty {
         Prng.choose([0, list.length - 1], num)
             .forEach(i => {
                 let selection = ITEMS.filter(([n, item]) => item.Type === list[i][1]);
-                let p = Object.assign({}, CHARSTORE[list[i][0]]);
+                let p = deep_copy_template(CHARSTORE[list[i][0]]);
                 let index = Prng.range(0, selection.length - 1);
                 p.Property = selection[index][1].Value;
                 this.addProperty(p);
-                // console.log(p);
             })
     }
     genLoadout(opts) {
@@ -47,7 +47,7 @@ export class CharacterPropertyStore extends StructProperty {
         this.selectItem(storeditems, opts.all ? 4 : opts.num);
     }
     genChar(prop) {
-        let p = Object.assign({}, CHARSTORE[prop]);
+        let p = deep_copy_template(CHARSTORE[prop]);
         let index;
         let selection = []
         switch(prop) {
@@ -71,7 +71,6 @@ export class CharacterPropertyStore extends StructProperty {
                 break;
         }
         this.addProperty(p);
-        // console.log(p);
     }
     static generate(name) {
         let ret = new CharacterPropertyStore();

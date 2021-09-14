@@ -4,6 +4,7 @@ import {
 } from 'uesavetool';
 
 import { 
+    deep_copy_template,
     RUNSTORE,
     REQUIREMENTS,
     ITEMPOOL,
@@ -35,11 +36,11 @@ export class RunPropertyStore extends StructProperty {
         this.addProperty(RUNSTORE.DIFFICULTY[diff.toUpperCase()]);
     }
     genItemPool(name, enhance) {
-        let item_pool = JSON.parse(JSON.stringify(RUNSTORE[name]));
+        let item_pool = deep_copy_template(RUNSTORE[name]);
         let list = ITEMPOOL[name].Standard 
                 ? ITEMPOOL[name][enhance ? 'Enhanced' : 'Standard'] 
                 : ITEMPOOL[name];
-        let pool = Prng.shuffle(Object.assign([], list));
+        let pool = Prng.shuffle(deep_copy_template(list));
     
         pool.forEach(([item, weight]) => {
             let [iname, prop] = ITEMS.find(([n,p]) => n===item);
@@ -61,9 +62,9 @@ export class RunPropertyStore extends StructProperty {
     }
     genSeeds() {
         for(let i = 0; i <= 9; i++) {
-            let gen = Object.assign({}, RUNSTORE.FloorGenerationSeeds);
-            let mod = Object.assign({}, RUNSTORE.FloorModifierFloats);
-            let play = Object.assign({}, RUNSTORE.FloorPlaySeeds);
+            let gen = deep_copy_template(RUNSTORE.FloorGenerationSeeds);
+            let mod = deep_copy_template(RUNSTORE.FloorModifierFloats);
+            let play = deep_copy_template(RUNSTORE.FloorPlaySeeds);
             gen.Property = [i, Prng.int16()];
             mod.Property = [i, Prng.range(0, 100)];
             play.Property = [i, Prng.int32()];
@@ -73,9 +74,8 @@ export class RunPropertyStore extends StructProperty {
         }
     }
     assignFloor(floor, name) {
-        let room = Object.assign({}, RUNSTORE[name]);
+        let room = deep_copy_template(RUNSTORE[name]);
         room.Property = [floor, 1];
-        // console.log(room);
         this.addProperty(room);
     }
     genRooms(room) {

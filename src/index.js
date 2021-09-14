@@ -20,6 +20,7 @@ export {
     T_CHARSTORE,
     T_GVAS_HEADER
 }
+export * from './utils.js';
 export * from './Prng.js';
 export * from './CharacterPropertyStore.js';
 export * from './RunPropertyStore.js';
