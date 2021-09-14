@@ -34,15 +34,17 @@ export class RunPropertyStore extends StructProperty {
     set Difficulty(diff) {
         this.addProperty(RUNSTORE.DIFFICULTY[diff.toUpperCase()]);
     }
-    genItemPool(name) {
+    genItemPool(name, enhance) {
         let item_pool = JSON.parse(JSON.stringify(RUNSTORE[name]));
-        let list = ITEMPOOL[name].Standard ? ITEMPOOL[name].Standard : ITEMPOOL[name];
+        let list = ITEMPOOL[name].Standard 
+                ? ITEMPOOL[name][enhance ? 'Enhanced' : 'Standard'] 
+                : ITEMPOOL[name];
         let pool = Prng.shuffle(Object.assign([], list));
     
         pool.forEach(([item, weight]) => {
             let [iname, prop] = ITEMS.find(([n,p]) => n===item);
             if(iname === undefined)
-                console.log(`Mislabled/Missing Item: ${item}`)
+                console.log(`Mislabled/Missing Item '${item}'. Check item pool '${name}' for typos.`);
             else {
                 let item_weight_pair;
                 if(prop.Type === 'Weapon')
@@ -126,10 +128,10 @@ export class RunPropertyStore extends StructProperty {
                 break;
         }
     }
-    static generate(diff) {
+    static generate(diff, opts) {
         let ret = new RunPropertyStore();
         REQUIREMENTS.POOLS
-            .forEach(pool => ret.genItemPool(pool));
+            .forEach(pool => ret.genItemPool(pool, opts.ENHANCE));
         ret.Difficulty = diff;
         ret.genSeeds();
         REQUIREMENTS.ROOMS.forEach(r => ret.genRooms(r));

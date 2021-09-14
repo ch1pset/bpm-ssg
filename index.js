@@ -1,11 +1,6 @@
 import { ContinueStateV2 } from './src/index.js';
 function gen(args) {
-    let a = {
-        s:args.seed,
-        c:args.char,
-        d:args.diff
-    }
-    return ContinueStateV2.seededGen(a);
+    return ContinueStateV2.seededGen(args);
 }
 
 export * from './src/index.js'

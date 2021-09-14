@@ -24,13 +24,13 @@ export class ContinueStateV2 extends Gvas {
         this.Properties
             .Properties.push(prop);
     }
-    static seededGen({s, c, d}) {
+    static seededGen({seed, char, diff, opts}) {
         let save = new ContinueStateV2();
         save.addProperty(save.Slot);
-        Prng.init(s);
-        save.addProperty(CharacterPropertyStore.generate(c));
-        Prng.init(s);
-        save.addProperty(RunPropertyStore.generate(d));
+        Prng.init(seed);
+        save.addProperty(CharacterPropertyStore.generate(char));
+        Prng.init(seed);
+        save.addProperty(RunPropertyStore.generate(diff, opts));
         Prng.destroy();
         return save;
     }
