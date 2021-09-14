@@ -259,7 +259,7 @@
         ]
     },
     "FloorIndex": {
-        "Name": "LibraryBeforeArmoury\u0000",
+        "Name": "FloorIndex\u0000",
         "Type": "IntProperty\u0000",
         "Property": [
             0,
