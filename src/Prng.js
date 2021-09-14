@@ -45,8 +45,8 @@ export const Prng = {
     // Weighted Random Sampling (2005; Efraimidis, Spirakis)
     //
     // Credits: https://github.com/denizdogan/weighted-shuffle by denizdogan
-    shuffle: function(array, enhance) {
-        return array.map(([i, w]) => [i, this.quick() ** (1 / enhance ? 1 : w)])
+    shuffle: function(array) {
+        return array.map(([i, w]) => [i, Math.pow(this.quick(), (1 / w))])
                     .sort(([an, aw], [bn, bw]) => aw - bw);
     },
     destroy: function() {
