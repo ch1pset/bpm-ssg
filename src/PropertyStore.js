@@ -4,11 +4,19 @@ export class PropertyStore extends Tuple {
     constructor() {
         super();
     }
+    getPropertyIndex(name) {
+        return this.Properties.findIndex(p => p.Name === name)
+    }
     addProperty(prop) {
         this.Properties.push(PropertyFactory.create(prop));
     }
+    delProperty(name) {
+        let indx = this.getPropertyIndex(name);
+        if(indx !== -1)
+            this.Properties.splice(indx, 1);
+    }
     has(name) {
-        return this.Properties.findIndex(p => p.Name === name) !== -1;
+        return this.getPropertyIndex(name) !== -1;
     }
     static from(obj) {
         let ret = new PropertyStore();
