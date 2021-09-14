@@ -245,42 +245,73 @@
         [ "The Quest", 1000 ],
         [ "Valkyrie's Call", 1000 ]
     ],
-    "ChoiceRoomItemsPoolArm": [
-        [ "Dwarven Braclet", 1000 ],
-        [ "Dwarven Ring", 1000 ],
-        [ "Midgard Bracelet", 1000 ],
-        [ "Powershot Glove", 1000 ],
-        [ "Quaternote", 1000 ],
-        [ "Raven God", 1000 ],
-        [ "Spacewalker", 1000 ]
-    ],
-    "ChoiceRoomItemsPoolFoot": [
-        [ "Giant Slayer Boots", 1000 ],
-        [ "Hermod's Greaves", 1000 ],
-        [ "Njord's Greaves", 1000 ],
-        [ "Rhythmic Chaos Boots", 1000 ],
-        [ "Seiðr's Blessing", 1000 ],
-        [ "Spurs of Justice", 1000 ],
-        [ "Tampling Boots", 1000 ]
-    ],
-    "ChoiceRoomItemsPoolHead": [
-        [ "Adventurer's Fedora", 1000 ],
-        [ "Circlet of the Serpentine", 1000 ],
-        [ "Hat of Madness", 1000 ],
-        [ "Helm-heim", 1000 ],
-        [ "Helm of Rage", 1000 ],
-        [ "Mani", 1000 ],
-        [ "Ogre's Helm", 1000 ]
-    ],
-    "ChoiceRoomItemsPoolShield": [
-        [ "Battle Lion Shield", 1000 ],
-        [ "Berserker's Arm", 1000 ],
-        [ "Cursed Iron", 1000 ],
-        [ "Face of Death", 1000 ],
-        [ "Gungnir's Partner", 1000 ],
-        [ "Masquerade", 1000 ],
-        [ "The Best Defense", 1000 ]
-    ],
+    "ChoiceRoomItemsPoolArm": {
+        "Enhanced": [
+            [ "Dwarven Braclet", 1000 ],
+            [ "Dwarven Ring", 1000 ],
+            [ "Midgard Bracelet", 1000 ],
+            [ "Powershot Glove", 1000 ],
+            [ "Quaternote", 1000 ],
+            [ "Raven God", 1000 ],
+            [ "Spacewalker", 1000 ]
+        ],
+        "Standard": [
+            [ "Midgard Bracelet", 1000 ],
+            [ "Powershot Glove", 1000 ],
+            [ "Raven God", 1000 ],
+            [ "Spacewalker", 1000 ]
+        ]
+    },
+    "ChoiceRoomItemsPoolFoot": {
+        "Enhanced": [
+            [ "Giant Slayer Boots", 1000 ],
+            [ "Hermod's Greaves", 1000 ],
+            [ "Njord's Greaves", 1000 ],
+            [ "Rhythmic Chaos Boots", 1000 ],
+            [ "Seiðr's Blessing", 1000 ],
+            [ "Spurs of Justice", 1000 ],
+            [ "Tampling Boots", 1000 ]
+        ],
+        "Standard": [
+            [ "Giant Slayer Boots", 1000 ],
+            [ "Hermod's Greaves", 1000 ],
+            [ "Rhythmic Chaos Boots", 1000 ],
+            [ "Tampling Boots", 1000 ]
+        ]
+    },
+    "ChoiceRoomItemsPoolHead": {
+        "Enhanced": [
+            [ "Adventurer's Fedora", 1000 ],
+            [ "Circlet of the Serpentine", 1000 ],
+            [ "Hat of Madness", 1000 ],
+            [ "Helm-heim", 1000 ],
+            [ "Helm of Rage", 1000 ],
+            [ "Mani", 1000 ],
+            [ "Ogre's Helm", 1000 ]
+        ],
+        "Standard": [
+            [ "Circlet of the Serpentine", 1000 ],
+            [ "Deadeye Lens", 1000 ],
+            [ "Short Horned", 1000 ],
+            [ "Ymir's Crown", 1000 ]
+        ]
+    },
+    "ChoiceRoomItemsPoolShield": {
+        "Enhanced": [
+            [ "Battle Lion Shield", 1000 ],
+            [ "Berserker's Arm", 1000 ],
+            [ "Cursed Iron", 1000 ],
+            [ "Face of Death", 1000 ],
+            [ "Gungnir's Partner", 1000 ],
+            [ "Masquerade", 1000 ],
+            [ "The Best Defense", 1000 ]
+        ],
+        "Standard": [
+            [ "Face of Death", 1000 ],
+            [ "Richeous Sun", 1000 ],
+            [ "The Best Defense", 1000 ]
+        ]
+    },
     "AngelStatuePool": [
         [ "Ability Up", 1000 ],
         [ "Ability Up", 1000 ],
