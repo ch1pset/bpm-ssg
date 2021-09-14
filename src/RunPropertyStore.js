@@ -35,15 +35,13 @@ export class RunPropertyStore extends StructProperty {
         this.addProperty(RUNSTORE.DIFFICULTY[diff.toUpperCase()]);
     }
     genItemPool(name) {
-        let item_pool = Object.assign({}, RUNSTORE[name]);
-        let pool = Prng.shuffle(ITEMPOOL[name]);
+        let item_pool = JSON.parse(JSON.stringify(RUNSTORE[name]));
+        let list = ITEMPOOL[name].Standard ? ITEMPOOL[name].Standard : ITEMPOOL[name];
+        let pool = Prng.shuffle(Object.assign([], list));
     
-        // console.log(`${name}: `);
-        // console.log(pool);
-        
         pool.forEach(([item, weight]) => {
-            let [name, prop] = ITEMS.find(i => i[0] === item);
-            if(name === undefined)
+            let [iname, prop] = ITEMS.find(([n,p]) => n===item);
+            if(iname === undefined)
                 console.log(`Mislabled/Missing Item: ${item}`)
             else {
                 let item_weight_pair;
