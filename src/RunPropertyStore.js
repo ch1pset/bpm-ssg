@@ -32,6 +32,18 @@ export class RunPropertyStore extends StructProperty {
         this.Properties[0]
             .addProperty(PropertyFactory.create(prop));
     }
+    delProperty(name) {
+        let indx = this.Properties[0]
+            .Properties.findIndex(p => p.Name === name);
+        if(indx !== -1)
+            this.Properties[0].Properties.splice(indx, 1);
+    }
+    setProperty(name, value) {
+        let indx = this.Properties[0]
+            .Properties.findIndex(p => p.Name === name);
+        if(indx !== -1)
+            this.Properties[0].Properties[indx].Property = value;
+    }
     set Difficulty(diff) {
         this.addProperty(RUNSTORE.DIFFICULTY[diff.toUpperCase()]);
     }
@@ -128,8 +140,23 @@ export class RunPropertyStore extends StructProperty {
                 break;
         }
     }
+    setFloorIndex(floor) {
+        let index = deep_copy_template(RUNSTORE.FloorIndex);
+        if(floor==="Crypts") {
+            index.Property = [0, 1];
+            let crypts = deep_copy_template(RUNSTORE.CRYPTSVISIT);
+            this.addProperty(index);
+            this.addProperty(crypts);
+            this.setProperty('ChoiceRoomChosen\0', [1,1]);
+        }
+        else {
+            index.Property = [0, parseInt(floor)];
+            this.addProperty(index);
+        }
+    }
     static generate(diff, opts) {
         let ret = new RunPropertyStore();
+        ret.setFloorIndex(opts.FLOORINDEX);
         REQUIREMENTS.POOLS
             .forEach(pool => ret.genItemPool(pool, opts.ENHANCE));
         ret.Difficulty = diff;
