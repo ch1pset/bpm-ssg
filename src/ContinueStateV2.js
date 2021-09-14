@@ -28,7 +28,7 @@ export class ContinueStateV2 extends Gvas {
         let save = new ContinueStateV2();
         save.addProperty(save.Slot);
         Prng.init(seed);
-        save.addProperty(CharacterPropertyStore.generate(char));
+        save.addProperty(CharacterPropertyStore.generate(char, opts));
         Prng.init(seed);
         save.addProperty(RunPropertyStore.generate(diff, opts));
         Prng.destroy();

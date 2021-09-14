@@ -72,7 +72,7 @@ export class CharacterPropertyStore extends StructProperty {
         }
         this.addProperty(p);
     }
-    static generate(name) {
+    static generate(name, opts) {
         let ret = new CharacterPropertyStore();
         let BPMCharacterPropertyStore = T_CHARSTORE[name.toLowerCase()].Properties[0];
         ret.Properties[0] = PropertyStore.from(BPMCharacterPropertyStore);
