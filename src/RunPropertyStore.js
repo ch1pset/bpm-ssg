@@ -32,22 +32,16 @@ export class RunPropertyStore extends StructProperty {
         this.Properties[0]
             .addProperty(PropertyFactory.create(prop));
     }
-    delProperty(name) {
-        let indx = this.Properties[0]
-            .Properties.findIndex(p => p.Name === name);
-        if(indx !== -1)
-            this.Properties[0].Properties.splice(indx, 1);
-    }
     setProperty(name, value) {
-        let indx = this.Properties[0]
-            .Properties.findIndex(p => p.Name === name);
+        let indx = this.Properties[0].getPropertyIndex(name);
         if(indx !== -1)
             this.Properties[0].Properties[indx].Property = value;
     }
     set Difficulty(diff) {
         this.addProperty(RUNSTORE.DIFFICULTY[diff.toUpperCase()]);
     }
-    genItemPool(name, enhance) {
+    genItemPool(seed, name, enhance) {
+        Prng.init(seed);
         let item_pool = deep_copy_template(RUNSTORE[name]);
         let list = ITEMPOOL[name].Standard 
                 ? ITEMPOOL[name][enhance ? 'Enhanced' : 'Standard'] 
@@ -72,7 +66,8 @@ export class RunPropertyStore extends StructProperty {
         });
         this.addProperty(item_pool);
     }
-    genSeeds() {
+    genSeeds(seed) {
+        Prng.init(seed);
         for(let i = 0; i <= 9; i++) {
             let gen = deep_copy_template(RUNSTORE.FloorGenerationSeeds);
             let mod = deep_copy_template(RUNSTORE.FloorModifierFloats);
@@ -90,7 +85,8 @@ export class RunPropertyStore extends StructProperty {
         room.Property = [floor, 1];
         this.addProperty(room);
     }
-    genRooms(room) {
+    genRooms(seed, room) {
+        Prng.init(seed);
         switch(room) {
             case "LibraryBeforeArmoury":
                 for(let i = 0; i < 4; i++) {
@@ -113,8 +109,11 @@ export class RunPropertyStore extends StructProperty {
                     .forEach(f => this.assignFloor(f, room));
                 break;
             case "BlackMarketRoomChosen":
+                Prng.choose([0, 5], Prng.range(1, 4) === 4 ? 1 : 0)
+                    .forEach(f => this.assignFloor(f, room));
+                break;
             case "PortalRoomChosen":
-                Prng.choose([0, 5], Prng.range())
+                Prng.choose([0, 6], Prng.range(1, 10) === 10 ? 1 : 0)
                     .forEach(f => this.assignFloor(f, room));
                 break;
             case "StairsRoomChosen":
@@ -124,7 +123,7 @@ export class RunPropertyStore extends StructProperty {
             case "ChoiceRoomChosen":
                 let floors = []
                 if(this.Properties[0].has("StairsRoomChosen\0"))
-                    floors = Prng.choose([0, 1]);
+                    floors = Prng.choose([0, 0], Prng.range(1, 10) === 1 ? 1 : 0);
                 else 
                     floors = Prng.choose([0, 5], 1);
                 floors.forEach(f => this.assignFloor(f, room));
@@ -147,21 +146,20 @@ export class RunPropertyStore extends StructProperty {
             let crypts = deep_copy_template(RUNSTORE.CRYPTSVISIT);
             this.addProperty(index);
             this.addProperty(crypts);
-            this.setProperty('ChoiceRoomChosen\0', [1,1]);
         }
         else {
             index.Property = [0, parseInt(floor)];
             this.addProperty(index);
         }
     }
-    static generate(diff, opts) {
+    static generate(seed, diff, opts) {
         let ret = new RunPropertyStore();
-        ret.setFloorIndex(opts.FLOORINDEX);
         REQUIREMENTS.POOLS
-            .forEach(pool => ret.genItemPool(pool, opts.ENHANCE));
+            .forEach(pool => ret.genItemPool(seed, pool, opts.ENHANCE));
         ret.Difficulty = diff;
-        ret.genSeeds();
-        REQUIREMENTS.ROOMS.forEach(r => ret.genRooms(r));
+        ret.genSeeds(seed);
+        REQUIREMENTS.ROOMS.forEach(r => ret.genRooms(seed, r));
+        ret.setFloorIndex(opts.FLOORINDEX);
         return ret;
     }
 }
