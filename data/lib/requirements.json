@@ -33,18 +33,18 @@
     "SpecialChapterVisit"
   ],
   "ROOMS": [
-    "LibraryBeforeArmoury",
-    "MinibossChoice",
-    "StairsRoomChosen",
-    "ChoiceRoomChosen",
-    "BankRoomChosen",
-    "ChallengeRoomChosen",
-    "HeroRoomChosen",
-    "GamblingRoomChosen",
-    "RerollRoomChosen",
-    "PrestigeRoomChosen",
-    "BlackMarketRoomChosen",
-    "PortalRoomChosen"
+    [ "LibraryBeforeArmoury", 0.5 ],
+    [ "MinibossChoice", 0.5 ],
+    [ "StairsRoomChosen", 0.5 ],
+    [ "ChoiceRoomChosen", 0.05 ],
+    [ "BankRoomChosen", 0.1 ],
+    [ "ChallengeRoomChosen", 0.5 ],
+    [ "HeroRoomChosen", 0.1 ],
+    [ "GamblingRoomChosen", 0.5 ],
+    [ "RerollRoomChosen", 0.5 ],
+    [ "PrestigeRoomChosen", 0.05 ],
+    [ "BlackMarketRoomChosen", 0.1 ],
+    [ "PortalRoomChosen", 0.01 ]
   ],
   "DIFFICULTY": [
     "BPMDifficulty"
