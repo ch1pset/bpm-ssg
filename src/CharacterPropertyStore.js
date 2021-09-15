@@ -39,16 +39,14 @@ export class CharacterPropertyStore extends StructProperty {
                 this.addProperty(p);
             })
     }
-    genLoadout(seed, opts) {
-        Prng.init(seed);
+    genLoadout(opts) {
         let loadout = Object.entries(REQUIREMENTS.LOADOUT);
         let abilities = loadout.slice(0, 2);
         let storeditems = loadout.slice(2, 6);
         this.selectItem(abilities, opts.all ? 2 : Prng.range(0, 2));
         this.selectItem(storeditems, opts.all ? 4 : opts.num);
     }
-    genChar(seed, prop) {
-        Prng.init(seed);
+    genChar(prop) {
         let p = deep_copy_template(CHARSTORE[prop]);
         let index;
         let selection = []
@@ -79,9 +77,10 @@ export class CharacterPropertyStore extends StructProperty {
         let BPMCharacterPropertyStore = T_CHARSTORE[name.toLowerCase()].Properties[0];
         ret.Properties[0] = PropertyStore.from(BPMCharacterPropertyStore);
         if(name === 'run') {
+            Prng.init(seed);
             REQUIREMENTS.RANDCHAR
-                .forEach(prop => ret.genChar(seed, prop));
-            ret.genLoadout(seed, {num: 1});
+                .forEach(prop => ret.genChar(prop));
+            ret.genLoadout({num: 1});
         }
         return ret;
     }
