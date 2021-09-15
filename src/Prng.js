@@ -41,6 +41,9 @@ export const Prng = {
         }
         return values;
     },
+    chance: function (pct_float) {
+        return this._prng.quick() < pct_float ? 1 : 0;
+    },
     // Algorithm based on:
     // Weighted Random Sampling (2005; Efraimidis, Spirakis)
     //
