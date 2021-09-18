@@ -72,7 +72,7 @@ export class CharacterPropertyStore extends StructProperty {
     }
     static generate(seed, name, opts) {
         let ret = new CharacterPropertyStore(name);
-        if(name === 'run') {
+        if(name.toLowerCase() === 'run') {
             Prng.init(seed);
             REQUIREMENTS.RANDCHAR
                 .forEach(([prop, amt]) => ret.genChar(prop, amt));
