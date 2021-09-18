@@ -34,15 +34,15 @@
   ],
   "ROOMS": [
     [ "LibraryBeforeArmoury", 0.5 ],
-    [ "MinibossChoice", 0.5 ],
+    [ "MinibossChoice", 1 ],
     [ "StairsRoomChosen", 0.5 ],
     [ "ChoiceRoomChosen", 0.05 ],
-    [ "BankRoomChosen", 0.1 ],
+    [ "BankRoomChosen", 0.2 ],
     [ "ChallengeRoomChosen", 0.5 ],
-    [ "HeroRoomChosen", 0.1 ],
-    [ "GamblingRoomChosen", 0.5 ],
-    [ "RerollRoomChosen", 0.5 ],
-    [ "PrestigeRoomChosen", 0.05 ],
+    [ "HeroRoomChosen", 0.2 ],
+    [ "GamblingRoomChosen", 1 ],
+    [ "RerollRoomChosen", 1 ],
+    [ "PrestigeRoomChosen", 0.1 ],
     [ "BlackMarketRoomChosen", 0.1 ],
     [ "PortalRoomChosen", 0.01 ]
   ],
@@ -50,12 +50,12 @@
     "BPMDifficulty"
   ],
   "RANDCHAR": [
-    "StoredWeapon",
-    "StoredMobilityAbility",
-    "StoredHealth",
-    "StoredShield",
-    "StoredCoins",
-    "StoredKeys"
+    [ "StoredWeapon", 1 ],
+    [ "StoredMobilityAbility", 1 ],
+    [ "StoredHealth", 7 ],
+    [ "StoredShield", 7 ],
+    [ "StoredCoins", 7 ],
+    [ "StoredKeys", 5 ]
   ],
   "LOADOUT": {
     "StoredSecondaryAbility": "Secondary",
