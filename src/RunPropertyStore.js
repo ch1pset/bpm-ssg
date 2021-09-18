@@ -61,23 +61,8 @@ export class RunPropertyStore extends StructProperty {
                 ? ITEMPOOL[name][enhance ? 'Enhanced' : 'Standard'] 
                 : ITEMPOOL[name];
         let pool = Prng.shuffle(deep_copy_template(list));
-    
-        pool.forEach(([item, weight]) => {
-            let [iname, prop] = ITEMS.find(([n,p]) => n===item);
-            if(iname === undefined)
-                console.log(`Mislabled/Missing Item '${item}'. Check item pool '${name}' for typos.`);
-            else {
-                let item_weight_pair;
-                if(prop.Type === 'Weapon')
-                    item_weight_pair = ItemWeightPair.from(RUNSTORE['BPMWeaponWeightPair'])
-                else 
-                    item_weight_pair = ItemWeightPair.from(RUNSTORE['BPMAbilityWeightPair'])
-
-                item_weight_pair.Item = prop.Value;
-                item_weight_pair.Weight = weight;
-                item_pool.Property.Properties.push(item_weight_pair);
-            }
-        });
+        pool.forEach(iw => item_pool.Property
+            .Properties.push(ItemWeightPair.fromPair(iw)));
         this.addProperty(item_pool);
     }
     genSeeds(seed) {
@@ -113,14 +98,8 @@ export class RunPropertyStore extends StructProperty {
                 range([0, 4], i => Prng.pick(2*i, 2*i+1))
                     .forEach(f => this.assignFloor(f, room));
                 break;
-            case "BankRoomChosen":
             case "ChallengeRoomChosen":
-            case "HeroRoomChosen":
                 range([FLOOR.ASG_I, FLOOR.MAX], f => Prng.chance(weight) ? this.assignFloor(f, room) : null);
-                break;
-            case "BlackMarketRoomChosen":
-                Prng.choose([FLOOR.ASG_I, FLOOR.SVAR_II], Prng.chance(weight))
-                    .forEach(f => this.assignFloor(f, room));
                 break;
             case "PortalRoomChosen":
                 Prng.choose([FLOOR.ASG_I, FLOOR.HELL_I], Prng.chance(weight))
@@ -134,18 +113,24 @@ export class RunPropertyStore extends StructProperty {
                 if(this.Properties[0].has("StairsRoomChosen\0"))
                     Prng.choose([FLOOR.ASG_I, FLOOR.ASG_I], Prng.chance(weight))
                         .forEach(f => this.assignFloor(f, room));
-                else 
+                else if(Prng.chance(weight))
                     this.assignFloor(Prng.pick(FLOOR.ASG_I, FLOOR.SVAR_II), room);
                 break;
+            case "BankRoomChosen":
+            case "HeroRoomChosen":
+            case "BlackMarketRoomChosen":
             case "RerollRoomChosen":
-                this.assignFloor(Prng.pick(FLOOR.ASG_I, FLOOR.SVAR_II), room);
-                break;
             case "GamblingRoomChosen":
-                Prng.choose([FLOOR.ASG_I, FLOOR.HELL_I], 2)
+                let num = 0;
+                while(Prng.chance(weight) && num < FLOOR.HELL_I) {
+                    num++;
+                    weight /= 2;
+                }
+                Prng.choose([FLOOR.ASG_I, FLOOR.SVAR_II], num)
                     .forEach(f => this.assignFloor(f, room));
                 break;
             case "PrestigeRoomChosen":
-                Prng.choose([FLOOR.VAN_I, FLOOR.VAN_II], Prng.chance(weight))
+                Prng.choose([FLOOR.VAN_I, FLOOR.VAN_I], Prng.chance(weight))
                     .forEach(f => this.assignFloor(f, room));
                 break;
         }
