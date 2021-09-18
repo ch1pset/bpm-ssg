@@ -1,4 +1,5 @@
 import { prng_alea } from 'esm-seedrandom'
+import { range } from './index.js';
 
 export const Prng = {
     _prng:null,
@@ -20,24 +21,17 @@ export const Prng = {
             return this._prng.quick();
         return 0;
     },
-    range: function(min, max) {
+    pick: function(min, max) {
         min = (min !== undefined) ? min : 0;
         max = (max !== undefined) ? max : 1;
         return Math.floor(this._prng.quick() * (max - min + 1)) + min;
     },
     choose: function([min, max], num) {
         let values = [];
-        num = (num !== undefined) ? num : this.range(min, max);
-        if(num !== 0 && num === (max - min + 1)) {
-            let i = min;
-            while(values.length < num)
-                values.push(i++);
-            return values;
-        }
-        for(let i = 0; i < num; i++) {
-            let val;
-            while(values.includes(val = this.range(min, max)));
-            values.push(val);
+        if(num > 0) {
+            values = range([min, max]);
+            while(values.length > num)
+                values.splice(this.pick(0, values.length - 1), 1);
         }
         return values;
     },
