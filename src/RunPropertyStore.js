@@ -13,6 +13,7 @@ import {
     ItemWeightPair,
     ITEMS
 } from './index.js';
+import { range } from './utils.js';
 
 const FLOOR = {
     ASG_I:  0,
@@ -22,7 +23,9 @@ const FLOOR = {
     SVAR_I: 4,
     SVAR_II:5,
     HELL_I: 6,
-    HELL_II:7
+    HELL_II:7,
+    UNKOWN:8,
+    MAX:9
 }
 
 export class RunPropertyStore extends StructProperty {
@@ -84,7 +87,7 @@ export class RunPropertyStore extends StructProperty {
             let mod = deep_copy_template(RUNSTORE.FloorModifierFloats);
             let play = deep_copy_template(RUNSTORE.FloorPlaySeeds);
             gen.Property = [i, Prng.int16()];
-            mod.Property = [i, Prng.range(0, 100)];
+            mod.Property = [i, Prng.quick() * 100];
             play.Property = [i, Prng.int32()];
             this.addProperty(gen);
             this.addProperty(mod);
@@ -99,24 +102,21 @@ export class RunPropertyStore extends StructProperty {
     genRooms([room, weight]) {
         switch(room) {
             case "LibraryBeforeArmoury":
-                for(let i = 0; i < 4; i++) {
+                range([0, 4], i => {
                     if(Prng.chance(weight)) {
                         this.assignFloor(2*i, room);
                         this.assignFloor(2*i+1, room);
                     }
-                }
+                })
                 break;
             case "MinibossChoice":
-                for(let i = 0; i < 4; i++) {
-                    Prng.choose([2*i, 2*i+1], 1)
-                        .forEach(f => this.assignFloor(f, room));
-                }
+                range([0, 4], i => Prng.pick(2*i, 2*i+1))
+                    .forEach(f => this.assignFloor(f, room));
                 break;
             case "BankRoomChosen":
             case "ChallengeRoomChosen":
             case "HeroRoomChosen":
-                Prng.choose([FLOOR.ASG_I, FLOOR.SVAR_II])
-                    .forEach(f => Prng.chance(weight) ? this.assignFloor(f, room) : f);
+                range([FLOOR.ASG_I, FLOOR.MAX], f => Prng.chance(weight) ? this.assignFloor(f, room) : null);
                 break;
             case "BlackMarketRoomChosen":
                 Prng.choose([FLOOR.ASG_I, FLOOR.SVAR_II], Prng.chance(weight))
@@ -131,15 +131,16 @@ export class RunPropertyStore extends StructProperty {
                     .forEach(f => this.assignFloor(f, room));
                 break;
             case "ChoiceRoomChosen":
-                if(this.Properties[0].has("StairsRoomChosen\0")){
+                if(this.Properties[0].has("StairsRoomChosen\0"))
                     Prng.choose([FLOOR.ASG_I, FLOOR.ASG_I], Prng.chance(weight))
                         .forEach(f => this.assignFloor(f, room));
-                }
                 else 
-                    this.assignFloor(Prng.choose([FLOOR.ASG_I, FLOOR.SVAR_II], 1), room);
+                    this.assignFloor(Prng.pick(FLOOR.ASG_I, FLOOR.SVAR_II), room);
+                break;
+            case "RerollRoomChosen":
+                this.assignFloor(Prng.pick(FLOOR.ASG_I, FLOOR.SVAR_II), room);
                 break;
             case "GamblingRoomChosen":
-            case "RerollRoomChosen":
                 Prng.choose([FLOOR.ASG_I, FLOOR.HELL_I], 2)
                     .forEach(f => this.assignFloor(f, room));
                 break;
@@ -149,18 +150,15 @@ export class RunPropertyStore extends StructProperty {
                 break;
         }
     }
-    setFloorIndex(floor) {
+    set FloorIndex(floor) {
         let index = deep_copy_template(RUNSTORE.FloorIndex);
         if(floor==="Crypts") {
             index.Property = [0, 1];
             let crypts = deep_copy_template(RUNSTORE.CRYPTSVISIT);
-            this.addProperty(index);
             this.addProperty(crypts);
         }
-        else {
-            index.Property = [0, parseInt(floor)];
-            this.addProperty(index);
-        }
+        else index.Property = [0, parseInt(floor)];
+        this.addProperty(index);
     }
     static generate(seed, diff, opts) {
         let ret = new RunPropertyStore();
@@ -170,7 +168,7 @@ export class RunPropertyStore extends StructProperty {
         ret.genSeeds(seed);
         Prng.init(seed);
         REQUIREMENTS.ROOMS.forEach(room => ret.genRooms(room));
-        ret.setFloorIndex(opts.FLOORINDEX);
+        ret.FloorIndex = opts.FLOORINDEX;
         return ret;
     }
 }
