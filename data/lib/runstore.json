@@ -3,199 +3,109 @@
       "Name": "ShopItemPool\u0000",
       "Type": "ArrayProperty\u0000",
       "StoredPropertyType": "StructProperty\u0000",
-      "Property": {
-          "Name": "ShopItemPool\u0000",
-          "Type": "StructProperty\u0000",
-          "StoredPropertyType": "BPMAbilityWeightPair\u0000",
-          "Properties": []
-      }
+      "Property": {}
     },
     "TreasureItemPool": {
       "Name": "TreasureItemPool\u0000",
       "Type": "ArrayProperty\u0000",
       "StoredPropertyType": "StructProperty\u0000",
-      "Property": {
-          "Name": "TreasureItemPool\u0000",
-          "Type": "StructProperty\u0000",
-          "StoredPropertyType": "BPMAbilityWeightPair\u0000",
-          "Properties": []
-      }
+      "Property": {}
     },
     "BossItemPool": {
       "Name": "BossItemPool\u0000",
       "Type": "ArrayProperty\u0000",
       "StoredPropertyType": "StructProperty\u0000",
-      "Property": {
-          "Name": "BossItemPool\u0000",
-          "Type": "StructProperty\u0000",
-          "StoredPropertyType": "BPMAbilityWeightPair\u0000",
-          "Properties": []
-      }
+      "Property": {}
     },
     "WeaponPool": {
       "Name": "WeaponPool\u0000",
       "Type": "ArrayProperty\u0000",
       "StoredPropertyType": "StructProperty\u0000",
-      "Property": {
-          "Name": "WeaponPool\u0000",
-          "Type": "StructProperty\u0000",
-          "StoredPropertyType": "BPMWeaponWeightPair\u0000",
-          "Properties": []
-      }
+      "Property": {}
     },
     "WeaponCheapPool": {
       "Name": "WeaponCheapPool\u0000",
       "Type": "ArrayProperty\u0000",
       "StoredPropertyType": "StructProperty\u0000",
-      "Property": {
-          "Name": "WeaponCheapPool\u0000",
-          "Type": "StructProperty\u0000",
-          "StoredPropertyType": "BPMWeaponWeightPair\u0000",
-          "Properties": []
-      }
+      "Property": {}
     },
     "WeaponAffordablePool": {
       "Name": "WeaponAffordablePool\u0000",
       "Type": "ArrayProperty\u0000",
       "StoredPropertyType": "StructProperty\u0000",
-      "Property": {
-          "Name": "WeaponAffordablePool\u0000",
-          "Type": "StructProperty\u0000",
-          "StoredPropertyType": "BPMWeaponWeightPair\u0000",
-          "Properties": []
-      }
+      "Property": {}
     },
     "WeaponExpensivePool": {
       "Name": "WeaponExpensivePool\u0000",
       "Type": "ArrayProperty\u0000",
       "StoredPropertyType": "StructProperty\u0000",
-      "Property": {
-          "Name": "WeaponExpensivePool\u0000",
-          "Type": "StructProperty\u0000",
-          "StoredPropertyType": "BPMWeaponWeightPair\u0000",
-          "Properties": []
-      }
+      "Property": {}
     },
     "LibrarySecondaryPool": {
       "Name": "LibrarySecondaryPool\u0000",
       "Type": "ArrayProperty\u0000",
       "StoredPropertyType": "StructProperty\u0000",
-      "Property": {
-          "Name": "LibrarySecondaryPool\u0000",
-          "Type": "StructProperty\u0000",
-          "StoredPropertyType": "BPMAbilityWeightPair\u0000",
-          "Properties": []
-      }
+      "Property": {}
     },
     "LibraryUltimatePool": {
       "Name": "LibraryUltimatePool\u0000",
       "Type": "ArrayProperty\u0000",
       "StoredPropertyType": "StructProperty\u0000",
-      "Property": {
-          "Name": "LibraryUltimatePool\u0000",
-          "Type": "StructProperty\u0000",
-          "StoredPropertyType": "BPMAbilityWeightPair\u0000",
-          "Properties": []
-      }
+      "Property": {}
     },
     "ChoiceRoomItemsPoolHead": {
       "Name": "ChoiceRoomItemsPoolHead\u0000",
       "Type": "ArrayProperty\u0000",
       "StoredPropertyType": "StructProperty\u0000",
-      "Property": {
-          "Name": "ChoiceRoomItemsPoolHead\u0000",
-          "Type": "StructProperty\u0000",
-          "StoredPropertyType": "BPMAbilityWeightPair\u0000",
-          "Properties": []
-      }
+      "Property": {}
     },
     "ChoiceRoomItemsPoolFoot": {
       "Name": "ChoiceRoomItemsPoolFoot\u0000",
       "Type": "ArrayProperty\u0000",
       "StoredPropertyType": "StructProperty\u0000",
-      "Property": {
-          "Name": "ChoiceRoomItemsPoolFoot\u0000",
-          "Type": "StructProperty\u0000",
-          "StoredPropertyType": "BPMAbilityWeightPair\u0000",
-          "Properties": []
-      }
+      "Property": {}
     },
     "ChoiceRoomItemsPoolShield": {
       "Name": "ChoiceRoomItemsPoolShield\u0000",
       "Type": "ArrayProperty\u0000",
       "StoredPropertyType": "StructProperty\u0000",
-      "Property": {
-          "Name": "ChoiceRoomItemsPoolShield\u0000",
-          "Type": "StructProperty\u0000",
-          "StoredPropertyType": "BPMAbilityWeightPair\u0000",
-          "Properties": []
-      }
+      "Property": {}
     },
     "ChoiceRoomItemsPoolArm": {
       "Name": "ChoiceRoomItemsPoolArm\u0000",
       "Type": "ArrayProperty\u0000",
       "StoredPropertyType": "StructProperty\u0000",
-      "Property": {
-          "Name": "ChoiceRoomItemsPoolArm\u0000",
-          "Type": "StructProperty\u0000",
-          "StoredPropertyType": "BPMAbilityWeightPair\u0000",
-          "Properties": []
-      }
+      "Property": {}
     },
     "DevilStatuePool": {
       "Name": "DevilStatuePool\u0000",
       "Type": "ArrayProperty\u0000",
       "StoredPropertyType": "StructProperty\u0000",
-      "Property": {
-          "Name": "DevilStatuePool\u0000",
-          "Type": "StructProperty\u0000",
-          "StoredPropertyType": "BPMAbilityWeightPair\u0000",
-          "Properties": []
-      }
+      "Property": {}
     },
     "AngelStatuePool": {
       "Name": "AngelStatuePool\u0000",
       "Type": "ArrayProperty\u0000",
       "StoredPropertyType": "StructProperty\u0000",
-      "Property": {
-          "Name": "AngelStatuePool\u0000",
-          "Type": "StructProperty\u0000",
-          "StoredPropertyType": "BPMAbilityWeightPair\u0000",
-          "Properties": []
-      }
+      "Property": {}
     },
     "CursedChestPool": {
       "Name": "CursedChestPool\u0000",
       "Type": "ArrayProperty\u0000",
       "StoredPropertyType": "StructProperty\u0000",
-      "Property": {
-          "Name": "CursedChestPool\u0000",
-          "Type": "StructProperty\u0000",
-          "StoredPropertyType": "BPMAbilityWeightPair\u0000",
-          "Properties": []
-      }
+      "Property": {}
     },
     "FutureProofingAPool": {
       "Name": "FutureProofingAPool\u0000",
       "Type": "ArrayProperty\u0000",
       "StoredPropertyType": "StructProperty\u0000",
-      "Property": {
-          "Name": "FutureProofingAPool\u0000",
-          "Type": "StructProperty\u0000",
-          "StoredPropertyType": "BPMAbilityWeightPair\u0000",
-          "Properties": []
-      }
+      "Property": {}
     },
     "FutureProofingBPool": {
       "Name": "FutureProofingBPool\u0000",
       "Type": "ArrayProperty\u0000",
       "StoredPropertyType": "StructProperty\u0000",
-      "Property": {
-          "Name": "FutureProofingBPool\u0000",
-          "Type": "StructProperty\u0000",
-          "StoredPropertyType": "BPMAbilityWeightPair\u0000",
-          "Properties": []
-      }
+      "Property": {}
     },
     "DIFFICULTY": {
         "EASY": {
@@ -387,19 +297,19 @@
         ]
     },
     "BPMWeaponWeightPair": {
-    "Name": "BPMWeaponWeightPair\u0000",
-    "Type": "Tuple",
-    "Properties": [
-        {
-            "Name": "BPMWeapon\u0000",
-            "Type": "SoftObjectProperty\u0000",
-            "Property": ""
-        },
-        {
-            "Name": "Weight\u0000",
-            "Type": "FloatProperty\u0000",
-            "Property": []
-        }
-    ]
+        "Name": "BPMWeaponWeightPair\u0000",
+        "Type": "Tuple",
+        "Properties": [
+            {
+                "Name": "BPMWeapon\u0000",
+                "Type": "SoftObjectProperty\u0000",
+                "Property": ""
+            },
+            {
+                "Name": "Weight\u0000",
+                "Type": "FloatProperty\u0000",
+                "Property": []
+            }
+        ]
     }
 }
