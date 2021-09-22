@@ -1,9 +1,9 @@
 import {
+    PropertyFactory,
     StructProperty
 } from 'uesavetool';
 
 import { 
-    deep_copy_template,
     T_CHARSTORE,
     CHARSTORE,
     ITEMS,
@@ -20,9 +20,12 @@ export class CharacterPropertyStore extends StructProperty {
         this.StoredPropertyType = "BPMCharacterPropertyStore\u0000";
         this.Properties = [
             PropertyStore.from(
-                deep_copy_template(T_CHARSTORE[name.toLowerCase()].Properties[0])
+                T_CHARSTORE[name.toLowerCase()].Properties[0]
             )
         ]
+    }
+    get StartingWeapon() {
+        return this.Properties[0].getProperty('StoredWeapon\0').Property;
     }
     addProperty(prop) {
         this.Properties[0].addProperty(prop);
@@ -31,21 +34,21 @@ export class CharacterPropertyStore extends StructProperty {
         Prng.choose([0, list.length - 1], num)
             .forEach(i => {
                 let selection = ITEMS.filter(([n, item]) => item.Type === list[i][1]);
-                let p = deep_copy_template(CHARSTORE[list[i][0]]);
+                let p = PropertyFactory.create(CHARSTORE[list[i][0]]);
                 let index = Prng.pick(0, selection.length - 1);
                 p.Property = selection[index][1].Value;
                 this.addProperty(p);
             })
     }
     genLoadout(opts) {
-        let loadout = Object.entries(REQUIREMENTS.LOADOUT);
+        let loadout = REQUIREMENTS.LOADOUT;
         let abilities = loadout.slice(0, 2);
         let storeditems = loadout.slice(2, 6);
         this.selectItem(abilities, opts.all ? 2 : Prng.pick(0, 2));
         this.selectItem(storeditems, opts.all ? 4 : opts.num);
     }
     genChar(prop, amt) {
-        let p = deep_copy_template(CHARSTORE[prop]);
+        let p = PropertyFactory.create(CHARSTORE[prop]);
         let index;
         let selection = []
         switch(prop) {
