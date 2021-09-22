@@ -7,8 +7,11 @@ export class PropertyStore extends Tuple {
     getPropertyIndex(name) {
         return this.Properties.findIndex(p => p.Name === name)
     }
+    getProperty(name) {
+        return this.Properties.find(p => p.Name === name);
+    }
     addProperty(prop) {
-        this.Properties.push(PropertyFactory.create(prop));
+        this.Properties.push(prop);
     }
     delProperty(name) {
         let indx = this.getPropertyIndex(name);
