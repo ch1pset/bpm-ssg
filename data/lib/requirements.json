@@ -1,23 +1,23 @@
 {
   "POOLS": [
-    "ShopItemPool",
-    "TreasureItemPool",
-    "BossItemPool",
-    "WeaponPool",
-    "WeaponCheapPool",
-    "WeaponAffordablePool",
-    "WeaponExpensivePool",
-    "LibrarySecondaryPool",
-    "LibraryUltimatePool",
-    "ChoiceRoomItemsPoolHead",
-    "ChoiceRoomItemsPoolFoot",
-    "ChoiceRoomItemsPoolShield",
-    "ChoiceRoomItemsPoolArm",
-    "DevilStatuePool",
-    "AngelStatuePool",
-    "CursedChestPool",
-    "FutureProofingAPool",
-    "FutureProofingBPool"
+    [ "ShopItemPool", "Ability" ],
+    [ "TreasureItemPool", "Ability" ],
+    [ "BossItemPool", "Ability" ],
+    [ "WeaponPool", "Weapon" ],
+    [ "WeaponCheapPool", "Weapon" ],
+    [ "WeaponAffordablePool", "Weapon" ],
+    [ "WeaponExpensivePool", "Weapon" ],
+    [ "LibrarySecondaryPool", "Ability" ],
+    [ "LibraryUltimatePool", "Ability" ],
+    [ "ChoiceRoomItemsPoolHead", "Ability" ],
+    [ "ChoiceRoomItemsPoolFoot", "Ability" ],
+    [ "ChoiceRoomItemsPoolShield", "Ability" ],
+    [ "ChoiceRoomItemsPoolArm", "Ability" ],
+    [ "DevilStatuePool", "Ability" ],
+    [ "AngelStatuePool", "Ability" ],
+    [ "CursedChestPool", "Ability" ],
+    [ "FutureProofingAPool", "Ability" ],
+    [ "FutureProofingBPool", "Ability" ]
   ],
   "SEEDS": [
     "FloorGenerationSeeds",
@@ -57,12 +57,12 @@
     [ "StoredCoins", 7 ],
     [ "StoredKeys", 5 ]
   ],
-  "LOADOUT": {
-    "StoredSecondaryAbility": "Secondary",
-    "StoredUltimateAbility": "Ultimate",
-    "StoredHeadItemAbility": "Head",
-    "StoredChestItemAbility": "Chest",
-    "StoredArmsItemAbility": "Arm",
-    "StoredLegsItemAbility": "Foot"
-  }
+  "LOADOUT": [
+    [ "StoredSecondaryAbility", "Secondary" ],
+    [ "StoredUltimateAbility", "Ultimate" ],
+    [ "StoredHeadItemAbility", "Head" ],
+    [ "StoredChestItemAbility", "Chest" ],
+    [ "StoredArmsItemAbility", "Arm" ],
+    [ "StoredLegsItemAbility", "Foot" ]
+  ]
 }
