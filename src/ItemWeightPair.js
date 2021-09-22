@@ -1,5 +1,4 @@
 import {
-    PropertyFactory,
     Tuple
 } from 'uesavetool'
 
@@ -37,7 +36,7 @@ export class ItemWeightPair extends Tuple {
         this.Properties[0].Property = value;
     }
     get Item() {
-        let [name, prop] = deep_copy_template(ITEMS.find(([n, i]) => i.Value === this.Properties[0].Property));
+        let [name, prop] = ITEMS.find(([n, i]) => i.Value === this.Properties[0].Property);
         return name;
     }
     set Weight(value) {
@@ -46,21 +45,12 @@ export class ItemWeightPair extends Tuple {
     get Weight() {
         return this.Properties[1].Property[1];
     }
-    static fromPair([name, weight]) {
-        let [item, prop] = deep_copy_template(ITEMS.find(([n, i]) => n === name));
+    static from([name, weight]) {
+        let [item, prop] = ITEMS.find(([n, i]) => n === name);
         if(item === undefined)
             console.log(`Mislabled/Missing Item '${name}'`);
         let item_weight_pair = new ItemWeightPair(prop.Type);
         item_weight_pair.Property = [prop.Value, weight];
         return item_weight_pair;
-    }
-    static from(obj) {
-        let ret = new ItemWeightPair();
-        ret.Name = obj.Name;
-        ret.Type = obj.Type;
-        ret.Properties = [];
-        if(obj.Properties !== undefined)
-            obj.Properties.forEach(prop => ret.Properties.push(PropertyFactory.create(prop)))
-        return ret;
     }
 }
