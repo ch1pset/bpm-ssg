@@ -38,7 +38,6 @@ export class ContinueStateV2 extends Gvas {
             }
         });
         save.addProperty(runstore);
-        console.log(save);
         Prng.destroy();
         return save;
     }
