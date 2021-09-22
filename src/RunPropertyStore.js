@@ -4,16 +4,13 @@ import {
 } from 'uesavetool';
 
 import { 
-    deep_copy_template,
+    range,
     RUNSTORE,
     REQUIREMENTS,
-    ITEMPOOL,
     Prng,
     PropertyStore,
-    ItemWeightPair,
-    ITEMS
+    ItemPool
 } from './index.js';
-import { range } from './utils.js';
 
 const FLOOR = {
     ASG_I:  0,
@@ -44,33 +41,25 @@ export class RunPropertyStore extends StructProperty {
     }
     addProperty(prop) {
         this.Properties[0]
-            .addProperty(PropertyFactory.create(prop));
+            .addProperty(prop);
     }
     setProperty(name, value) {
         let indx = this.Properties[0].getPropertyIndex(name);
         if(indx !== -1)
             this.Properties[0].Properties[indx].Property = value;
     }
-    set Difficulty(diff) {
-        this.addProperty(RUNSTORE.DIFFICULTY[diff.toUpperCase()]);
+    getProperty(name) {
+        return this.Properties[0].getProperty(name);
     }
-    genItemPool(seed, name, enhance) {
-        Prng.init(seed);
-        let item_pool = deep_copy_template(RUNSTORE[name]);
-        let list = ITEMPOOL[name].Standard 
-                ? ITEMPOOL[name][enhance ? 'Enhanced' : 'Standard'] 
-                : ITEMPOOL[name];
-        let pool = Prng.shuffle(deep_copy_template(list));
-        pool.forEach(iw => item_pool.Property
-            .Properties.push(ItemWeightPair.fromPair(iw)));
-        this.addProperty(item_pool);
+    set Difficulty(diff) {
+        this.addProperty(PropertyFactory.create(RUNSTORE.DIFFICULTY[diff.toUpperCase()]));
     }
     genSeeds(seed) {
         Prng.init(seed);
         for(let i = 0; i <= 9; i++) {
-            let gen = deep_copy_template(RUNSTORE.FloorGenerationSeeds);
-            let mod = deep_copy_template(RUNSTORE.FloorModifierFloats);
-            let play = deep_copy_template(RUNSTORE.FloorPlaySeeds);
+            let gen = PropertyFactory.create(RUNSTORE.FloorGenerationSeeds);
+            let mod = PropertyFactory.create(RUNSTORE.FloorModifierFloats);
+            let play = PropertyFactory.create(RUNSTORE.FloorPlaySeeds);
             gen.Property = [i, Prng.int16()];
             mod.Property = [i, Prng.quick() * 100];
             play.Property = [i, Prng.int32()];
@@ -80,7 +69,7 @@ export class RunPropertyStore extends StructProperty {
         }
     }
     assignFloor(floor, name) {
-        let room = deep_copy_template(RUNSTORE[name]);
+        let room = PropertyFactory.create(RUNSTORE[name]);
         room.Property = [floor, 1];
         this.addProperty(room);
     }
@@ -98,9 +87,9 @@ export class RunPropertyStore extends StructProperty {
                 range([0, 4], i => Prng.pick(2*i, 2*i+1))
                     .forEach(f => this.assignFloor(f, room));
                 break;
-            case "ChallengeRoomChosen":
-                range([FLOOR.ASG_I, FLOOR.MAX], f => Prng.chance(weight) ? this.assignFloor(f, room) : null);
-                break;
+            // case "ChallengeRoomChosen": // Don't seem to affect runs in any way
+            //     range([FLOOR.ASG_I, FLOOR.MAX], f => Prng.chance(weight) ? this.assignFloor(f, room) : null);
+            //     break;
             case "PortalRoomChosen":
                 Prng.choose([FLOOR.ASG_I, FLOOR.HELL_I], Prng.chance(weight))
                     .forEach(f => this.assignFloor(f, room));
@@ -136,10 +125,10 @@ export class RunPropertyStore extends StructProperty {
         }
     }
     set FloorIndex(floor) {
-        let index = deep_copy_template(RUNSTORE.FloorIndex);
+        let index = PropertyFactory.create(RUNSTORE.FloorIndex);
         if(floor==="Crypts") {
             index.Property = [0, 1];
-            let crypts = deep_copy_template(RUNSTORE.CRYPTSVISIT);
+            let crypts = PropertyFactory.create(RUNSTORE.CRYPTSVISIT);
             this.addProperty(crypts);
         }
         else index.Property = [0, parseInt(floor)];
@@ -148,7 +137,7 @@ export class RunPropertyStore extends StructProperty {
     static generate(seed, diff, opts) {
         let ret = new RunPropertyStore();
         REQUIREMENTS.POOLS
-            .forEach(pool => ret.genItemPool(seed, pool, opts.ENHANCE));
+            .forEach(pool => ret.addProperty(ItemPool.generate(seed, pool, opts.ENHANCE)));
         ret.Difficulty = diff;
         ret.genSeeds(seed);
         Prng.init(seed);
