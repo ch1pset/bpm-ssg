@@ -27,16 +27,16 @@ export class ContinueStateV2 extends Gvas {
     }
     static seededGen({seed, char, diff, opts}) {
         let save = new ContinueStateV2();
-        save.addProperty(save.Slot);
         Prng.init(seed);
         let charstore = CharacterPropertyStore.generate(seed, char, opts);
-        save.addProperty(charstore);
         let runstore = RunPropertyStore.generate(seed, diff, opts);
         REQUIREMENTS.POOLS.forEach(([name, type]) => {
             if(type === 'Weapon') {
                 runstore.getProperty(`${name}\0`).delItemByValue(charstore.StartingWeapon)
             }
         });
+        save.addProperty(save.Slot);
+        save.addProperty(charstore);
         save.addProperty(runstore);
         Prng.destroy();
         return save;
