@@ -1,143 +1,126 @@
-{  
+{
+    "RunPropertyStore": {
+        "Name": "RunPropertyStore\u0000",
+        "Type": "StructProperty\u0000",
+        "StoredPropertyType": "BPMRunPropertyStore\u0000",
+        "Properties": []
+    },
+    "BPMRunPropertyStore": {
+        "Name": "BPMRunPropertyStore\u0000",
+        "Type": "Tuple",
+        "Properties": []
+    },
     "ShopItemPool": {
       "Name": "ShopItemPool\u0000",
       "Type": "ArrayProperty\u0000",
-      "StoredPropertyType": "StructProperty\u0000",
-      "Property": {}
+      "StoredPropertyType": "StructProperty\u0000"
     },
     "TreasureItemPool": {
       "Name": "TreasureItemPool\u0000",
       "Type": "ArrayProperty\u0000",
-      "StoredPropertyType": "StructProperty\u0000",
-      "Property": {}
+      "StoredPropertyType": "StructProperty\u0000"
     },
     "BossItemPool": {
       "Name": "BossItemPool\u0000",
       "Type": "ArrayProperty\u0000",
-      "StoredPropertyType": "StructProperty\u0000",
-      "Property": {}
+      "StoredPropertyType": "StructProperty\u0000"
     },
     "WeaponPool": {
       "Name": "WeaponPool\u0000",
       "Type": "ArrayProperty\u0000",
-      "StoredPropertyType": "StructProperty\u0000",
-      "Property": {}
+      "StoredPropertyType": "StructProperty\u0000"
     },
     "WeaponCheapPool": {
       "Name": "WeaponCheapPool\u0000",
       "Type": "ArrayProperty\u0000",
-      "StoredPropertyType": "StructProperty\u0000",
-      "Property": {}
+      "StoredPropertyType": "StructProperty\u0000"
     },
     "WeaponAffordablePool": {
       "Name": "WeaponAffordablePool\u0000",
       "Type": "ArrayProperty\u0000",
-      "StoredPropertyType": "StructProperty\u0000",
-      "Property": {}
+      "StoredPropertyType": "StructProperty\u0000"
     },
     "WeaponExpensivePool": {
       "Name": "WeaponExpensivePool\u0000",
       "Type": "ArrayProperty\u0000",
-      "StoredPropertyType": "StructProperty\u0000",
-      "Property": {}
+      "StoredPropertyType": "StructProperty\u0000"
     },
     "LibrarySecondaryPool": {
       "Name": "LibrarySecondaryPool\u0000",
       "Type": "ArrayProperty\u0000",
-      "StoredPropertyType": "StructProperty\u0000",
-      "Property": {}
+      "StoredPropertyType": "StructProperty\u0000"
     },
     "LibraryUltimatePool": {
       "Name": "LibraryUltimatePool\u0000",
       "Type": "ArrayProperty\u0000",
-      "StoredPropertyType": "StructProperty\u0000",
-      "Property": {}
+      "StoredPropertyType": "StructProperty\u0000"
     },
     "ChoiceRoomItemsPoolHead": {
       "Name": "ChoiceRoomItemsPoolHead\u0000",
       "Type": "ArrayProperty\u0000",
-      "StoredPropertyType": "StructProperty\u0000",
-      "Property": {}
+      "StoredPropertyType": "StructProperty\u0000"
     },
     "ChoiceRoomItemsPoolFoot": {
       "Name": "ChoiceRoomItemsPoolFoot\u0000",
       "Type": "ArrayProperty\u0000",
-      "StoredPropertyType": "StructProperty\u0000",
-      "Property": {}
+      "StoredPropertyType": "StructProperty\u0000"
     },
     "ChoiceRoomItemsPoolShield": {
       "Name": "ChoiceRoomItemsPoolShield\u0000",
       "Type": "ArrayProperty\u0000",
-      "StoredPropertyType": "StructProperty\u0000",
-      "Property": {}
+      "StoredPropertyType": "StructProperty\u0000"
     },
     "ChoiceRoomItemsPoolArm": {
       "Name": "ChoiceRoomItemsPoolArm\u0000",
       "Type": "ArrayProperty\u0000",
-      "StoredPropertyType": "StructProperty\u0000",
-      "Property": {}
+      "StoredPropertyType": "StructProperty\u0000"
     },
     "DevilStatuePool": {
       "Name": "DevilStatuePool\u0000",
       "Type": "ArrayProperty\u0000",
-      "StoredPropertyType": "StructProperty\u0000",
-      "Property": {}
+      "StoredPropertyType": "StructProperty\u0000"
     },
     "AngelStatuePool": {
       "Name": "AngelStatuePool\u0000",
       "Type": "ArrayProperty\u0000",
-      "StoredPropertyType": "StructProperty\u0000",
-      "Property": {}
+      "StoredPropertyType": "StructProperty\u0000"
     },
     "CursedChestPool": {
       "Name": "CursedChestPool\u0000",
       "Type": "ArrayProperty\u0000",
-      "StoredPropertyType": "StructProperty\u0000",
-      "Property": {}
+      "StoredPropertyType": "StructProperty\u0000"
     },
     "FutureProofingAPool": {
       "Name": "FutureProofingAPool\u0000",
       "Type": "ArrayProperty\u0000",
-      "StoredPropertyType": "StructProperty\u0000",
-      "Property": {}
+      "StoredPropertyType": "StructProperty\u0000"
     },
     "FutureProofingBPool": {
       "Name": "FutureProofingBPool\u0000",
       "Type": "ArrayProperty\u0000",
-      "StoredPropertyType": "StructProperty\u0000",
-      "Property": {}
+      "StoredPropertyType": "StructProperty\u0000"
+    },
+    "BPMDifficulty": {
+        "Name": "BPMDifficulty\u0000",
+        "Type": "EnumProperty\u0000",
+        "EnumType": "EBPMDifficulty\u0000",
+        "Property": ""
     },
     "DIFFICULTY": {
-        "EASY": {
-            "Name":"BPMDifficulty\u0000",
-            "Type":"EnumProperty\u0000",
-            "EnumType":"EBPMDifficulty\u0000",
-            "Property":"EBPMDifficulty::BPMD_EASY\u0000"
-        },
-        "HARD": {
-            "Name":"BPMDifficulty\u0000",
-            "Type":"EnumProperty\u0000",
-            "EnumType":"EBPMDifficulty\u0000",
-            "Property":"EBPMDifficulty::BPMD_HARD\u0000"
-        },
-        "HELLISH": {
-            "Name":"BPMDifficulty\u0000",
-            "Type":"EnumProperty\u0000",
-            "EnumType":"EBPMDifficulty\u0000",
-            "Property":"EBPMDifficulty::BPMD_HELLISH\u0000"
-        },
-        "PRACTICE": {
-            "Name":"BPMDifficulty\u0000",
-            "Type":"EnumProperty\u0000",
-            "EnumType":"EBPMDifficulty\u0000",
-            "Property":"EBPMDifficulty::BPMD_PRACTICE\u0000"
-        }
+        "EASY": "EBPMDifficulty::BPMD_EASY\u0000",
+        "HARD": "EBPMDifficulty::BPMD_HARD\u0000",
+        "HELLISH": "EBPMDifficulty::BPMD_HELLISH\u0000",
+        "PRACTICE": "EBPMDifficulty::BPMD_PRACTICE\u0000"
     },
-    "CRYPTSVISIT": {
-        "Name":"SpecialChapterVisit\u0000",
-        "Type":"EnumProperty\u0000",
-        "EnumType":"ESpecialChapterVisit\u0000",
-        "Property":"ESpecialChapterVisit::ESCV_AsgardCrypt\u0000"
+    "SpecialChapterVisit": {
+        "Name": "SpecialChapterVisit\u0000",
+        "Type": "EnumProperty\u0000",
+        "EnumType": "ESpecialChapterVisit\u0000",
+        "Property": "ESpecialChapterVisit::ESCV_NONE\u0000"
+    },
+    "SPECIALCHAPTER": {
+        "NONE": "ESpecialChapterVisit::ESCV_NONE\u0000",
+        "CRYPTS": "ESpecialChapterVisit::ESCV_AsgardCrypt\u0000"
     },
     "bChallenge": {
         "Name": "bChallenge\u0000",
@@ -283,33 +266,26 @@
     "BPMAbilityWeightPair": {
         "Name": "BPMAbilityWeightPair\u0000",
         "Type": "Tuple",
-        "Properties": [
-            {
-            "Name": "BPMAbility\u0000",
-            "Type": "SoftObjectProperty\u0000",
-            "Property": ""
-            },
-            {
-            "Name": "Weight\u0000",
-            "Type": "FloatProperty\u0000",
-            "Property": []
-            }
-        ]
+        "Properties": []
     },
     "BPMWeaponWeightPair": {
         "Name": "BPMWeaponWeightPair\u0000",
         "Type": "Tuple",
-        "Properties": [
-            {
-                "Name": "BPMWeapon\u0000",
-                "Type": "SoftObjectProperty\u0000",
-                "Property": ""
-            },
-            {
-                "Name": "Weight\u0000",
-                "Type": "FloatProperty\u0000",
-                "Property": []
-            }
-        ]
+        "Properties": []
+    },
+    "BPMAbility": {
+        "Name": "BPMAbility\u0000",
+        "Type": "SoftObjectProperty\u0000",
+        "Property": ""
+    },
+    "BPMWeapon": {
+        "Name": "BPMWeapon\u0000",
+        "Type": "SoftObjectProperty\u0000",
+        "Property": ""
+    },
+    "Weight": {
+        "Name": "Weight\u0000",
+        "Type": "FloatProperty\u0000",
+        "Property": []
     }
 }

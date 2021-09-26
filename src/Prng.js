@@ -43,8 +43,18 @@ export const Prng = {
     //
     // Credits: https://github.com/denizdogan/weighted-shuffle by denizdogan
     shuffle: function(array) {
-        return array.map(([i, w]) => [i, Math.pow(this.quick(), (1 / w))])
+        return array.map(([i, w]) => [i.slice(0), Math.pow(this.quick(), (1 / w))])
                     .sort(([an, aw], [bn, bw]) => bw - aw);
+    },
+    /**
+     * Selects `num` random items from `list` and returns a new `Array` containing the selected items
+     * 
+     * @param {Array} list 
+     * @param {Number} num
+     */
+    select: function(list, num) {
+        num = (num!==undefined) ? num : this.pick(0, list.length)
+        return this.choose([0, list.length - 1], num).map(i => list[i]);
     },
     destroy: function() {
         this._prng = null;

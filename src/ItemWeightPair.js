@@ -3,26 +3,20 @@ import {
 } from 'uesavetool'
 
 import {
-    deep_copy_template,
-    ITEMS
+    ITEMS,
+    RUNSTORE,
+    createProperty
 } from './index.js'
 
 export class ItemWeightPair extends Tuple {
     constructor(type) {
         super()
-        this.Name = `BPM${type==='Weapon'? type : 'Ability'}WeightPair`,
+        let isWeapon = type==='Weapon';
+        this.Name = `BPM${isWeapon ? type : 'Ability'}WeightPair`,
         this.Type = "Tuple",
         this.Properties = [
-            {
-                "Name": `BPM${type==='Weapon'? type : 'Ability'}\0`,
-                "Type": "SoftObjectProperty\u0000",
-                "Property": ""
-            },
-            {
-                "Name": "Weight\u0000",
-                "Type": "FloatProperty\u0000",
-                "Property": []
-            }
+            createProperty(RUNSTORE[isWeapon ? 'BPMWeapon' : 'BPMAbility']),
+            createProperty(RUNSTORE.Weight)
         ]
     }
     set Property([item, weight]) {
@@ -36,8 +30,7 @@ export class ItemWeightPair extends Tuple {
         this.Properties[0].Property = value;
     }
     get Item() {
-        let [name, prop] = ITEMS.find(([n, i]) => i.Value === this.Properties[0].Property);
-        return name;
+        return this.Properties[0].Property;
     }
     set Weight(value) {
         this.Properties[1].Property = [0, value];
@@ -45,7 +38,7 @@ export class ItemWeightPair extends Tuple {
     get Weight() {
         return this.Properties[1].Property[1];
     }
-    static from([name, weight]) {
+    static create([name, weight]) {
         let [item, prop] = ITEMS.find(([n, i]) => n === name);
         if(item === undefined)
             console.log(`Mislabled/Missing Item '${name}'`);

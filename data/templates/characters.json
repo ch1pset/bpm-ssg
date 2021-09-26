@@ -1,594 +1,484 @@
 {
-    "goll": {
-        "Name": "CharacterPropertyStore\u0000",
-        "Type": "StructProperty\u0000",
-        "StoredPropertyType": "BPMCharacterPropertyStore\u0000",
-        "Properties": [
-            {
-                "Name": "BPMCharacterPropertyStore\u0000",
-                "Type": "Tuple",
-                "Properties": [
-                    {
-                        "Name": "StoredCharacterArchetype\u0000",
-                        "Type": "ObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/CharacterSelectors/Default.Default\u0000"
-                    },
-                    {
-                        "Name": "StoredCharacterMesh\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Character/FP_player/FP_player.FP_player\u0000"
-                    },
-                    {
-                        "Name": "StoredWeapon\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/Weapons/BP_Pistol.BP_Pistol_C\u0000"
-                    },
-                    {
-                        "Name": "StoredSecondaryAbility\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/Abilities/Secondary/Secondary_FireBolt.Secondary_FireBolt_C\u0000"
-                    },
-                    {
-                        "Name": "StoredMobilityAbility\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/Abilities/Auxillary/Aux_QuickStep.Aux_QuickStep_C\u0000"
-                    },
-                    {
-                        "Name": "StoredUltimateAbility\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_Grenade.Ulti_Grenade_C\u0000"
-                    }
-                ]
-            }
-        ]
-    },
-    "freyr": {
-        "Name": "CharacterPropertyStore\u0000",
-        "Type": "StructProperty\u0000",
-        "StoredPropertyType": "BPMCharacterPropertyStore\u0000",
-        "Properties": [
-            {
-                "Name": "BPMCharacterPropertyStore\u0000",
-                "Type": "Tuple",
-                "Properties": [
-                    {
-                        "Name": "StoredCharacterArchetype\u0000",
-                        "Type": "ObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/CharacterSelectors/Tank.Tank\u0000"
-                    },
-                    {
-                        "Name": "StoredCharacterMesh\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Character/FP_player/Future_Rig.Future_Rig\u0000"
-                    },
-                    {
-                        "Name": "StoredWeapon\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/Weapons/BP_Revolver.BP_Revolver_C\u0000"
-                    },
-                    {
-                        "Name": "StoredSecondaryAbility\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/Abilities/Secondary/Secondary_AbilityBlockArm.Secondary_AbilityBlockArm_C\u0000"
-                    },
-                    {
-                        "Name": "StoredMobilityAbility\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/Abilities/Auxillary/Aux_QuickStep.Aux_QuickStep_C\u0000"
-                    },
-                    {
-                        "Name": "StoredUltimateAbility\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_AbilityGiveShield.Ulti_AbilityGiveShield_C\u0000"
-                    },
-                    {
-                        "Name": "StoredHealthContainer\u0000",
-                        "Type": "FloatProperty\u0000",
-                        "Property": [
-                            0,
-                            0
-                        ]
-                    },
-                    {
-                        "Name": "StoredHealth\u0000",
-                        "Type": "FloatProperty\u0000",
-                        "Property": [
-                            0,
-                            0
-                        ]
-                    },
-                    {
-                        "Name": "StoredShield\u0000",
-                        "Type": "FloatProperty\u0000",
-                        "Property": [
-                            0,
-                            150
-                        ]
-                    },
-                    {
-                        "Name": "StoredPlayerStatMovementSpeed\u0000",
-                        "Type": "FloatProperty\u0000",
-                        "Property": [
-                            0,
-                            0.5
-                        ]
-                    }
-                ]
-            }
-        ]
-    },
-    "hildr": {
-        "Name": "CharacterPropertyStore\u0000",
-        "Type": "StructProperty\u0000",
-        "StoredPropertyType": "BPMCharacterPropertyStore\u0000",
-        "Properties": [
-            {
-                "Name": "BPMCharacterPropertyStore\u0000",
-                "Type": "Tuple",
-                "Properties": [
-                    {
-                        "Name": "StoredCharacterArchetype\u0000",
-                        "Type": "ObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/CharacterSelectors/Speed.Speed\u0000"
-                    },
-                    {
-                        "Name": "StoredCharacterMesh\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Character/FP_player/Rogue_Rig.Rogue_Rig\u0000"
-                    },
-                    {
-                        "Name": "StoredWeapon\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/Weapons/BP_SpreadPistol.BP_SpreadPistol_C\u0000"
-                    },
-                    {
-                        "Name": "StoredSecondaryAbility\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/Abilities/Secondary/Secondary_FireBolt.Secondary_FireBolt_C\u0000"
-                    },
-                    {
-                        "Name": "StoredMobilityAbility\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/Abilities/Auxillary/Aux_QuickStep.Aux_QuickStep_C\u0000"
-                    },
-                    {
-                        "Name": "StoredUltimateAbility\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_AbilityUltimateSpeedBuff.Ulti_AbilityUltimateSpeedBuff_C\u0000"
-                    },
-                    {
-                        "Name": "StoredHealthContainer\u0000",
-                        "Type": "FloatProperty\u0000",
-                        "Property": [
-                            0,
-                            50
-                        ]
-                    },
-                    {
-                        "Name": "StoredHealth\u0000",
-                        "Type": "FloatProperty\u0000",
-                        "Property": [
-                            0,
-                            50
-                        ]
-                    },
-                    {
-                        "Name": "StoredShield\u0000",
-                        "Type": "FloatProperty\u0000",
-                        "Property": [
-                            0,
-                            25
-                        ]
-                    },
-                    {
-                        "Name": "StoredKeys\u0000",
-                        "Type": "IntProperty\u0000",
-                        "Property": [
-                            0,
-                            1
-                        ]
-                    },
-                    {
-                        "Name": "StoredPlayerStatMovementSpeed\u0000",
-                        "Type": "FloatProperty\u0000",
-                        "Property": [
-                            0,
-                            6
-                        ]
-                    }
-                ]
-            }
-        ]
-    },
-    "njord": {
-        "Name": "CharacterPropertyStore\u0000",
-        "Type": "StructProperty\u0000",
-        "StoredPropertyType": "BPMCharacterPropertyStore\u0000",
-        "Properties": [
-            {
-                "Name": "BPMCharacterPropertyStore\u0000",
-                "Type": "Tuple",
-                "Properties": [
-                    {
-                        "Name": "StoredCharacterArchetype\u0000",
-                        "Type": "ObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/CharacterSelectors/Mage.Mage\u0000"
-                    },
-                    {
-                        "Name": "StoredCharacterMesh\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Character/FP_player/Frost_Rig.Frost_Rig\u0000"
-                    },
-                    {
-                        "Name": "StoredWeapon\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/Weapons/BP_MagicHands.BP_MagicHands_C\u0000"
-                    },
-                    {
-                        "Name": "StoredSecondaryAbility\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/Abilities/Secondary/Secondary_ManaShield.Secondary_ManaShield_C\u0000"
-                    },
-                    {
-                        "Name": "StoredMobilityAbility\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/Abilities/Auxillary/Aux_QuickStep.Aux_QuickStep_C\u0000"
-                    },
-                    {
-                        "Name": "StoredUltimateAbility\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_AbilityUltimateRegenForTime.Ulti_AbilityUltimateRegenForTime_C\u0000"
-                    },
-                    {
-                        "Name": "bStoredCanPickupWeapons\u0000",
-                        "Type": "BoolProperty\u0000",
-                        "Property": false
-                    },
-                    {
-                        "Name": "StoredHealthContainer\u0000",
-                        "Type": "FloatProperty\u0000",
-                        "Property": [
-                            0,
-                            50
-                        ]
-                    },
-                    {
-                        "Name": "StoredHealth\u0000",
-                        "Type": "FloatProperty\u0000",
-                        "Property": [
-                            0,
-                            50
-                        ]
-                    },
-                    {
-                        "Name": "StoredCoins\u0000",
-                        "Type": "IntProperty\u0000",
-                        "Property": [
-                            0,
-                            7
-                        ]
-                    }
-                ]
-            }
-        ]
-    },
-    "odr": {
-        "Name": "CharacterPropertyStore\u0000",
-        "Type": "StructProperty\u0000",
-        "StoredPropertyType": "BPMCharacterPropertyStore\u0000",
-        "Properties": [
-            {
-                "Name": "BPMCharacterPropertyStore\u0000",
-                "Type": "Tuple",
-                "Properties": [
-                    {
-                        "Name": "StoredCharacterArchetype\u0000",
-                        "Type": "ObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/CharacterSelectors/Fragile.Fragile\u0000"
-                    },
-                    {
-                        "Name": "StoredCharacterMesh\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Character/FP_player/RoyalHand_Rig.RoyalHand_Rig\u0000"
-                    },
-                    {
-                        "Name": "StoredWeapon\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/Weapons/BP_DoubleBarrel.BP_DoubleBarrel_C\u0000"
-                    },
-                    {
-                        "Name": "StoredSecondaryAbility\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/Abilities/Secondary/Secondary_Teleport.Secondary_Teleport_C\u0000"
-                    },
-                    {
-                        "Name": "StoredMobilityAbility\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/Abilities/Auxillary/Aux_QuickStepFlying.Aux_QuickStepFlying_C\u0000"
-                    },
-                    {
-                        "Name": "StoredUltimateAbility\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_AbilityUltimateDiscount.Ulti_AbilityUltimateDiscount_C\u0000"
-                    },
-                    {
-                        "Name": "bStoredHasHealth\u0000",
-                        "Type": "BoolProperty\u0000",
-                        "Property": false
-                    },
-                    {
-                        "Name": "StoredPlayerStatLuck\u0000",
-                        "Type": "FloatProperty\u0000",
-                        "Property": [
-                            0,
-                            2
-                        ]
-                    }
-                ]
-            }
-        ]
-    },
-    "skuld": {
-        "Name": "CharacterPropertyStore\u0000",
-        "Type": "StructProperty\u0000",
-        "StoredPropertyType": "BPMCharacterPropertyStore\u0000",
-        "Properties": [
-            {
-                "Name": "BPMCharacterPropertyStore\u0000",
-                "Type": "Tuple",
-                "Properties": [
-                    {
-                        "Name": "StoredCharacterArchetype\u0000",
-                        "Type": "ObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/CharacterSelectors/DyingVampire.DyingVampire\u0000"
-                    },
-                    {
-                        "Name": "StoredCharacterMesh\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Character/FP_player/FP_player.FP_player\u0000"
-                    },
-                    {
-                        "Name": "StoredWeapon\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/Weapons/BP_PingRifle.BP_PingRifle_C\u0000"
-                    },
-                    {
-                        "Name": "StoredSecondaryAbility\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/Abilities/Secondary/Secondary_MarkForDeath.Secondary_MarkForDeath_C\u0000"
-                    },
-                    {
-                        "Name": "StoredMobilityAbility\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/Abilities/Auxillary/Aux_QuickStepDyingVamp.Aux_QuickStepDyingVamp_C\u0000"
-                    },
-                    {
-                        "Name": "StoredUltimateAbility\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_GenerateChest.Ulti_GenerateChest_C\u0000"
-                    },
-                    {
-                        "Name": "StoredHealthContainer\u0000",
-                        "Type": "FloatProperty\u0000",
-                        "Property": [
-                            0,
-                            150
-                        ]
-                    },
-                    {
-                        "Name": "StoredHealth\u0000",
-                        "Type": "FloatProperty\u0000",
-                        "Property": [
-                            0,
-                            150
-                        ]
-                    }
-                ]
-            }
-        ]
-    },
-    "geri": {
-        "Name": "CharacterPropertyStore\u0000",
-        "Type": "StructProperty\u0000",
-        "StoredPropertyType": "BPMCharacterPropertyStore\u0000",
-        "Properties": [
-            {
-                "Name": "BPMCharacterPropertyStore\u0000",
-                "Type": "Tuple",
-                "Properties": [
-                    {
-                        "Name": "StoredCharacterArchetype\u0000",
-                        "Type": "ObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/CharacterSelectors/GeriBanker.GeriBanker\u0000"
-                    },
-                    {
-                        "Name": "StoredCharacterMesh\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Character/FP_player/HairyHands.HairyHands\u0000"
-                    },
-                    {
-                        "Name": "StoredWeapon\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/Weapons/BP_Pistol.BP_Pistol_C\u0000"
-                    },
-                    {
-                        "Name": "StoredSecondaryAbility\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/Abilities/Secondary/Secondary_CoinThrow.Secondary_CoinThrow_C\u0000"
-                    },
-                    {
-                        "Name": "StoredMobilityAbility\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/Abilities/Auxillary/Aux_QuickStep.Aux_QuickStep_C\u0000"
-                    },
-                    {
-                        "Name": "StoredUltimateAbility\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_RemoteBank.Ulti_RemoteBank_C\u0000"
-                    },
-                    {
-                        "Name": "StoredHealthContainer\u0000",
-                        "Type": "FloatProperty\u0000",
-                        "Property": [
-                            0,
-                            25
-                        ]
-                    },
-                    {
-                        "Name": "StoredHealth\u0000",
-                        "Type": "FloatProperty\u0000",
-                        "Property": [
-                            0,
-                            25
-                        ]
-                    },
-                    {
-                        "Name": "StoredCoins\u0000",
-                        "Type": "IntProperty\u0000",
-                        "Property": [
-                            0,
-                            3
-                        ]
-                    },
-                    {
-                        "Name": "bStoredSmallCharacter\u0000",
-                        "Type": "BoolProperty\u0000",
-                        "Property": true
-                    },
-                    {
-                        "Name": "bStoredAlwaysGeneratesBanks\u0000",
-                        "Type": "BoolProperty\u0000",
-                        "Property": true
-                    }
-                ]
-            }
-        ]
-    },
-    "herfjoter": {
-        "Name": "CharacterPropertyStore\u0000",
-        "Type": "StructProperty\u0000",
-        "StoredPropertyType": "BPMCharacterPropertyStore\u0000",
-        "Properties": [
-            {
-                "Name": "BPMCharacterPropertyStore\u0000",
-                "Type": "Tuple",
-                "Properties": [
-                    {
-                        "Name": "StoredCharacterArchetype\u0000",
-                        "Type": "ObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/CharacterSelectors/GoldenHealth.GoldenHealth\u0000"
-                    },
-                    {
-                        "Name": "StoredCharacterMesh\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Character/FP_player/FP_player.FP_player\u0000"
-                    },
-                    {
-                        "Name": "StoredWeapon\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/Weapons/BP_BoltRifle.BP_BoltRifle_C\u0000"
-                    },
-                    {
-                        "Name": "StoredSecondaryAbility\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/Abilities/Secondary/Secondary_Snipe.Secondary_Snipe_C\u0000"
-                    },
-                    {
-                        "Name": "StoredMobilityAbility\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/Abilities/Auxillary/Aux_QuickStepGolden.Aux_QuickStepGolden_C\u0000"
-                    },
-                    {
-                        "Name": "StoredUltimateAbility\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_ConvertToCoins.Ulti_ConvertToCoins_C\u0000"
-                    },
-                    {
-                        "Name": "StoredCoins\u0000",
-                        "Type": "IntProperty\u0000",
-                        "Property": [
-                            0,
-                            3
-                        ]
-                    },
-                    {
-                        "Name": "bStoredGoldIsHealth\u0000",
-                        "Type": "BoolProperty\u0000",
-                        "Property": true
-                    }
-                ]
-            }
-        ]
-    },
-    "run": {
-        "Name": "CharacterPropertyStore\u0000",
-        "Type": "StructProperty\u0000",
-        "StoredPropertyType": "BPMCharacterPropertyStore\u0000",
-        "Properties": [
-            {
-                "Name": "BPMCharacterPropertyStore\u0000",
-                "Type": "Tuple",
-                "Properties": [
-                    {
-                        "Name": "StoredCharacterArchetype\u0000",
-                        "Type": "ObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/CharacterSelectors/RandomLoadout.RandomLoadout\u0000"
-                    },
-                    {
-                        "Name": "StoredCharacterMesh\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Character/FP_player/FP_player.FP_player\u0000"
-                    },
-                    {
-                        "Name": "bStoredRandomLoadout\u0000",
-                        "Type": "BoolProperty\u0000",
-                        "Property": true
-                    }
-                ]
-            }
-        ]
-    },
-    "sanngridr": {
-        "Name": "CharacterPropertyStore\u0000",
-        "Type": "StructProperty\u0000",
-        "StoredPropertyType": "BPMCharacterPropertyStore\u0000",
-        "Properties": [
-            {
-                "Name": "BPMCharacterPropertyStore\u0000",
-                "Type": "Tuple",
-                "Properties": [
-                    {
-                        "Name": "StoredCharacterArchetype\u0000",
-                        "Type": "ObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/CharacterSelectors/OneHitWalking.OneHitWalking\u0000"
-                    },
-                    {
-                        "Name": "StoredCharacterMesh\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Character/FP_player/FP_player.FP_player\u0000"
-                    },
-                    {
-                        "Name": "StoredWeapon\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/Weapons/BP_Pistol.BP_Pistol_C\u0000"
-                    },
-                    {
-                        "Name": "StoredMobilityAbility\u0000",
-                        "Type": "SoftObjectProperty\u0000",
-                        "Property": "/Game/Blueprints/Abilities/Auxillary/Aux_QuickStep.Aux_QuickStep_C\u0000"
-                    },
-                    {
-                        "Name": "bStoredHasHealth\u0000",
-                        "Type": "BoolProperty\u0000",
-                        "Property": false
-                    },
-                    {
-                        "Name": "bStoredCompleteAllRoomsRequired\u0000",
-                        "Type": "BoolProperty\u0000",
-                        "Property": true
-                    }
-                ]
-            }
-        ]
-    }
+    "goll": [
+        {
+            "Name": "StoredCharacterArchetype\u0000",
+            "Type": "ObjectProperty\u0000",
+            "Property": "/Game/Blueprints/CharacterSelectors/Default.Default\u0000"
+        },
+        {
+            "Name": "StoredCharacterMesh\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Character/FP_player/FP_player.FP_player\u0000"
+        },
+        {
+            "Name": "StoredWeapon\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Blueprints/Weapons/BP_Pistol.BP_Pistol_C\u0000"
+        },
+        {
+            "Name": "StoredSecondaryAbility\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Blueprints/Abilities/Secondary/Secondary_FireBolt.Secondary_FireBolt_C\u0000"
+        },
+        {
+            "Name": "StoredMobilityAbility\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Blueprints/Abilities/Auxillary/Aux_QuickStep.Aux_QuickStep_C\u0000"
+        },
+        {
+            "Name": "StoredUltimateAbility\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_Grenade.Ulti_Grenade_C\u0000"
+        }
+    ],
+    "freyr": [
+        {
+            "Name": "StoredCharacterArchetype\u0000",
+            "Type": "ObjectProperty\u0000",
+            "Property": "/Game/Blueprints/CharacterSelectors/Tank.Tank\u0000"
+        },
+        {
+            "Name": "StoredCharacterMesh\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Character/FP_player/Future_Rig.Future_Rig\u0000"
+        },
+        {
+            "Name": "StoredWeapon\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Blueprints/Weapons/BP_Revolver.BP_Revolver_C\u0000"
+        },
+        {
+            "Name": "StoredSecondaryAbility\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Blueprints/Abilities/Secondary/Secondary_AbilityBlockArm.Secondary_AbilityBlockArm_C\u0000"
+        },
+        {
+            "Name": "StoredMobilityAbility\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Blueprints/Abilities/Auxillary/Aux_QuickStep.Aux_QuickStep_C\u0000"
+        },
+        {
+            "Name": "StoredUltimateAbility\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_AbilityGiveShield.Ulti_AbilityGiveShield_C\u0000"
+        },
+        {
+            "Name": "StoredHealthContainer\u0000",
+            "Type": "FloatProperty\u0000",
+            "Property": [
+                0,
+                0
+            ]
+        },
+        {
+            "Name": "StoredHealth\u0000",
+            "Type": "FloatProperty\u0000",
+            "Property": [
+                0,
+                0
+            ]
+        },
+        {
+            "Name": "StoredShield\u0000",
+            "Type": "FloatProperty\u0000",
+            "Property": [
+                0,
+                150
+            ]
+        },
+        {
+            "Name": "StoredPlayerStatMovementSpeed\u0000",
+            "Type": "FloatProperty\u0000",
+            "Property": [
+                0,
+                0.5
+            ]
+        }
+    ],
+    "hildr": [
+        {
+            "Name": "StoredCharacterArchetype\u0000",
+            "Type": "ObjectProperty\u0000",
+            "Property": "/Game/Blueprints/CharacterSelectors/Speed.Speed\u0000"
+        },
+        {
+            "Name": "StoredCharacterMesh\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Character/FP_player/Rogue_Rig.Rogue_Rig\u0000"
+        },
+        {
+            "Name": "StoredWeapon\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Blueprints/Weapons/BP_SpreadPistol.BP_SpreadPistol_C\u0000"
+        },
+        {
+            "Name": "StoredSecondaryAbility\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Blueprints/Abilities/Secondary/Secondary_FireBolt.Secondary_FireBolt_C\u0000"
+        },
+        {
+            "Name": "StoredMobilityAbility\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Blueprints/Abilities/Auxillary/Aux_QuickStep.Aux_QuickStep_C\u0000"
+        },
+        {
+            "Name": "StoredUltimateAbility\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_AbilityUltimateSpeedBuff.Ulti_AbilityUltimateSpeedBuff_C\u0000"
+        },
+        {
+            "Name": "StoredHealthContainer\u0000",
+            "Type": "FloatProperty\u0000",
+            "Property": [
+                0,
+                50
+            ]
+        },
+        {
+            "Name": "StoredHealth\u0000",
+            "Type": "FloatProperty\u0000",
+            "Property": [
+                0,
+                50
+            ]
+        },
+        {
+            "Name": "StoredShield\u0000",
+            "Type": "FloatProperty\u0000",
+            "Property": [
+                0,
+                25
+            ]
+        },
+        {
+            "Name": "StoredKeys\u0000",
+            "Type": "IntProperty\u0000",
+            "Property": [
+                0,
+                1
+            ]
+        },
+        {
+            "Name": "StoredPlayerStatMovementSpeed\u0000",
+            "Type": "FloatProperty\u0000",
+            "Property": [
+                0,
+                6
+            ]
+        }
+    ],
+    "njord": [
+        {
+            "Name": "StoredCharacterArchetype\u0000",
+            "Type": "ObjectProperty\u0000",
+            "Property": "/Game/Blueprints/CharacterSelectors/Mage.Mage\u0000"
+        },
+        {
+            "Name": "StoredCharacterMesh\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Character/FP_player/Frost_Rig.Frost_Rig\u0000"
+        },
+        {
+            "Name": "StoredWeapon\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Blueprints/Weapons/BP_MagicHands.BP_MagicHands_C\u0000"
+        },
+        {
+            "Name": "StoredSecondaryAbility\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Blueprints/Abilities/Secondary/Secondary_ManaShield.Secondary_ManaShield_C\u0000"
+        },
+        {
+            "Name": "StoredMobilityAbility\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Blueprints/Abilities/Auxillary/Aux_QuickStep.Aux_QuickStep_C\u0000"
+        },
+        {
+            "Name": "StoredUltimateAbility\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_AbilityUltimateRegenForTime.Ulti_AbilityUltimateRegenForTime_C\u0000"
+        },
+        {
+            "Name": "bStoredCanPickupWeapons\u0000",
+            "Type": "BoolProperty\u0000",
+            "Property": false
+        },
+        {
+            "Name": "StoredHealthContainer\u0000",
+            "Type": "FloatProperty\u0000",
+            "Property": [
+                0,
+                50
+            ]
+        },
+        {
+            "Name": "StoredHealth\u0000",
+            "Type": "FloatProperty\u0000",
+            "Property": [
+                0,
+                50
+            ]
+        },
+        {
+            "Name": "StoredCoins\u0000",
+            "Type": "IntProperty\u0000",
+            "Property": [
+                0,
+                7
+            ]
+        }
+    ],
+    "odr": [
+        {
+            "Name": "StoredCharacterArchetype\u0000",
+            "Type": "ObjectProperty\u0000",
+            "Property": "/Game/Blueprints/CharacterSelectors/Fragile.Fragile\u0000"
+        },
+        {
+            "Name": "StoredCharacterMesh\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Character/FP_player/RoyalHand_Rig.RoyalHand_Rig\u0000"
+        },
+        {
+            "Name": "StoredWeapon\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Blueprints/Weapons/BP_DoubleBarrel.BP_DoubleBarrel_C\u0000"
+        },
+        {
+            "Name": "StoredSecondaryAbility\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Blueprints/Abilities/Secondary/Secondary_Teleport.Secondary_Teleport_C\u0000"
+        },
+        {
+            "Name": "StoredMobilityAbility\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Blueprints/Abilities/Auxillary/Aux_QuickStepFlying.Aux_QuickStepFlying_C\u0000"
+        },
+        {
+            "Name": "StoredUltimateAbility\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_AbilityUltimateDiscount.Ulti_AbilityUltimateDiscount_C\u0000"
+        },
+        {
+            "Name": "bStoredHasHealth\u0000",
+            "Type": "BoolProperty\u0000",
+            "Property": false
+        },
+        {
+            "Name": "StoredPlayerStatLuck\u0000",
+            "Type": "FloatProperty\u0000",
+            "Property": [
+                0,
+                2
+            ]
+        }
+    ],
+    "skuld": [
+        {
+            "Name": "StoredCharacterArchetype\u0000",
+            "Type": "ObjectProperty\u0000",
+            "Property": "/Game/Blueprints/CharacterSelectors/DyingVampire.DyingVampire\u0000"
+        },
+        {
+            "Name": "StoredCharacterMesh\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Character/FP_player/FP_player.FP_player\u0000"
+        },
+        {
+            "Name": "StoredWeapon\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Blueprints/Weapons/BP_PingRifle.BP_PingRifle_C\u0000"
+        },
+        {
+            "Name": "StoredSecondaryAbility\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Blueprints/Abilities/Secondary/Secondary_MarkForDeath.Secondary_MarkForDeath_C\u0000"
+        },
+        {
+            "Name": "StoredMobilityAbility\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Blueprints/Abilities/Auxillary/Aux_QuickStepDyingVamp.Aux_QuickStepDyingVamp_C\u0000"
+        },
+        {
+            "Name": "StoredUltimateAbility\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_GenerateChest.Ulti_GenerateChest_C\u0000"
+        },
+        {
+            "Name": "StoredHealthContainer\u0000",
+            "Type": "FloatProperty\u0000",
+            "Property": [
+                0,
+                150
+            ]
+        },
+        {
+            "Name": "StoredHealth\u0000",
+            "Type": "FloatProperty\u0000",
+            "Property": [
+                0,
+                150
+            ]
+        }
+    ],
+    "geri": [
+        {
+            "Name": "StoredCharacterArchetype\u0000",
+            "Type": "ObjectProperty\u0000",
+            "Property": "/Game/Blueprints/CharacterSelectors/GeriBanker.GeriBanker\u0000"
+        },
+        {
+            "Name": "StoredCharacterMesh\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Character/FP_player/HairyHands.HairyHands\u0000"
+        },
+        {
+            "Name": "StoredWeapon\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Blueprints/Weapons/BP_Pistol.BP_Pistol_C\u0000"
+        },
+        {
+            "Name": "StoredSecondaryAbility\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Blueprints/Abilities/Secondary/Secondary_CoinThrow.Secondary_CoinThrow_C\u0000"
+        },
+        {
+            "Name": "StoredMobilityAbility\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Blueprints/Abilities/Auxillary/Aux_QuickStep.Aux_QuickStep_C\u0000"
+        },
+        {
+            "Name": "StoredUltimateAbility\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_RemoteBank.Ulti_RemoteBank_C\u0000"
+        },
+        {
+            "Name": "StoredHealthContainer\u0000",
+            "Type": "FloatProperty\u0000",
+            "Property": [
+                0,
+                25
+            ]
+        },
+        {
+            "Name": "StoredHealth\u0000",
+            "Type": "FloatProperty\u0000",
+            "Property": [
+                0,
+                25
+            ]
+        },
+        {
+            "Name": "StoredCoins\u0000",
+            "Type": "IntProperty\u0000",
+            "Property": [
+                0,
+                3
+            ]
+        },
+        {
+            "Name": "bStoredSmallCharacter\u0000",
+            "Type": "BoolProperty\u0000",
+            "Property": true
+        },
+        {
+            "Name": "bStoredAlwaysGeneratesBanks\u0000",
+            "Type": "BoolProperty\u0000",
+            "Property": true
+        }
+    ],
+    "herfjoter": [
+        {
+            "Name": "StoredCharacterArchetype\u0000",
+            "Type": "ObjectProperty\u0000",
+            "Property": "/Game/Blueprints/CharacterSelectors/GoldenHealth.GoldenHealth\u0000"
+        },
+        {
+            "Name": "StoredCharacterMesh\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Character/FP_player/FP_player.FP_player\u0000"
+        },
+        {
+            "Name": "StoredWeapon\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Blueprints/Weapons/BP_BoltRifle.BP_BoltRifle_C\u0000"
+        },
+        {
+            "Name": "StoredSecondaryAbility\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Blueprints/Abilities/Secondary/Secondary_Snipe.Secondary_Snipe_C\u0000"
+        },
+        {
+            "Name": "StoredMobilityAbility\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Blueprints/Abilities/Auxillary/Aux_QuickStepGolden.Aux_QuickStepGolden_C\u0000"
+        },
+        {
+            "Name": "StoredUltimateAbility\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_ConvertToCoins.Ulti_ConvertToCoins_C\u0000"
+        },
+        {
+            "Name": "StoredCoins\u0000",
+            "Type": "IntProperty\u0000",
+            "Property": [
+                0,
+                3
+            ]
+        },
+        {
+            "Name": "bStoredGoldIsHealth\u0000",
+            "Type": "BoolProperty\u0000",
+            "Property": true
+        }
+    ],
+    "run": [
+        {
+            "Name": "StoredCharacterArchetype\u0000",
+            "Type": "ObjectProperty\u0000",
+            "Property": "/Game/Blueprints/CharacterSelectors/RandomLoadout.RandomLoadout\u0000"
+        },
+        {
+            "Name": "StoredCharacterMesh\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Character/FP_player/FP_player.FP_player\u0000"
+        },
+        {
+            "Name": "bStoredRandomLoadout\u0000",
+            "Type": "BoolProperty\u0000",
+            "Property": true
+        }
+    ],
+    "sanngridr": [
+        {
+            "Name": "StoredCharacterArchetype\u0000",
+            "Type": "ObjectProperty\u0000",
+            "Property": "/Game/Blueprints/CharacterSelectors/OneHitWalking.OneHitWalking\u0000"
+        },
+        {
+            "Name": "StoredCharacterMesh\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Character/FP_player/FP_player.FP_player\u0000"
+        },
+        {
+            "Name": "StoredWeapon\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Blueprints/Weapons/BP_Pistol.BP_Pistol_C\u0000"
+        },
+        {
+            "Name": "StoredMobilityAbility\u0000",
+            "Type": "SoftObjectProperty\u0000",
+            "Property": "/Game/Blueprints/Abilities/Auxillary/Aux_QuickStep.Aux_QuickStep_C\u0000"
+        },
+        {
+            "Name": "bStoredHasHealth\u0000",
+            "Type": "BoolProperty\u0000",
+            "Property": false
+        },
+        {
+            "Name": "bStoredCompleteAllRoomsRequired\u0000",
+            "Type": "BoolProperty\u0000",
+            "Property": true
+        }
+    ]
 }

@@ -1,6 +1,4 @@
-export function deep_copy_template(template) {
-    return JSON.parse(JSON.stringify(template));
-}
+import { PropertyFactory } from "uesavetool";
 
 export function range([min, max], cb) { //inclusive
     let numbers = []
@@ -9,3 +7,7 @@ export function range([min, max], cb) { //inclusive
     }
     return numbers;
 }
+/**
+ * Alias for `PropertyFactory.create()`
+ */
+export const createProperty = (template) => PropertyFactory.create(template);

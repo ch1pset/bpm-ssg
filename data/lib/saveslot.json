@@ -1,17 +1,10 @@
 {
-    "ContinueStateV2": {
+    "SaveSlotName": {
         "Name":"SaveSlotName\u0000",
         "Type":"StrProperty\u0000",
-        "Property":"ContinueStateV2\u0000"
+        "Property":""
     },
-    "ContinueState": {
-        "Name":"SaveSlotName\u0000",
-        "Type":"StrProperty\u0000",
-        "Property":"ContinueState\u0000"
-    },
-    "GameState": {
-      "Name": "SaveSlotName\u0000",
-      "Type": "StrProperty\u0000",
-      "Property": "GameState\u0000"
-    }
+    "ContinueStateV2": "ContinueStateV2\u0000",
+    "ContinueState": "ContinueState\u0000",
+    "GameState": "GameState\u0000"
 }

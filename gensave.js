@@ -15,8 +15,8 @@ function main(argv) {
         args[name] = value;
     })
     let a = {s:args.seed, c:args.char, d:args.diff};
-    let save = ContinueStateV2.seededGen(a);
-    let save2 = ContinueStateV2.seededGen(a);
+    let save = ContinueStateV2.generate(a);
+    let save2 = ContinueStateV2.generate(a);
     console.log(`First Size: ${save.Size} Second Size: ${save2.Size}`);
     fs.writeFile('./ContinueStateV2.sav', save.serialize(), err => {
         if(err) throw err;

@@ -57,9 +57,11 @@
     [ "StoredCoins", 7 ],
     [ "StoredKeys", 5 ]
   ],
-  "LOADOUT": [
+  "ABILITIES": [
     [ "StoredSecondaryAbility", "Secondary" ],
-    [ "StoredUltimateAbility", "Ultimate" ],
+    [ "StoredUltimateAbility", "Ultimate" ]
+  ],
+  "STOREDITEMS": [
     [ "StoredHeadItemAbility", "Head" ],
     [ "StoredChestItemAbility", "Chest" ],
     [ "StoredArmsItemAbility", "Arm" ],

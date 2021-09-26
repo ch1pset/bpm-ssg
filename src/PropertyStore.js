@@ -1,33 +1,39 @@
-import { PropertyFactory, Tuple } from "uesavetool";
+import { Tuple } from "uesavetool";
 
 export class PropertyStore extends Tuple {
     constructor() {
         super();
     }
-    getPropertyIndex(name) {
+    getIndex(name) {
         return this.Properties.findIndex(p => p.Name === name)
     }
-    getProperty(name) {
+    valueOf(name) {
+        return this.get(name).Property;
+    }
+    get(name) {
         return this.Properties.find(p => p.Name === name);
     }
-    addProperty(prop) {
-        this.Properties.push(prop);
+    set(name, value) {
+        let prop = this.get(name);
+        prop.Property = value;
+        return prop;
     }
-    delProperty(name) {
-        let indx = this.getPropertyIndex(name);
+    add(prop) {
+        if(prop !== undefined && prop !== null)
+            this.Properties.push(prop);
+        return this;
+    }
+    concat(props) {
+        props.forEach(p => this.add(p));
+        return this;
+    }
+    remove(name) {
+        let indx = this.getIndex(name);
         if(indx !== -1)
             this.Properties.splice(indx, 1);
+        return this;
     }
     has(name) {
-        return this.getPropertyIndex(name) !== -1;
-    }
-    static from(obj) {
-        let ret = new PropertyStore();
-        ret.Name = obj.Name;
-        ret.Type = obj.Type;
-        ret.Properties = [];
-        if(obj.Properties)
-            obj.Properties.forEach(prop => ret.Properties.push(PropertyFactory.create(prop)))
-        return ret;
+        return this.getIndex(name) !== -1;
     }
 }

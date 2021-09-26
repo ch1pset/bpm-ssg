@@ -1,4 +1,15 @@
 {
+    "CharacterPropertyStore": {
+      "Name": "CharacterPropertyStore\u0000",
+      "Type": "StructProperty\u0000",
+      "StoredPropertyType": "BPMCharacterPropertyStore\u0000",
+      "Properties": []
+    },
+    "BPMCharacterPropertyStore": {
+      "Name": "BPMCharacterPropertyStore\u0000",
+      "Type": "Tuple",
+      "Properties": []
+    },
     "EquipmentAbilities": {
         "Name": "StoredEquipmentAbilities\u0000",
         "Type": "ArrayProperty\u0000",
