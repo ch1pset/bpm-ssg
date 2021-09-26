@@ -889,6 +889,20 @@
         }
     ],
     [
+        "Jarnbjorn",
+        {
+            "Type": "Ultimate",
+            "Value": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_Grenade.Ulti_Grenade_C\u0000"
+        }
+    ],
+    [
+        "Freyr's Blessing",
+        {
+            "Type": "Ultimate",
+            "Value": "/Game/Blueprints/Abilities/Ultimate/Active/Ulti_AbilityGiveShield.Ulti_AbilityGiveShield_C\u0000"
+        }
+    ],
+    [
         "Mjolnir",
         {
             "Type": "Ultimate",
