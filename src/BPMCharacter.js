@@ -45,7 +45,7 @@ export class BPMCharacter extends PropertyStore {
     static generate(seed, name, opts) {
         let char = BPMCharacter.create(name);
         if(name.toLowerCase() === 'run') {
-            Prng.init(seed);
+            Prng.init(opts.NULLSEED ? 0 : seed);
 
             REQUIREMENTS.RANDCHAR
                 .map(item => Generate.inventory(item))

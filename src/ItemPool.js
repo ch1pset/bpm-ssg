@@ -17,7 +17,9 @@ export class ItemPool extends StructProperty {
         this.Properties = []
     }
     addItem(iw) {
-        this.Properties.push(ItemWeightPair.create(iw));
+        if(iw !== undefined && iw !== null)
+            this.Properties.push(iw);
+        return this;
     }
     delItem(value) {
         let indx = this.Properties.findIndex(p => p.Item === value);
@@ -27,10 +29,9 @@ export class ItemPool extends StructProperty {
     }
     static generate([name, type], enhance) {
         let pool = new ItemPool(name, type)
-        let list = ITEMPOOL[name].Standard ?
-            ITEMPOOL[name][enhance ? 'Enhanced' : 'Standard'] :
-            ITEMPOOL[name];
+        let list = ITEMPOOL[name][enhance ? 'Enhanced' : 'Standard'];
         Prng.shuffle(list)
+            .map(iw => ItemWeightPair.create(iw))
             .forEach(iw => pool.addItem(iw));
         return pool;
     }

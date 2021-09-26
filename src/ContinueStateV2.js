@@ -57,7 +57,6 @@ export class ContinueStateV2 extends Gvas {
     }
     static generate({seed, char, diff, opts}) {
         let save = new ContinueStateV2();
-        Prng.init(seed);
         save.Slot = SAVESLOT.ContinueStateV2;
         save.Character = BPMCharacter.generate(seed, char, opts);
         save.Run = BPMRun.generate(seed, diff, opts);
@@ -66,7 +65,6 @@ export class ContinueStateV2 extends Gvas {
                 if(type === 'Weapon')
                     save.Run[name].delItem(save.Character.StoredWeapon)
             });
-        Prng.destroy();
         return save;
     }
 }

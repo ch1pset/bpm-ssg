@@ -39,9 +39,12 @@ export class ItemWeightPair extends Tuple {
         return this.Properties[1].Property[1];
     }
     static create([name, weight]) {
-        let [item, prop] = ITEMS.find(([n, i]) => n === name);
-        if(item === undefined)
+        let item = ITEMS.find(([n, i]) => n === name);
+        if(item === undefined) {
             console.log(`Mislabled/Missing Item '${name}'`);
+            return null;
+        }
+        let [iname, prop] = item;
         let item_weight_pair = new ItemWeightPair(prop.Type);
         item_weight_pair.Property = [prop.Value, weight];
         return item_weight_pair;

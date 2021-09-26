@@ -5,7 +5,8 @@ import {
     PropertyStore,
     createProperty,
     Generate,
-    Prng
+    Prng,
+    BPMRoom
 } from './index.js';
 
 export class BPMRun extends PropertyStore {
@@ -171,23 +172,41 @@ export class BPMRun extends PropertyStore {
         run.Difficulty = diff;
         run.FloorIndex = opts.FLOORINDEX;
 
-        Prng.init(seed);
+        Prng.init(opts.NULLSEED ? 0 : seed);
         REQUIREMENTS.POOLS
             .forEach(([name, type]) => run[name] = ItemPool.generate([name, type], opts.ENHANCE));
 
-        Prng.init(seed);
-        REQUIREMENTS.SEEDS
-            .flatMap(fseed => Generate.floorseeds(fseed))
-            .forEach(fseed => run.add(fseed))
+        if(!opts.NULLSEED) {
+            Prng.init(seed);
+            REQUIREMENTS.SEEDS
+                .flatMap(fseed => Generate.floorseeds(fseed))
+                .forEach(fseed => run.add(fseed))
+        }
 
-        Prng.init(seed);
+        Prng.init(opts.NULLSEED ? 0 : seed);
         REQUIREMENTS.ROOMS
             .flatMap(room => Generate.rooms(room))
             .forEach(room => run.add(room));
 
-        if(run.has('StairsRoomChosen\0') && run.has('ChoiceRoomChosen\0')) {
+        if(opts.STAIRS && !run.has('StairsRoomChosen\0'))
+            run.add(BPMRoom.create(0, 'StairsRoomChosen'));
+
+        if(opts.CHOICE && !run.has('ChoiceRoomChosen\0') && !run.has('StairsRoomChosen\0'))
+            run.add(BPMRoom.create(2, 'ChoiceRoomChosen'));
+
+        if(opts.PRESTIGE && !run.has('PrestigeRoomChosen\0'))
+            run.add(BPMRoom.create(2, 'PrestigeRoomChosen'));
+
+        if(opts.BLACKMARKET && !run.has('BlackMarketRoomChosen\0'))
+            run.add(BPMRoom.create(0, 'BlackMarketRoomChosen\0'));
+
+        if(opts.PORTAL && !run.has('PortalRoomChosen\0'))
+            run.add(BPMRoom.create(0, 'PortalRoomChosen\0'));
+
+        if((run.has('StairsRoomChosen\0')) && run.has('ChoiceRoomChosen\0')) {
             run.set('ChoiceRoomChosen\0', [0, 1]);
         }
+
         return run;
     }
 }
