@@ -10,32 +10,30 @@
       "Type": "Tuple",
       "Properties": []
     },
-    "EquipmentAbilities": {
+    "StoredEquipmentAbilities": {
         "Name": "StoredEquipmentAbilities\u0000",
         "Type": "ArrayProperty\u0000",
-        "StoredPropertyType": "SoftObjectProperty\u0000",
-        "Property": {
-            "Name": "",
-            "Type": "SoftObjectProperty",
-            "Properties": []
-        }
+        "StoredPropertyType": "SoftObjectProperty\u0000"
     },
-    "EquipmentCharges": {
+    "StoredEquipmentAbilitiesCharges": {
         "Name": "StoredEquipmentAbilitiesCharges\u0000",
         "Type": "ArrayProperty\u0000",
-        "StoredPropertyType": "IntProperty\u0000",
-        "Property": {
-            "Name": "",
-            "Type": "IntProperty",
-            "Properties": []
-        }
+        "StoredPropertyType": "IntProperty\u0000"
     },
-    "StoredArchetype": {
+    "StoredUltimateAbilityCharges": {
+      "Name": "StoredUltimateAbilityCharges\u0000",
+      "Type": "IntProperty\u0000",
+      "Property": [
+        0,
+        1
+      ]
+    },
+    "StoredCharacterArchetype": {
         "Name": "StoredCharacterArchetype\u0000",
         "Type": "ObjectProperty\u0000",
         "Property": ""
     },
-    "StoredMesh": {
+    "StoredCharacterMesh": {
         "Name": "StoredCharacterMesh\u0000",
         "Type": "SoftObjectProperty\u0000",
         "Property": ""
@@ -85,7 +83,7 @@
       "Type": "FloatProperty\u0000",
       "Property": [
         0,
-        0
+        100
       ]
     },
     "StoredHealth": {
@@ -120,7 +118,7 @@
         0
       ]
     },
-    "StoredSpeedStat": {
+    "StoredPlayerStatMovementSpeed": {
       "Name": "StoredPlayerStatMovementSpeed\u0000",
       "Type": "FloatProperty\u0000",
       "Property": [
@@ -128,7 +126,7 @@
         0
       ]
     },
-    "StoredDamageStat": {
+    "StoredPlayerStatWeaponDamage": {
       "Name": "StoredPlayerStatWeaponDamage\u0000",
       "Type": "FloatProperty\u0000",
       "Property": [
@@ -136,7 +134,7 @@
         0
       ]
     },
-    "StoredCriticalStat": {
+    "StoredPlayerStatWeaponCritical": {
       "Name": "StoredPlayerStatWeaponCritical\u0000",
       "Type": "FloatProperty\u0000",
       "Property": [
@@ -144,7 +142,7 @@
         0
       ]
     },
-    "StoredRangeStat": {
+    "StoredPlayerStatRange": {
       "Name": "StoredPlayerStatRange\u0000",
       "Type": "FloatProperty\u0000",
       "Property": [
@@ -152,7 +150,7 @@
         0
       ]
     },
-    "StoredLuckStat": {
+    "StoredPlayerStatLuck": {
       "Name": "StoredPlayerStatLuck\u0000",
       "Type": "FloatProperty\u0000",
       "Property": [
@@ -160,15 +158,15 @@
         0
       ]
     },
-    "StoredAbilityStat": {
-      "Name": "StoredPlayerStatAbility\u0000",
+    "StoredPlayerStatAbilityPower": {
+      "Name": "StoredPlayerStatAbilityPower\u0000",
       "Type": "FloatProperty\u0000",
       "Property": [
         0,
         0
       ]
     },
-    "StoredClipUpStat": {
+    "StoredPlayerStatExtraAmmo": {
       "Name": "StoredPlayerStatExtraAmmo\u0000",
       "Type": "IntProperty\u0000",
       "Property": [
