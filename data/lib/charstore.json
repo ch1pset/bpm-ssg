@@ -177,51 +177,51 @@
     "bStoredCanPickupWeapons": {
       "Name": "bStoredCanPickupWeapons\u0000",
       "Type": "BoolProperty\u0000",
-      "Property": false
+      "Property": true
     },
     "bStoredHasHealth": {
       "Name": "bStoredHasHealth\u0000",
       "Type": "BoolProperty\u0000",
-      "Property": false
+      "Property": true
     },
     "bStoredSmallCharacter": {
       "Name": "bStoredSmallCharacter\u0000",
       "Type": "BoolProperty\u0000",
-      "Property": true
+      "Property": false
     },
     "bStoredAlwaysGeneratesBanks": {
       "Name": "bStoredAlwaysGeneratesBanks\u0000",
       "Type": "BoolProperty\u0000",
-      "Property": true
+      "Property": false
     },
     "bStoredGoldIsHealth": {
       "Name": "bStoredGoldIsHealth\u0000",
       "Type": "BoolProperty\u0000",
-      "Property": true
+      "Property": false
     },
     "bStoredRandomLoadout": {
       "Name": "bStoredRandomLoadout\u0000",
       "Type": "BoolProperty\u0000",
-      "Property": true
+      "Property": false
     },
     "bStoredCompleteAllRoomsRequired": {
       "Name": "bStoredCompleteAllRoomsRequired\u0000",
       "Type": "BoolProperty\u0000",
-      "Property": true
+      "Property": false
     },
     "bStoredGeneratesShops": {
       "Name": "bStoredGeneratesShops\u0000",
       "Type": "BoolProperty\u0000",
-      "Property": false
+      "Property": true
     },
     "bStoredGeneratesTreasureRooms": {
       "Name": "bStoredGeneratesTreasureRooms\u0000",
       "Type": "BoolProperty\u0000",
-      "Property": false
+      "Property": true
     },
     "bStoredGeneratesArmouryRooms": {
       "Name": "bStoredGeneratesArmouryRooms\u0000",
       "Type": "BoolProperty\u0000",
-      "Property": false
+      "Property": true
     }
 }
