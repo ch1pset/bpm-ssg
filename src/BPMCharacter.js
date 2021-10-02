@@ -22,6 +22,7 @@ export class BPMCharacter extends PropertyStore {
             createProperty(CHARSTORE.StoredMobilityAbility),
             createProperty(CHARSTORE.StoredSecondaryAbility),
             createProperty(CHARSTORE.StoredUltimateAbility),
+            createProperty(CHARSTORE.StoredUltimateAbilityCharges),
             createProperty(CHARSTORE.StoredArmsItemAbility),
             createProperty(CHARSTORE.StoredChestItemAbility),
             createProperty(CHARSTORE.StoredHeadItemAbility),
@@ -38,7 +39,17 @@ export class BPMCharacter extends PropertyStore {
             createProperty(CHARSTORE.StoredPlayerStatLuck),
             createProperty(CHARSTORE.StoredPlayerStatAbilityPower),
             createProperty(CHARSTORE.StoredPlayerStatExtraAmmo),
-            createProperty(CHARSTORE.StoredEquipmentAbilities)
+            createProperty(CHARSTORE.StoredEquipmentAbilities),
+            createProperty(CHARSTORE.bStoredCanPickupWeapons),
+            createProperty(CHARSTORE.bStoredHasHealth),
+            createProperty(CHARSTORE.bStoredSmallCharacter),
+            createProperty(CHARSTORE.bStoredAlwaysGeneratesBanks),
+            createProperty(CHARSTORE.bStoredGoldIsHealth),
+            createProperty(CHARSTORE.bStoredRandomLoadout),
+            createProperty(CHARSTORE.bStoredCompleteAllRoomsRequired),
+            createProperty(CHARSTORE.bStoredGeneratesShops),
+            createProperty(CHARSTORE.bStoredGeneratesTreasureRooms),
+            createProperty(CHARSTORE.bStoredGeneratesArmouryRooms),
         ]);
         this.StoredEquipmentAbilities = [];
     }
@@ -57,6 +68,12 @@ export class BPMCharacter extends PropertyStore {
     set StoredEquipmentAbilitiesCharges(values) {
         this.set('StoredEquipmentAbilitiesCharges\0', StoredEquipmentAbilitiesCharges.create(values));
     }
+    get StoredUltimateAbilityCharges() {
+        return this.valueOf('StoredUltimateAbilityCharges\0')[1];
+    }
+    set StoredUltimateAbilityCharges(value) {
+        this.set('StoredUltimateAbilityCharges\0', [0, value])
+    }
     get StoredCharacterArchetype() {
         return this.valueOf('StoredCharacterArchetype\0');
     }
@@ -70,43 +87,43 @@ export class BPMCharacter extends PropertyStore {
         this.set('StoredCharacterMesh\0', value)
     }
     get StoredPlayerStatMovementSpeed() {
-        return this.valueOf('StoredPlayerStatMovementSpeed\0');
+        return this.valueOf('StoredPlayerStatMovementSpeed\0')[1];
     }
     set StoredPlayerStatMovementSpeed(value) {
         this.set('StoredPlayerStatMovementSpeed\0', [0, value]);
     }
     get StoredPlayerStatWeaponDamage() {
-        return this.valueOf('StoredPlayerStatWeaponDamage\0');
+        return this.valueOf('StoredPlayerStatWeaponDamage\0')[1];
     }
     set StoredPlayerStatWeaponDamage(value) {
         this.set('StoredPlayerStatWeaponDamage\0', [0, value]);
     }
     get StoredPlayerStatWeaponCritical() {
-        return this.valueOf('StoredPlayerStatWeaponCritical\0');
+        return this.valueOf('StoredPlayerStatWeaponCritical\0')[1];
     }
     set StoredPlayerStatWeaponCritical(value) {
         this.set('StoredPlayerStatWeaponCritical\0', [0, value]);
     }
     get StoredPlayerStatRange() {
-        return this.valueOf('StoredPlayerStatRange\0');
+        return this.valueOf('StoredPlayerStatRange\0')[1];
     }
     set StoredPlayerStatRange(value) {
         this.set('StoredPlayerStatRange\0', [0, value]);
     }
     get StoredPlayerStatLuck() {
-        return this.valueOf('StoredPlayerStatLuck\0');
+        return this.valueOf('StoredPlayerStatLuck\0')[1];
     }
     set StoredPlayerStatLuck(value) {
         this.set('StoredPlayerStatLuck\0', [0, value]);
     }
     get StoredPlayerStatAbilityPower() {
-        return this.valueOf('StoredPlayerStatAbilityPower\0');
+        return this.valueOf('StoredPlayerStatAbilityPower\0')[1];
     }
     set StoredPlayerStatAbilityPower(value) {
         this.set('StoredPlayerStatAbilityPower\0', [0, value]);
     }
     get StoredPlayerStatExtraAmmo() {
-        return this.valueOf('StoredPlayerStatExtraAmmo\0');
+        return this.valueOf('StoredPlayerStatExtraAmmo\0')[1];
     }
     set StoredPlayerStatExtraAmmo(value) {
         this.set('StoredPlayerStatExtraAmmo\0', [0, value]);
@@ -229,6 +246,66 @@ export class BPMCharacter extends PropertyStore {
     set StoredLegsItemAbility(value) {
         this.set('StoredLegsItemAbility\0', value);
     }
+    get bStoredCanPickupWeapons() {
+        return this.valueOf('bStoredCanPickupWeapons\0');
+    }
+    set bStoredCanPickupWeapons(value) {
+        this.set('bStoredCanPickupWeapons\0', value);
+    }
+    get bStoredHasHealth() {
+        return this.valueOf('bStoredHasHealth\0');
+    }
+    set bStoredHasHealth(value) {
+        this.set('bStoredHasHealth\0', value);
+    }
+    get bStoredSmallCharacter() {
+        return this.valueOf('bStoredSmallCharacter\0');
+    }
+    set bStoredSmallCharacter(value) {
+        this.set('bStoredSmallCharacter\0', value);
+    }
+    get bStoredAlwaysGeneratesBanks() {
+        return this.valueOf('bStoredAlwaysGeneratesBanks\0');
+    }
+    set bStoredAlwaysGeneratesBanks(value) {
+        this.set('bStoredAlwaysGeneratesBanks\0', value);
+    }
+    get bStoredGoldIsHealth() {
+        return this.valueOf('bStoredGoldIsHealth\0');
+    }
+    set bStoredGoldIsHealth(value) {
+        this.set('bStoredGoldIsHealth\0', value);
+    }
+    get bStoredRandomLoadout() {
+        return this.valueOf('bStoredRandomLoadout\0');
+    }
+    set bStoredRandomLoadout(value) {
+        this.set('bStoredRandomLoadout\0', value);
+    }
+    get bStoredCompleteAllRoomsRequired() {
+        return this.valueOf('bStoredCompleteAllRoomsRequired\0');
+    }
+    set bStoredCompleteAllRoomsRequired(value) {
+        this.set('bStoredCompleteAllRoomsRequired\0', value);
+    }
+    get bStoredGeneratesShops() {
+        return this.valueOf('bStoredGeneratesShops\0');
+    }
+    set bStoredGeneratesShops(value) {
+        this.set('bStoredGeneratesShops\0', value);
+    }
+    get bStoredGeneratesTreasureRooms() {
+        return this.valueOf('bStoredGeneratesTreasureRooms\0');
+    }
+    set bStoredGeneratesTreasureRooms(value) {
+        this.set('bStoredGeneratesTreasureRooms\0', value);
+    }
+    get bStoredGeneratesArmouryRooms() {
+        return this.valueOf('bStoredGeneratesArmouryRooms\0');
+    }
+    set bStoredGeneratesArmouryRooms(value) {
+        this.set('bStoredGeneratesArmouryRooms\0', value);
+    }
     static create(name) {
         let char = new BPMCharacter();
         T_CHARSTORE[name.toLowerCase()]
@@ -263,11 +340,12 @@ export class BPMCharacter extends PropertyStore {
                 cb(value);
         }
 
-        set(opts.HEALTH,        (v) => char.StoredHealth = v);
-        set(opts.SHIELD,        (v) => char.StoredShield = v);
-        set(opts.COINS,         (v) => char.StoredCoins = v);
-        set(opts.KEYS,          (v) => char.StoredKeys = v);
-        set(opts.WEAPON,        
+        set(opts.HEALTH,            (v) => char.StoredHealth = v);
+        set(opts.SHIELD,            (v) => char.StoredShield = v);
+        set(opts.COINS,             (v) => char.StoredCoins = v);
+        set(opts.KEYS,              (v) => char.StoredKeys = v);
+        set(opts.AMMO,              (v) => char.StoredPlayerStatExtraAmmo = v);
+        set(opts.WEAPON,
             (v) => char.StoredWeapon = ITEMS[v].Value);
         set(opts.AUXILARY,
             (v) => char.StoredMobilityAbility = ITEMS[v].Value);
@@ -275,15 +353,34 @@ export class BPMCharacter extends PropertyStore {
             (v) => char.StoredSecondaryAbility = ITEMS[v].Value);
         set(opts.ULTIMATE,
             (v) => char.StoredUltimateAbility = ITEMS[v].Value);
-        set(opts.CURSES, 
+        set(opts.ULTCHARGE,
+            (v) => char.StoredUltimateAbilityCharges = v ? 1 : 0);
+        set(opts.HEAD,
+            (v) => char.StoredHeadItemAbility = ITEMS[v].Value);
+        set(opts.ARM,
+            (v) => char.StoredArmsItemAbility = ITEMS[v].Value);
+        set(opts.CHEST,
+            (v) => char.StoredChestItemAbility = ITEMS[v].Value);
+        set(opts.LEG,
+            (v) => char.StoredLegsItemAbility = ITEMS[v].Value);
+        set(opts.CURSES,
             (v) => char.StoredEquipmentAbilities = v.map(curse => ITEMS[curse].Value));
-        set(opts.STATS.ABILITY,   (v) => char.StoredPlayerStatAbilityPower = v);
-        set(opts.STATS.PRECISION, (v) => char.StoredPlayerStatWeaponCritical = v);
-        set(opts.STATS.DAMAGE,    (v) => char.StoredPlayerStatWeaponDamage = v);
-        set(opts.STATS.LUCK,      (v) => char.StoredPlayerStatLuck = v);
-        set(opts.STATS.RANGE,     (v) => char.StoredPlayerStatRange = v);
-        set(opts.STATS.SPEED,     (v) => char.StoredPlayerStatMovementSpeed = v);
-        set(opts.STATS.AMMO,      (v) => char.StoredPlayerStatExtraAmmo = v);
+        set(opts.STATS.ABILITY,     (v) => char.StoredPlayerStatAbilityPower = v);
+        set(opts.STATS.PRECISION,   (v) => char.StoredPlayerStatWeaponCritical = v);
+        set(opts.STATS.DAMAGE,      (v) => char.StoredPlayerStatWeaponDamage = v);
+        set(opts.STATS.LUCK,        (v) => char.StoredPlayerStatLuck = v);
+        set(opts.STATS.RANGE,       (v) => char.StoredPlayerStatRange = v);
+        set(opts.STATS.SPEED,       (v) => char.StoredPlayerStatMovementSpeed = v);
+        
+        set(opts.TRAITS.NOWEAPONS,  (v) => char.bStoredCanPickupWeapons = v);
+        set(opts.TRAITS.NOHEALTH,   (v) => char.bStoredHasHealth = v);
+        set(opts.TRAITS.SMALL,      (v) => char.bStoredSmallCharacter = v);
+        set(opts.TRAITS.BANKS,      (v) => char.bStoredAlwaysGeneratesBanks = v);
+        set(opts.TRAITS.GOLDHEALTH, (v) => char.bStoredGoldIsHealth = v);
+        set(opts.TRAITS.CLEARALL,   (v) => char.bStoredCompleteAllRoomsRequired = v);
+        set(opts.TRAITS.NOSHOPS,    (v) => char.bStoredGeneratesShops = v);
+        set(opts.TRAITS.NOTREASURE, (v) => char.bStoredGeneratesTreasureRooms = v);
+        set(opts.TRAITS.NOARMORY,   (v) => char.bStoredGeneratesArmouryRooms = v);
 
         return char;
     }
