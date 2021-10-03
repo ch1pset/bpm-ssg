@@ -62,9 +62,17 @@ export class ContinueStateV2 extends Gvas {
         save.Run = BPMRun.generate(seed, diff, opts);
 
         REQUIREMENTS.POOLS.forEach(([name, type]) => {
-                if(type === 'Weapon')
-                    save.Run[name].delItem(save.Character.StoredWeapon)
+                save.Run[name].delItem(save.Character.StoredWeapon)
+                save.Run[name].delItem(save.Character.StoredHeadItemAbility)
+                save.Run[name].delItem(save.Character.StoredArmsItemAbility)
+                save.Run[name].delItem(save.Character.StoredChestItemAbility)
+                save.Run[name].delItem(save.Character.StoredLegsItemAbility)
+                save.Run[name].delItem(save.Character.StoredUltimateAbility)
+                save.Run[name].delItem(save.Character.StoredSecondaryAbility)
             });
+
+        save.Character.StoredEquipmentAbilities.Properties
+            .forEach(item => save.Run.FutureProofingBPool.delItem(item));
         return save;
     }
 }

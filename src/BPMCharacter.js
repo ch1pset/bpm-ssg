@@ -321,18 +321,18 @@ export class BPMCharacter extends PropertyStore {
 
             REQUIREMENTS.RANDCHAR
                 .map(item => Inventory.generate(item))
-                .forEach(p => char.add(p));
+                .forEach(item => char[item.Name] = item.Value)
 
             if(char.StoredHealth === 0 && char.StoredShield === 0)
                 char.StoredHealth = 25;
 
             Prng.select(REQUIREMENTS.ABILITIES)
                 .map(ability => Loadout.generate(ability))
-                .forEach(ability => char.add(ability));
+                .forEach(ability => char[ability.Name] = ability.Value)
             
             Prng.select(REQUIREMENTS.STOREDITEMS, 1)
                 .map(item => Loadout.generate(item))
-                .forEach(item => char.add(item));
+                .forEach(item => char[item.Name] = item.Value)
         }
 
         const set = (value, cb) => {

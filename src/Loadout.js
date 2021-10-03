@@ -1,19 +1,15 @@
-import { Property } from 'uesavetool';
 import {
     Prng,
-    itemsOfType,
-    createProperty
+    itemsOfType
 } from './index.js'
 
 export const Loadout = {
     /**
      * @param {[string, string]} item
-     * @return {Property}
+     * @return {{Name:string,Value:string}}
      */
-    generate: function([pname, type]) {
+    generate: function([name, type]) {
         let [item] = Prng.select(itemsOfType(type), 1)
-        let p = createProperty(CHARSTORE[pname]);
-        p.Property = item;
-        return p;
+        return {Name:name, Value:item};
     }
 }

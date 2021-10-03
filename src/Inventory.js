@@ -1,16 +1,14 @@
-import { Property } from 'uesavetool';
 import {
     Prng,
-    itemsOfType,
-    createProperty
+    itemsOfType
 } from './index.js'
 
 export const Inventory = {
     /**
      * @param {[string, number]} item
-     * @return {Property}
+     * @return {{Name:string,Value:(string|number)}}
      */
-    generate: function([pname, amt]) {
+    generate: function([name, amt]) {
         const prop = (name) => {
             switch(name) {
                 case "StoredWeapon":
@@ -20,14 +18,12 @@ export const Inventory = {
                     return itemsOfType('Auxilary').slice(0,2)[Prng.pick(0, 1)];
                 case "StoredHealth":
                 case "StoredShield":
-                    return [0, (25 * Prng.pick(0, amt))];
+                    return (25 * Prng.pick(0, amt));
                 case "StoredCoins":
                 case "StoredKeys":
-                    return [0, Prng.pick(0, amt)];
+                    return Prng.pick(0, amt);
             }
         }
-        let p = createProperty(CHARSTORE[pname])
-        p.Property = prop(pname);
-        return p;
+        return {Name:name, Value:prop(name)}
     }
 }

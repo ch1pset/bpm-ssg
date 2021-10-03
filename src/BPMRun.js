@@ -59,57 +59,111 @@ export class BPMRun extends PropertyStore {
         }
         else this.set('FloorIndex\0', [0, parseInt(floor)]);
     }
+    /**
+     * @type {ItemPool}
+     */
     get ShopItemPool() {
         return this.valueOf('ShopItemPool\0')
     }
+    /**
+     * @type {ItemPool}
+     */
     get TreasureItemPool() {
         return this.valueOf('TreasureItemPool\0')
     }
+    /**
+     * @type {ItemPool}
+     */
     get BossItemPool() {
         return this.valueOf('BossItemPool\0')
     }
+    /**
+     * @type {ItemPool}
+     */
     get WeaponPool() {
         return this.valueOf('WeaponPool\0')
     }
+    /**
+     * @type {ItemPool}
+     */
     get WeaponCheapPool() {
         return this.valueOf('WeaponCheapPool\0')
     }
+    /**
+     * @type {ItemPool}
+     */
     get WeaponAffordablePool() {
         return this.valueOf('WeaponAffordablePool\0')
     }
+    /**
+     * @type {ItemPool}
+     */
     get WeaponExpensivePool() {
         return this.valueOf('WeaponExpensivePool\0')
     }
+    /**
+     * @type {ItemPool}
+     */
     get LibrarySecondaryPool() {
         return this.valueOf('LibrarySecondaryPool\0')
     }
+    /**
+     * @type {ItemPool}
+     */
     get LibraryUltimatePool() {
         return this.valueOf('LibraryUltimatePool\0')
     }
+    /**
+     * @type {ItemPool}
+     */
     get ChoiceRoomItemsPoolHead() {
         return this.valueOf('ChoiceRoomItemsPoolHead\0')
     }
+    /**
+     * @type {ItemPool}
+     */
     get ChoiceRoomItemsPoolFoot() {
         return this.valueOf('ChoiceRoomItemsPoolFoot\0')
     }
+    /**
+     * @type {ItemPool}
+     */
     get ChoiceRoomItemsPoolShield() {
         return this.valueOf('ChoiceRoomItemsPoolShield\0')
     }
+    /**
+     * @type {ItemPool}
+     */
     get ChoiceRoomItemsPoolArm() {
         return this.valueOf('ChoiceRoomItemsPoolArm\0')
     }
+    /**
+     * @type {ItemPool}
+     */
     get DevilStatuePool() {
         return this.valueOf('DevilStatuePool\0')
     }
+    /**
+     * @type {ItemPool}
+     */
     get AngelStatuePool() {
         return this.valueOf('AngelStatuePool\0')
     }
+    /**
+     * @type {ItemPool}
+     */
     get CursedChestPool() {
         return this.valueOf('CursedChestPool\0')
     }
+    /**
+     * @type {ItemPool}
+     */
     get FutureProofingAPool() {
         return this.valueOf('FutureProofingAPool\0')
     }
+    /**
+     * @type {ItemPool}
+     */
     get FutureProofingBPool() {
         return this.valueOf('FutureProofingBPool\0')
     }
