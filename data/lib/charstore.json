@@ -20,6 +20,14 @@
         "Type": "ArrayProperty\u0000",
         "StoredPropertyType": "IntProperty\u0000"
     },
+    "StoredSecondaryAbilityCharges": {
+      "Name": "StoredSecondaryAbilityCharges\u0000",
+      "Type": "IntProperty\u0000",
+      "Property": [
+        0,
+        1
+      ]
+    },
     "StoredUltimateAbilityCharges": {
       "Name": "StoredUltimateAbilityCharges\u0000",
       "Type": "IntProperty\u0000",
@@ -123,7 +131,7 @@
       "Type": "FloatProperty\u0000",
       "Property": [
         0,
-        0
+        1
       ]
     },
     "StoredPlayerStatWeaponDamage": {
@@ -131,7 +139,7 @@
       "Type": "FloatProperty\u0000",
       "Property": [
         0,
-        0
+        1
       ]
     },
     "StoredPlayerStatWeaponCritical": {
@@ -139,7 +147,7 @@
       "Type": "FloatProperty\u0000",
       "Property": [
         0,
-        0
+        1
       ]
     },
     "StoredPlayerStatRange": {
@@ -147,7 +155,7 @@
       "Type": "FloatProperty\u0000",
       "Property": [
         0,
-        0
+        1
       ]
     },
     "StoredPlayerStatLuck": {
@@ -155,7 +163,7 @@
       "Type": "FloatProperty\u0000",
       "Property": [
         0,
-        0
+        1
       ]
     },
     "StoredPlayerStatAbilityPower": {
@@ -163,7 +171,7 @@
       "Type": "FloatProperty\u0000",
       "Property": [
         0,
-        0
+        1
       ]
     },
     "StoredPlayerStatExtraAmmo": {
@@ -171,7 +179,7 @@
       "Type": "IntProperty\u0000",
       "Property": [
         0,
-        0
+        1
       ]
     },
     "bStoredCanPickupWeapons": {

@@ -34,8 +34,22 @@ export class BPMRun extends PropertyStore {
             createProperty(RUNSTORE.AngelStatuePool),
             createProperty(RUNSTORE.CursedChestPool),
             createProperty(RUNSTORE.FutureProofingAPool),
-            createProperty(RUNSTORE.FutureProofingBPool)
+            createProperty(RUNSTORE.FutureProofingBPool),
+            createProperty(RUNSTORE.bChallenge),
+            createProperty(RUNSTORE.ChallengeNumber)
         ]);
+    }
+    get bChallenge() {
+        return this.valueOf('bChallenge\0');
+    }
+    set bChallenge(value) {
+        this.set('bChallenge\0', value)
+    }
+    get ChallengeNumber() {
+        return this.valueOf('ChallengeNumber\0')[1];
+    }
+    set ChallengeNumber(value) {
+        this.set('ChallengeNumber\0', [0, value])
     }
     get Difficulty() {
         return this.valueOf('BPMDifficulty\0');

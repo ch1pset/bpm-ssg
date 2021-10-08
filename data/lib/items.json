@@ -1,4 +1,7 @@
 {
+    "None": {
+        "Value":""
+    },
     "Hat of Madness": {
         "Type": "Head",
         "Value": "/Game/Blueprints/Abilities/Item/Head/Head_ItemAttatchExplosives.Head_ItemAttatchExplosives_C\u0000"

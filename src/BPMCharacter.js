@@ -14,7 +14,7 @@ import { StoredEquipmentAbilities, StoredEquipmentAbilitiesCharges } from './Sto
 export class BPMCharacter extends PropertyStore {
     constructor() {
         super();
-        this.Name = "BPMCharacterPropertyStore\u0000";
+        this.Name = "";
         this.concat([
             createProperty(CHARSTORE.StoredCharacterArchetype),
             createProperty(CHARSTORE.StoredCharacterMesh),
@@ -22,6 +22,7 @@ export class BPMCharacter extends PropertyStore {
             createProperty(CHARSTORE.StoredMobilityAbility),
             createProperty(CHARSTORE.StoredSecondaryAbility),
             createProperty(CHARSTORE.StoredUltimateAbility),
+            createProperty(CHARSTORE.StoredSecondaryAbilityCharges),
             createProperty(CHARSTORE.StoredUltimateAbilityCharges),
             createProperty(CHARSTORE.StoredArmsItemAbility),
             createProperty(CHARSTORE.StoredChestItemAbility),
@@ -53,6 +54,9 @@ export class BPMCharacter extends PropertyStore {
         ]);
         this.StoredEquipmentAbilities = [];
     }
+    get ArchetypeIndex() {
+        return Object.keys(T_CHARSTORE).findIndex(n => n===this.Name.toLowerCase());
+    }
     /**
      * @type {StoredEquipmentAbilities}
      */
@@ -68,6 +72,12 @@ export class BPMCharacter extends PropertyStore {
     set StoredEquipmentAbilitiesCharges(values) {
         this.set('StoredEquipmentAbilitiesCharges\0', StoredEquipmentAbilitiesCharges.create(values));
     }
+    get StoredSecondaryAbilityCharges() {
+        return this.valueOf('StoredSecondaryAbilityCharges\0')[1];
+    }
+    set StoredSecondaryAbilityCharges(value) {
+        this.set('StoredSecondaryAbilityCharges\0', [0, value]);
+    }    
     get StoredUltimateAbilityCharges() {
         return this.valueOf('StoredUltimateAbilityCharges\0')[1];
     }
@@ -308,6 +318,7 @@ export class BPMCharacter extends PropertyStore {
     }
     static create(name) {
         let char = new BPMCharacter();
+        char.Name = name;
         T_CHARSTORE[name.toLowerCase()]
             .forEach(prop => char.has(prop.Name) 
                 ? char.set(prop.Name, prop.Property)
@@ -347,21 +358,24 @@ export class BPMCharacter extends PropertyStore {
         set(opts.AMMO,              (v) => char.StoredPlayerStatExtraAmmo = v);
         set(opts.WEAPON,
             (v) => char.StoredWeapon = ITEMS[v].Value);
-        set(opts.AUXILARY,
+        set(opts.MOBILITY,
             (v) => char.StoredMobilityAbility = ITEMS[v].Value);
-        set(opts.SECONDARY,
+        set(opts.ABILITIES.SECONDARY,
             (v) => char.StoredSecondaryAbility = ITEMS[v].Value);
-        set(opts.ULTIMATE,
+        set(opts.ABILITIES.ULTIMATE,
             (v) => char.StoredUltimateAbility = ITEMS[v].Value);
-        set(opts.ULTCHARGE,
-            (v) => char.StoredUltimateAbilityCharges = v ? 1 : 0);
-        set(opts.HEAD,
+        set(opts.CHARGE,
+            (v) => {
+                char.StoredSecondaryAbilityCharges = v ? 10 : 0
+                char.StoredUltimateAbilityCharges = v ? 10 : 0
+            });
+        set(opts.ITEMS.HEAD,
             (v) => char.StoredHeadItemAbility = ITEMS[v].Value);
-        set(opts.ARM,
+        set(opts.ITEMS.ARM,
             (v) => char.StoredArmsItemAbility = ITEMS[v].Value);
-        set(opts.CHEST,
+        set(opts.ITEMS.CHEST,
             (v) => char.StoredChestItemAbility = ITEMS[v].Value);
-        set(opts.LEG,
+        set(opts.ITEMS.LEG,
             (v) => char.StoredLegsItemAbility = ITEMS[v].Value);
         set(opts.CURSES,
             (v) => char.StoredEquipmentAbilities = v.map(curse => ITEMS[curse].Value));

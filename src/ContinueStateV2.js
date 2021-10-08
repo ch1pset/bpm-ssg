@@ -61,6 +61,11 @@ export class ContinueStateV2 extends Gvas {
         save.Character = BPMCharacter.generate(seed, char, opts);
         save.Run = BPMRun.generate(seed, diff, opts);
 
+        if(save.Character.ArchetypeIndex > 9) {
+            save.Run.bChallenge = true;
+            save.Run.ChallengeNumber = save.Character.ArchetypeIndex - 10;
+        }
+
         REQUIREMENTS.POOLS.forEach(([name, type]) => {
                 save.Run[name].delItem(save.Character.StoredWeapon)
                 save.Run[name].delItem(save.Character.StoredHeadItemAbility)

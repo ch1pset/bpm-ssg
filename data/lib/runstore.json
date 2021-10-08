@@ -125,7 +125,7 @@
     "bChallenge": {
         "Name": "bChallenge\u0000",
         "Type": "BoolProperty\u0000",
-        "Property": true
+        "Property": false
     },
     "FloorGenerationSeeds": {
         "Name": "FloorGenerationSeeds\u0000",
